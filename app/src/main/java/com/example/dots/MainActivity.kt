@@ -7,13 +7,21 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.dots.databinding.ActivityMainBinding
 
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private var currentPage = 0
+    private lateinit var adapter: ViewPagerAdapter
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+
+
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -27,19 +35,73 @@ class MainActivity : AppCompatActivity() {
         val dotsIndicator = binding.dotsIndicator
         val viewPager = binding.viewPager
 
-        val adapter = ViewPagerAdapter(supportFragmentManager)
+        adapter = ViewPagerAdapter(supportFragmentManager)
         adapter.addFragment(Fragment_slider1(), title = "1st")
         adapter.addFragment(Fragment_slider2(), title = "2nd")
         adapter.addFragment(Fragment_slider3(), title = "3rd")
 
         viewPager.adapter = adapter
-
         dotsIndicator.setViewPager(viewPager)
 
 
+        //Tombol Skip
+        binding.skipText.setOnClickListener {
+
+        }
 
 
+        //Tombol Next
+        binding.nextText.setOnClickListener {
+            if (currentPage < adapter.count -1) {
+                binding.viewPager.currentItem = currentPage + 1
+            }
+        }
+
+        // Tombol Prev
+        binding.prevText.setOnClickListener {
+            if (currentPage > 0) {
+                binding.viewPager.currentItem = currentPage - 1
+            }
+        }
 
 
+        //Tombol Get Started
+        binding.startText.setOnClickListener {
+
+        }
+
+        viewPager.addOnPageChangeListener(object : androidx.viewpager.widget.ViewPager.OnPageChangeListener {
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
+
+            override fun onPageSelected(position: Int) {
+                currentPage = position
+                updateButtons(position)
+            }
+
+            override fun onPageScrollStateChanged(state: Int) {}
+        })
+
+        updateButtons(0)
+
+    }
+
+    private fun updateButtons(position: Int) {
+        when (position) {
+            0 -> { // Slide pertama
+                binding.prevText.visibility = android.view.View.GONE
+                binding.nextText.visibility = android.view.View.VISIBLE
+                binding.startText.visibility = android.view.View.GONE
+            }
+            adapter.count - 1 -> { // Slide terakhir
+                binding.prevText.visibility = android.view.View.VISIBLE
+                binding.nextText.visibility = android.view.View.GONE
+                binding.startText.visibility = android.view.View.VISIBLE
+            }
+            else -> { // Slide tengah
+                binding.prevText.visibility = android.view.View.VISIBLE
+                binding.nextText.visibility = android.view.View.VISIBLE
+                binding.startText.visibility = android.view.View.GONE
+            }
+        }
     }
 }

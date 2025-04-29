@@ -11,4 +11,7 @@
     <string name="slider2_description">Lalukan pembayaran dengan mudah dan cepat serta tidak khawatir uang cashmu akan habis</string>
     <string name="get_your_order">Get Your Order</string>
     <string name="slider3_description">Pesanan anda hanya datang dan nikmati dengan kesegaran Teh Idaman yang ngalahin teh pucuk</string>
+    <string name="next">Next</string>
+    <string name="prev">Prev</string>
+    <string name="get_started">Get Started</string>
 </resources>
