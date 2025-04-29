@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">dots</string>
+    <string name="selamat_datang">Selamat Datang</string>
+    <string name="image_slider">image slider</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">Skip</string>
+    <string name="slider1_description">Pilih minuman teh kesukanmu dengan berbagai varian rasa dan jadikan hari mu menyenangkan</string>
+    <string name="choose_product">Choose Product</string>
+    <string name="make_payment">Make Payment</string>
+    <string name="slider2_description">Lalukan pembayaran dengan mudah dan cepat serta tidak khawatir uang cashmu akan habis</string>
+    <string name="get_your_order">Get Your Order</string>
+    <string name="slider3_description">Pesanan anda hanya datang dan nikmati dengan kesegaran Teh Idaman yang ngalahin teh pucuk</string>
+</resources>
