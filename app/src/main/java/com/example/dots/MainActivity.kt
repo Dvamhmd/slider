@@ -1,6 +1,8 @@
 package com.example.dots
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -65,10 +67,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        //Tombol Get Started
-        binding.startText.setOnClickListener {
 
-        }
 
         viewPager.addOnPageChangeListener(object : androidx.viewpager.widget.ViewPager.OnPageChangeListener {
             override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
@@ -82,6 +81,19 @@ class MainActivity : AppCompatActivity() {
         })
 
         updateButtons(0)
+
+
+        findViewById<TextView>(R.id.startText).setOnClickListener {
+            val intent = Intent(this, GetStartedActivity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<TextView>(R.id.skipText).setOnClickListener {
+            val intent = Intent(this, GetStartedActivity::class.java)
+            startActivity(intent)
+        }
+
+
 
     }
 

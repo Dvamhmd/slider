@@ -5,4 +5,5 @@
     <color name="soft_gray">#A8A8A9</color>
     <color name="slider_on">#17223B</color>
     <color name="slider_off">#C4C4C4</color>
+    <color name="start">#589359</color>
 </resources>

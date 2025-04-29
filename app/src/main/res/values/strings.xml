@@ -14,4 +14,6 @@
     <string name="next">Next</string>
     <string name="prev">Prev</string>
     <string name="get_started">Get Started</string>
+    <string name="welcome">You want\nAuthentic,\nhere you\ngo!</string>
+    <string name="find_it">Find it here, buy it now!</string>
 </resources>
