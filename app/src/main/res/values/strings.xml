@@ -16,4 +16,19 @@
     <string name="get_started">Get Started</string>
     <string name="welcome">You want\nAuthentic,\nhere you\ngo!</string>
     <string name="find_it">Find it here, buy it now!</string>
+    <string name="icon">icon</string>
+    <string name="delivery_to">Delivery to</string>
+    <string name="select_address">Mau diantar kemana nih??</string>
+    <string name="mau_yang_seger_ketik_aja">Mau yang seger? Ketik aja!</string>
+    <string name="address">Mau diantar kemana nih??</string>
+    <string name="search">Mau yang seger? Ketik aja!</string>
+    <string name="category">Category</string>
+    <string name="see_all">See all</string>
+    <string name="image">image</string>
+    <string name="tea_series">Tea Series</string>
+    <string name="squash_series">Squash Series</string>
+    <string name="thai_series">Thai Series</string>
+    <string name="yakult_series">Yakult Series</string>
+    <string name="milky_series">Milky Series</string>
+    <string name="favorit">Favorit</string>
 </resources>

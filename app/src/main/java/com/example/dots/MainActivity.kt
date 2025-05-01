@@ -97,6 +97,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    //fungsi untuk bottom indicator
     private fun updateButtons(position: Int) {
         when (position) {
             0 -> { // Slide pertama
@@ -115,5 +116,9 @@ class MainActivity : AppCompatActivity() {
                 binding.startText.visibility = android.view.View.GONE
             }
         }
+
+
+
+
     }
 }

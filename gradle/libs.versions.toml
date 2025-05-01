@@ -9,6 +9,7 @@ appcompat = "1.7.0"
 material = "1.12.0"
 activity = "1.10.1"
 constraintlayout = "2.2.1"
+curvedbottomnav = "0.1.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -22,7 +23,7 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 dotsindicator = { group = "com.tbuonomo", name = "dotsindicator", version = "4.3" }
 ssp = { group = "com.intuit.ssp", name = "ssp-android", version = "1.0.6" }
 sdp = { group = "com.intuit.sdp", name = "sdp-android", version = "1.0.6" }
-
+curved-bottom-navigation = { group = "com.github.qamarelsafadi", name = "CurvedBottomNavigation", version.ref = "curvedbottomnav" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

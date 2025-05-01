@@ -29,6 +29,7 @@ android {
 
     buildFeatures{
         viewBinding = true
+        dataBinding = true
     }
 
 
@@ -39,6 +40,7 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
 }
 
 dependencies {
@@ -55,6 +57,9 @@ dependencies {
     //scalable ssp sdp
     implementation(libs.ssp)
     implementation(libs.sdp)
+
+    //bottom navigation
+    implementation(libs.curved.bottom.navigation)
 
 
     testImplementation(libs.junit)
