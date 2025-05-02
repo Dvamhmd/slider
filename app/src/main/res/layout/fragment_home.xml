@@ -7,12 +7,14 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@color/background"
+    android:backgroundTint="@color/background"
     tools:context=".fragmentsBottomNav.HomeFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/background"
+        android:backgroundTint="@color/background"
         android:elevation="0dp">
 
         <LinearLayout
@@ -133,6 +135,8 @@
             android:layout_marginEnd="@dimen/_16sdp"
             android:layout_marginBottom="@dimen/_24sdp"
             android:baselineAligned="false"
+            android:background="@color/background"
+            android:backgroundTint="@color/background"
             app:cardCornerRadius="12dp"
             app:cardElevation="0dp">
 
@@ -168,6 +172,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="@color/background"
         tools:ignore="SpeakableTextPresentCheck">
 
         <LinearLayout
@@ -274,6 +279,8 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="@dimen/_16sdp"
                 app:cardElevation="0dp"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
                 android:layout_marginBottom="@dimen/_80sdp">
                 
                 <LinearLayout
@@ -296,14 +303,19 @@
                         app:tabMode="fixed"
                         tools:ignore="SpeakableTextPresentCheck" />
 
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:background="@color/line"/>
 
 
-                        <androidx.viewpager2.widget.ViewPager2
-                            android:id="@+id/viewPager"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@color/white"
-                            tools:ignore="SpeakableTextPresentCheck" />
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
 
 
 

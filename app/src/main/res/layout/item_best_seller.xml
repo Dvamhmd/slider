@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_180sdp"
+    android:layout_height="wrap_content"
     android:gravity="center"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal">
@@ -83,7 +83,14 @@
                     android:textSize="@dimen/_11ssp"
                     tools:ignore="TextContrastCheck" />
 
+
+
+
             </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_16sdp" />
 
         </LinearLayout>
 
@@ -168,9 +175,17 @@
 
             </LinearLayout>
 
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_16sdp" />
+
         </LinearLayout>
 
+
+
     </androidx.cardview.widget.CardView>
+
+
 
 
 

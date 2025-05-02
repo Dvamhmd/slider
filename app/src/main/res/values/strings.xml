@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">dots</string>
+    <string name="app_name">Teh Idaman</string>
     <string name="selamat_datang">Selamat Datang</string>
     <string name="image_slider">image slider</string>
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="skip">Skip</string>
     <string name="slider1_description">Pilih minuman teh kesukanmu dengan berbagai varian rasa dan jadikan hari mu menyenangkan</string>
@@ -46,4 +46,9 @@
     <string name="stok_ada">Stok ada</string>
     <string name="scroll">scroll</string>
     <string name="closing">Alirkan Kedamaian\nTebarkan Kesejahteraan</string>
+    <string name="thai_tea_ori">Thai Tea Ori</string>
+    <string name="matcha_creamy">Matcha Creamy</string>
+    <string name="choco_oreo">Choco Oreo</string>
+    <string name="berry_squash">Berry Squash</string>
+    <string name="taro_creamy">Taro Creamy</string>
 </resources>
