@@ -7,7 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.dots.adapter.ViewPagerAdapter
+import com.example.dots.adapter.SliderAdapter
 import com.example.dots.databinding.ActivityMainBinding
 import com.example.dots.fragmentsSlider.Fragment_slider1
 import com.example.dots.fragmentsSlider.Fragment_slider2
@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private var currentPage = 0
-    private lateinit var adapter: ViewPagerAdapter
+    private lateinit var adapter: SliderAdapter
 
 
 
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         val dotsIndicator = binding.dotsIndicator
         val viewPager = binding.viewPager
 
-        adapter = ViewPagerAdapter(supportFragmentManager)
+        adapter = SliderAdapter(supportFragmentManager)
         adapter.addFragment(Fragment_slider1(), title = "1st")
         adapter.addFragment(Fragment_slider2(), title = "2nd")
         adapter.addFragment(Fragment_slider3(), title = "3rd")

@@ -6,17 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.widget.ViewPager2
 import com.example.dots.R
-import com.example.dots.adapter.FragmentAdapter
-import com.example.dots.fragmentsBestPromo.BestSellerFragment
-import com.example.dots.fragmentsBestPromo.PromoFragment
+import com.example.dots.adapter.PromoBestAdapter
 import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 
 class HomeFragment : Fragment() {
+
+    private lateinit var viewPager: ViewPager2
+    private lateinit var tabLayout: TabLayout
 
 
     override fun onCreateView(
@@ -60,25 +61,19 @@ class HomeFragment : Fragment() {
         yakultSeriesImage.setImageResource(R.drawable.yakult_series)
         yakultSeriesName.text = getString(R.string.yakult_series)
 
-        var viewPager: ViewPager = view.findViewById(R.id.viewPager)
-        var tabLayout: TabLayout = view.findViewById(R.id.tabLayout)
+        viewPager = view.findViewById(R.id.viewPager)
+        tabLayout = view.findViewById(R.id.tabLayout)
 
-        val fragmentAdapter = FragmentAdapter(childFragmentManager)
-        fragmentAdapter.addFragment(fragment = PromoFragment(), title = "Promo")
-        fragmentAdapter.addFragment(fragment = BestSellerFragment(), title = "Best Seller")
+        val adapter = PromoBestAdapter(requireActivity())
+        viewPager.adapter = adapter
 
-        viewPager.adapter = fragmentAdapter
-        tabLayout.setupWithViewPager(viewPager)
-
-
-
-
-
-
-
-
-
-
+        //Link TabLayout dan ViewPager2
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            when (position) {
+                0 -> tab.text = "Promo"
+                1 -> tab.text = "Best Seller"
+            }
+        }.attach()
 
         // Mengembalikan hasil dari view
         return view

@@ -6,14 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
-import androidx.viewpager.widget.ViewPager
-import com.example.dots.adapter.FragmentAdapter
 import com.example.dots.fragmentsBottomNav.CartFragment
 import com.example.dots.fragmentsBottomNav.FavoriteFragment
 import com.example.dots.fragmentsBottomNav.HistoryFragment
 import com.example.dots.fragmentsBottomNav.HomeFragment
 import com.example.dots.fragmentsBottomNav.ProfilFragment
-import com.google.android.material.tabs.TabLayout
 import com.qamar.curvedbottomnaviagtion.CurvedBottomNavigation
 
 class HomeActivity : AppCompatActivity() {
