@@ -1,4 +1,4 @@
-package com.example.dots.fragments
+package com.example.dots.fragmentsBottomNav
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,8 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.viewpager.widget.ViewPager
 import com.example.dots.R
+import com.example.dots.adapter.FragmentAdapter
+import com.example.dots.fragmentsBestPromo.BestSellerFragment
+import com.example.dots.fragmentsBestPromo.PromoFragment
+import com.google.android.material.tabs.TabLayout
 
 
 class HomeFragment : Fragment() {
@@ -53,6 +59,26 @@ class HomeFragment : Fragment() {
         val yakultSeriesName = yakultSeriesLayout.findViewById<TextView>(R.id.name_series)
         yakultSeriesImage.setImageResource(R.drawable.yakult_series)
         yakultSeriesName.text = getString(R.string.yakult_series)
+
+        var viewPager: ViewPager = view.findViewById(R.id.viewPager)
+        var tabLayout: TabLayout = view.findViewById(R.id.tabLayout)
+
+        val fragmentAdapter = FragmentAdapter(childFragmentManager)
+        fragmentAdapter.addFragment(fragment = PromoFragment(), title = "Promo")
+        fragmentAdapter.addFragment(fragment = BestSellerFragment(), title = "Best Seller")
+
+        viewPager.adapter = fragmentAdapter
+        tabLayout.setupWithViewPager(viewPager)
+
+
+
+
+
+
+
+
+
+
 
         // Mengembalikan hasil dari view
         return view

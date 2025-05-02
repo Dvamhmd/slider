@@ -31,4 +31,19 @@
     <string name="yakult_series">Yakult Series</string>
     <string name="milky_series">Milky Series</string>
     <string name="favorit">Favorit</string>
+    <string name="judul_promo">Judul Promo</string>
+    <string name="deskripsi_promo">deskripsi promo</string>
+    <string name="yuk_coba">Yuk! coba</string>
+    <string name="promo_title1">Diskon 5.5 Gila-Gilaan</string>
+    <string name="promo_title2">Promo Spesial Pancasila</string>
+    <string name="promo_title3">Promo Jum\'at Berkah</string>
+    <string name="promo_desc1">Berlaku tanggal 05-06 Mei 2025</string>
+    <string name="promo_desc2">Berlaku tanggal 19-21 Mei 2025</string>
+    <string name="promo_desc3">Berlaku setiap hari Jum\'at</string>
+    <string name="jasmine_tea">Jasmine Tea</string>
+    <string name="rp">Rp.</string>
+    <string name="price">2.500</string>
+    <string name="stok_ada">Stok ada</string>
+    <string name="scroll">scroll</string>
+    <string name="closing">Selalu dihati\nSelalu dinanti</string>
 </resources>

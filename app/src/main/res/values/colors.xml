@@ -4,6 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="green">#A1C77C</color>A8C621
     <color name="soft_gray">#A8A8A9</color>
+    <color name="softer_gray">#C1C7D0</color>
     <color name="orange">#A8C621</color>
 
     <color name="slider_on">#17223B</color>
@@ -14,7 +15,7 @@
     <color name="line">#E2E4E9</color>
 
     <color name="text_green">#517E4D</color>
-    <color name="text_red">#327B40</color>172B4D
+    <color name="text_red">#327B40</color>
     <color name="text_main">#172B4D</color>
 
 </resources>

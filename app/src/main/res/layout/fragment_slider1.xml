@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragment_slider1">
+    tools:context=".fragmentsSlider.Fragment_slider1">
 
 
 

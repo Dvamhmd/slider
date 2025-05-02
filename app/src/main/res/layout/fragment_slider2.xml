@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:gravity="center"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragment_slider2">
+    tools:context=".fragmentsSlider.Fragment_slider2">
 
     <ImageView
         android:id="@+id/image_slider2"

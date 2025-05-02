@@ -7,7 +7,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.dots.adapter.ViewPagerAdapter
 import com.example.dots.databinding.ActivityMainBinding
+import com.example.dots.fragmentsSlider.Fragment_slider1
+import com.example.dots.fragmentsSlider.Fragment_slider2
+import com.example.dots.fragmentsSlider.Fragment_slider3
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
@@ -15,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private var currentPage = 0
     private lateinit var adapter: ViewPagerAdapter
+
 
 
 

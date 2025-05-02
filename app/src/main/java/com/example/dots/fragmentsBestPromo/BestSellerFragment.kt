@@ -1,4 +1,4 @@
-package com.example.dots.fragments
+package com.example.dots.fragmentsBestPromo
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.dots.R
 
 
-class ProfilFragment : Fragment() {
+class BestSellerFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -16,7 +16,7 @@ class ProfilFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profil, container, false)
+        return inflater.inflate(R.layout.fragment_best_seller, container, false)
     }
 
 

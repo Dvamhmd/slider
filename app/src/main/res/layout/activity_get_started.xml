@@ -45,6 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/find_it"
+            android:textSize="@dimen/_12ssp"
             android:textColor="@color/white"
             android:layout_marginBottom="@dimen/_10sdp"
             android:fontFamily="@font/montserrat_medium" />
