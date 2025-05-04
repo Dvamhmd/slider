@@ -51,4 +51,9 @@
     <string name="choco_oreo">Choco Oreo</string>
     <string name="berry_squash">Berry Squash</string>
     <string name="taro_creamy">Taro Creamy</string>
+    <string name="welcome_nback">Welcome\nBack!</string>
+    <string name="username_or_email">Username or Email</string>
+    <string name="create_an_account">Create an\naccount</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
 </resources>
