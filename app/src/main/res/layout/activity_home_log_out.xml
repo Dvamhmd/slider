@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fitsSystemWindows="true"
+    tools:context=".HomeActivityLogOut">
+
+
+
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+    <com.qamar.curvedbottomnaviagtion.CurvedBottomNavigation
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:cbn_background="@color/white"
+        app:cbn_fabColor="@color/orange"
+        app:cbn_iconColor="@color/text_main"
+        app:cbn_height="@dimen/_68sdp"
+        app:cbn_icon_size="@dimen/_36sdp"
+        app:cbn_curve_radius="0dp"
+        app:cbn_selected_icon_size="@dimen/_42sdp"
+        app:cbn_selectedIconColor="@color/white"
+        app:cbn_titleColor="@color/text_main" />
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/_16sdp"
+    android:paddingEnd="@dimen/_16sdp"
+    android:paddingTop="@dimen/_8sdp"
+    android:paddingBottom="@dimen/_8sdp">
+
+    <FrameLayout
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="@drawable/chat_pic_bg"
+        android:layout_marginEnd="12dp"
+        android:layout_gravity="center"
+        android:padding="1dp">
+
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:contentDescription="@string/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/chat_1"
+            android:background="@android:color/transparent"
+            android:outlineProvider="background" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/storeName"
+            android:text="@string/store_name"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/storeMessage"
+            android:text="@string/text_message"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666666"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="end"
+        tools:ignore="UseCompoundDrawables">
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:text="@string/send_time"
+            android:textSize="12sp"
+            android:textColor="@color/dark_gray"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/imgStatus"
+            android:contentDescription="@string/icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/check"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

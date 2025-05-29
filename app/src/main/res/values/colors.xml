@@ -6,6 +6,8 @@
     <color name="soft_gray">#A8A8A9</color>
     <color name="softer_gray">#C1C7D0</color>
     <color name="softest_gray">#F3F3F3</color>
+    <color name="dark_gray">#626262</color>
+    <color name="dark_green">#468651</color>
 
     <color name="orange">#A8C621</color>
 
@@ -17,6 +19,7 @@
     <color name="line">#E2E4E9</color>
 
     <color name="text_green">#517E4D</color>
+    <color name="text_dark_green">#51643E</color>
     <color name="text_red">#327B40</color>
     <color name="text_main">#172B4D</color>
 

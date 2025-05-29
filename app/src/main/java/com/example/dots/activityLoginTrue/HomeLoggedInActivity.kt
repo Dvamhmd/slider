@@ -1,29 +1,25 @@
-package com.example.dots
+package com.example.dots.activityLoginTrue
 
-import android.content.res.Resources
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.fragment.app.Fragment
-import com.example.dots.fragmentsBottomNav.CartFragment
-import com.example.dots.fragmentsBottomNav.FavoriteFragment
-import com.example.dots.fragmentsBottomNav.HistoryFragment
-import com.example.dots.fragmentsBottomNav.HomeFragment
-import com.example.dots.fragmentsBottomNav.ProfilFragment
+import com.example.dots.R
+import com.example.dots.fragmentsLoggedIn.LoggedInCartFragment
+import com.example.dots.fragmentsLoggedIn.LoggedInFavoriteFragment
+import com.example.dots.fragmentsLoggedIn.LoggedInHistoryFragment
+import com.example.dots.fragmentsLoggedIn.LoggedInHomeFragment
+import com.example.dots.fragmentsLoggedIn.LoggedInProfilFragment
 import com.qamar.curvedbottomnaviagtion.CurvedBottomNavigation
 
-class HomeActivity : AppCompatActivity() {
-
-
-
-
+class HomeLoggedInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_home_logged_in)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -31,9 +27,8 @@ class HomeActivity : AppCompatActivity() {
         }
 
 
-
-
-
+        val windowInsetsController = WindowInsetsControllerCompat(window, window.decorView)
+        windowInsetsController.isAppearanceLightStatusBars = true
 
         //Setting Icon Bottom Navigation
         val bottomNavigation = findViewById<CurvedBottomNavigation>(R.id.bottomNavigation )
@@ -58,22 +53,23 @@ class HomeActivity : AppCompatActivity() {
             CurvedBottomNavigation.Model(id = 5, title = "Profil", R.drawable.ic_profile)
         )
 
-        //setting id bottom navigation
+
+
+        //setting id fragment navigation
         bottomNavigation.setOnClickMenuListener {
             when(it.id) {
-                1 -> { replaceFragment(CartFragment()) }
-                2 -> { replaceFragment(FavoriteFragment()) }
-                3 -> { replaceFragment(HomeFragment()) }
-                4 -> { replaceFragment(HistoryFragment()) }
-                5 -> { replaceFragment(ProfilFragment()) }
+                1 -> { replaceFragment(LoggedInCartFragment()) }
+                2 -> { replaceFragment(LoggedInFavoriteFragment()) }
+                3 -> { replaceFragment(LoggedInHomeFragment()) }
+                4 -> { replaceFragment(LoggedInHistoryFragment()) }
+                5 -> { replaceFragment(LoggedInProfilFragment()) }
             }
         }
 
 
 
-
         //Button Default saat awal masuk
-        replaceFragment(HomeFragment())
+        replaceFragment(LoggedInHomeFragment())
         bottomNavigation.show(id = 3)
 
 
@@ -85,7 +81,5 @@ class HomeActivity : AppCompatActivity() {
             .replace(R.id.fragmentContainer,fragment)
             .commit()
     }
-
-
 
 }

@@ -7,10 +7,44 @@
     android:gravity="center"
     tools:context=".fragmentsBottomNav.HistoryFragment">
 
+    <ImageView
+        android:layout_width="@dimen/_285sdp"
+        android:layout_height="@dimen/_285sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:alpha="0.5"
+        android:contentDescription="@string/image"
+        android:src="@drawable/belum_login"
+        tools:ignore="ImageContrastCheck" />
+
     <TextView
-        android:text=""
-        android:textSize="24sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="@string/eh_kamu_belum_login_nih"
+        android:fontFamily="@font/dmsans_semi_bold"
+        android:textSize="@dimen/_20ssp"
+        android:textColor="@color/dark_green"
+        android:layout_marginBottom="@dimen/_4sdp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:fontFamily="@font/dmsans_semi_bold"
+        android:text="@string/yuk_login_dulu_biar_bisa_akses_fitur_ini"
+        android:textAlignment="center"
+        android:textColor="@color/soft_gray"
+        android:textSize="@dimen/_12ssp"
+        tools:ignore="TextContrastCheck" />
+
+    <Button
+        android:id="@+id/go_to_login"
+        android:layout_width="@dimen/_145sdp"
+        android:layout_height="@dimen/_44sdp"
+        android:backgroundTint="@color/green"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
 
 </LinearLayout>

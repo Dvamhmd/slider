@@ -1,10 +1,10 @@
-<resources>
-    <string name="app_name">Teh Idaman</string>
-    <string name="selamat_datang">Selamat Datang</string>
-    <string name="image_slider">image slider</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="MissingTranslation">Teh Idaman</string>
+    <string name="selamat_datang" tools:ignore="MissingTranslation">Selamat Datang</string>
+    <string name="image_slider" tools:ignore="MissingTranslation">image slider</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="skip">Skip</string>
+    <string name="hello_blank_fragment" tools:ignore="MissingTranslation">Hello blank fragment</string>
+    <string name="skip" tools:ignore="MissingTranslation">Skip</string>
     <string name="slider1_description">Pilih minuman teh kesukanmu dengan berbagai varian rasa dan jadikan hari mu menyenangkan</string>
     <string name="choose_product">Choose Product</string>
     <string name="make_payment">Make Payment</string>
@@ -56,4 +56,35 @@
     <string name="create_an_account">Create an\naccount</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
+    <string name="eh_kamu_belum_login_nih">Eh Kamu belum Login nih!</string>
+    <string name="yuk_login_dulu_biar_bisa_akses_fitur_ini" translatable="false">Yuk login dulu biar bisa akses fitur ini</string>
+    <string name="login" tools:ignore="MissingTranslation">Login</string>
+    <string name="back" tools:ignore="MissingTranslation">Back</string>
+    <string name="welcome_back" tools:ignore="MissingTranslation">Welcome\nBack!</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="create_an_account_2">Create An Account</string>
+    <string name="add_to_favorite">Add to Favorite</string>
+    <string name="favorite">Favorite</string>
+    <string name="no_favorit">Belum ada Favorit</string>
+    <string name="add_now">Yuk tambahkan sekarang!</string>
+    <string name="start_shopping">Start Shopping</string>
+    <string name="shop_now">Yuk mulai belanja sekarang!</string>
+    <string name="empty_cart">Keranjangmu masih kosong</string>
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="my_order">My Order</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="fais_al_qori">Fais Al Qori</string>
+    <string name="faisbisa39_gmail_com">faisbisa39@gmail.com</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="change_password">Change Password</string>
+    <string name="about_idaman">About Idaman</string>
+    <string name="log_out">Log Out</string>
+    <string name="chat">Chat</string>
+    <string name="cari_chat_dengan_penjual">Cari Chat dengan penjual</string>
+    <string name="text_message">text_message</string>
+    <string name="store_name">store_name</string>
+    <string name="send_time">09.41</string>
 </resources>

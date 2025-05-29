@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
-    android:fitsSystemWindows="true"
-    tools:context=".fragmentsBottomNav.ProfilFragment">
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    tools:context=".LoginPleaseActivity">
 
     <ImageView
-        android:layout_width="@dimen/_285sdp"
-        android:layout_height="@dimen/_285sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/_20sdp"
         android:alpha="0.5"
         android:contentDescription="@string/image"
         android:src="@drawable/belum_login"
-        tools:ignore="ImageContrastCheck,VisualLintBounds" />
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:layout_width="match_parent"
@@ -46,6 +48,18 @@
         android:text="@string/login"
         android:textColor="@color/white"
         android:textSize="@dimen/_14ssp"
-        tools:ignore="TextContrastCheck,VisualLintButtonSize,VisualLintBounds" />
+        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="@dimen/_145sdp"
+        android:layout_height="@dimen/_44sdp"
+        android:backgroundTint="@android:color/transparent"
+        android:text="@string/back"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
+
+
 
 </LinearLayout>

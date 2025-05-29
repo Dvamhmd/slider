@@ -1,4 +1,4 @@
-package com.example.dots.fragmentsBottomNav
+package com.example.dots.fragmentsLoggedIn
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,14 +9,15 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.viewpager2.widget.ViewPager2
-import com.example.dots.LoginPleaseActivity
 import com.example.dots.R
+import com.example.dots.activityLoginTrue.ChatLoggedInActivity
+import com.example.dots.activityLoginTrue.SettingsLoggedInActivity
 import com.example.dots.adapter.PromoBestAdapter
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 
-class HomeFragment : Fragment() {
+class LoggedInHomeFragment : Fragment() {
 
     private lateinit var viewPager: ViewPager2
     private lateinit var tabLayout: TabLayout
@@ -26,23 +27,24 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
+
+        val view = inflater.inflate(R.layout.fragment_logged_in_home, container, false)
+
         val settings = view.findViewById<ImageView>(R.id.settings)
-        val chat = view.findViewById<ImageView>(R.id.message)
+        val chat = view.findViewById<ImageView>(R.id.chat)
 
+
+        // navigasi settings
         settings.setOnClickListener{
-            val intent = Intent(requireContext(), LoginPleaseActivity::class.java)
+            val intent = Intent(requireContext(), SettingsLoggedInActivity::class.java)
             startActivity(intent)
         }
 
+        // navigasi chat
         chat.setOnClickListener{
-            val intent = Intent(requireContext(), LoginPleaseActivity::class.java)
+            val intent = Intent(requireContext(), ChatLoggedInActivity::class.java)
             startActivity(intent)
         }
-
-
-
-
 
         // setting gambar dan judul tea series
         val teaSeriesLayout = view.findViewById<View>(R.id.tea_series)
@@ -93,12 +95,11 @@ class HomeFragment : Fragment() {
             }
         }.attach()
 
-        // Mengembalikan hasil dari view
+
+
+
         return view
-
     }
-
-
 
 
 }

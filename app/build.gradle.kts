@@ -10,6 +10,7 @@ android {
     defaultConfig {
         applicationId = "com.example.dots"
         minSdk = 24
+        //noinspection OldTargetApi
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -29,6 +30,7 @@ android {
 
     buildFeatures{
         viewBinding = true
+        //noinspection DataBindingWithoutKapt
         dataBinding = true
     }
 
@@ -60,6 +62,12 @@ dependencies {
 
     //bottom navigation
     implementation(libs.curved.bottom.navigation)
+
+    //ios switch
+    implementation(libs.switch.button)
+
+
+
 
 
     testImplementation(libs.junit)
