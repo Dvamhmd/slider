@@ -21,6 +21,8 @@
     <color name="text_green">#517E4D</color>
     <color name="text_dark_green">#51643E</color>
     <color name="text_red">#327B40</color>
-    <color name="text_main">#172B4D</color>
+    <color name="text_main">#172B4D</color>22000000
+
+    <color name="ripple_dark">#7F000000</color>
 
 </resources>

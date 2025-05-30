@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Dots"
         tools:targetApi="31">
         <activity
+            android:name=".activityLoginTrue.AboutLoggedInActivity"
+            android:exported="false" />
+        <activity
             android:name=".activityLoginTrue.SettingsLoggedInActivity"
             android:exported="false" />
         <activity
