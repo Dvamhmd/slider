@@ -24,5 +24,6 @@
     <color name="text_main">#172B4D</color>22000000
 
     <color name="ripple_dark">#7F000000</color>
+    <color name="gray_border">#C8C8C8</color>
 
 </resources>

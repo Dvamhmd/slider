@@ -93,4 +93,13 @@
     <string name="about_2"><![CDATA[Produk kemitraan yang kami tawarkan adalah “Teh Idaman” yaitu UMKM yang bergerak di segmen minuman kekinian. Tepat setahun setelah PT Idaman Anak Bangsa berdiri, terdapat lebih dari 200 mitra kami telah tersebar di beberapa provinsi seperti Yogyakarta, Jawa Tengah, Jawa Timur dan Jawa Barat.]]></string>
     <string name="about_3">If you need help or you have any questions, feel free to contact me by email.</string>
     <string name="marketing_tehidaman_gmail_com">marketing.tehidaman@gmail.com</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="log_in">Log In</string>
+    <string name="create_account">Create Account</string>
+    <string name="personal_details">Personal Details</string>
+    <string name="_0895_4026_55123">0895-4026-55123</string>
+    <string name="message_description">Pesan sekarang dan rasakan\nnikmatnya Teh Idaman</string>
+    <string name="message_title">Belum ada pesanan</string>
 </resources>
