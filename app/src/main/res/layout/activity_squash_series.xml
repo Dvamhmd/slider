@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".category.SquashSeries">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sdp"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/back"
+                android:contentDescription="@string/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                android:layout_marginStart="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:text="@string/squash_series"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/text_main"
+                android:textSize="@dimen/_18ssp"
+                android:fontFamily="@font/dmsans_semi_bold" />
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/_12sdp">
+
+            <include
+                android:id="@+id/series1"
+                layout="@layout/item_product" />
+
+            <include
+                android:id="@+id/series2"
+                layout="@layout/item_product" />
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

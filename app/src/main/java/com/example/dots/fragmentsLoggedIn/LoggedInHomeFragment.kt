@@ -13,6 +13,11 @@ import com.example.dots.R
 import com.example.dots.activityLoginTrue.ChatLoggedInActivity
 import com.example.dots.activityLoginTrue.SettingsLoggedInActivity
 import com.example.dots.adapter.PromoBestAdapter
+import com.example.dots.category.MilkySeries
+import com.example.dots.category.SquashSeries
+import com.example.dots.category.TeaSeries
+import com.example.dots.category.ThaiSeries
+import com.example.dots.category.YakultSeries
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -46,7 +51,7 @@ class LoggedInHomeFragment : Fragment() {
             startActivity(intent)
         }
 
-        // setting gambar dan judul tea series
+        // tea series
         val teaSeriesLayout = view.findViewById<View>(R.id.tea_series)
         val teaSeriesImage = teaSeriesLayout.findViewById<ImageView>(R.id.image_series)
         val teaSeriesName = teaSeriesLayout.findViewById<TextView>(R.id.name_series)
@@ -81,6 +86,42 @@ class LoggedInHomeFragment : Fragment() {
         yakultSeriesImage.setImageResource(R.drawable.yakult_series)
         yakultSeriesName.text = getString(R.string.yakult_series)
 
+
+        //navigasi tea series
+        teaSeriesImage.setOnClickListener{
+            val intent = Intent(requireContext(), TeaSeries::class.java)
+            startActivity(intent)
+        }
+
+        //navigasi squash series
+        squashSeriesImage.setOnClickListener{
+            val intent = Intent(requireContext(), SquashSeries::class.java)
+            startActivity(intent)
+        }
+
+        //navigasi milky series
+        milkySeriesLayout.setOnClickListener{
+            val intent = Intent(requireContext(), MilkySeries::class.java)
+            startActivity(intent)
+        }
+
+        //navigasi thai series
+        thaiSeriesLayout.setOnClickListener{
+            val intent = Intent(requireContext(), ThaiSeries::class.java)
+            startActivity(intent)
+        }
+
+        //navigasi yakult series
+        yakultSeriesLayout.setOnClickListener{
+            val intent = Intent(requireContext(), YakultSeries::class.java)
+            startActivity(intent)
+        }
+
+
+
+
+
+
         viewPager = view.findViewById(R.id.viewPager)
         tabLayout = view.findViewById(R.id.tabLayout)
 
@@ -95,10 +136,10 @@ class LoggedInHomeFragment : Fragment() {
             }
         }.attach()
 
-
-
-
         return view
+
+
+
     }
 
 

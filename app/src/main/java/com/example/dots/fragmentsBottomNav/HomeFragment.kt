@@ -12,6 +12,11 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.dots.LoginPleaseActivity
 import com.example.dots.R
 import com.example.dots.adapter.PromoBestAdapter
+import com.example.dots.categoryOut.MilkySeriesOut
+import com.example.dots.categoryOut.SquashSeriesOut
+import com.example.dots.categoryOut.TeaSeriesOut
+import com.example.dots.categoryOut.ThaiSeriesOut
+import com.example.dots.categoryOut.YakultSeriesOut
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -78,6 +83,37 @@ class HomeFragment : Fragment() {
         val yakultSeriesName = yakultSeriesLayout.findViewById<TextView>(R.id.name_series)
         yakultSeriesImage.setImageResource(R.drawable.yakult_series)
         yakultSeriesName.text = getString(R.string.yakult_series)
+
+        teaSeriesLayout.setOnClickListener{
+            val intent = Intent(requireContext(), TeaSeriesOut::class.java)
+            startActivity(intent)
+        }
+
+        squashSeriesLayout.setOnClickListener{
+            val intent = Intent(requireContext(), SquashSeriesOut::class.java)
+            startActivity(intent)
+        }
+
+        milkySeriesLayout.setOnClickListener{
+            val intent = Intent(requireContext(), MilkySeriesOut::class.java)
+            startActivity(intent)
+        }
+
+        thaiSeriesLayout.setOnClickListener{
+            val intent = Intent(requireContext(), ThaiSeriesOut::class.java)
+            startActivity(intent)
+        }
+
+        yakultSeriesLayout.setOnClickListener{
+            val intent = Intent(requireContext(), YakultSeriesOut::class.java)
+            startActivity(intent)
+        }
+
+
+
+
+
+
 
         viewPager = view.findViewById(R.id.viewPager)
         tabLayout = view.findViewById(R.id.tabLayout)

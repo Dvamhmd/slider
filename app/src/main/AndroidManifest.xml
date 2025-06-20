@@ -13,6 +13,36 @@
         android:theme="@style/Theme.Dots"
         tools:targetApi="31">
         <activity
+            android:name=".categoryOut.SquashSeriesOut"
+            android:exported="false" />
+        <activity
+            android:name=".categoryOut.MilkySeriesOut"
+            android:exported="false" />
+        <activity
+            android:name=".categoryOut.YakultSeriesOut"
+            android:exported="false" />
+        <activity
+            android:name=".categoryOut.ThaiSeriesOut"
+            android:exported="false" />
+        <activity
+            android:name=".categoryOut.TeaSeriesOut"
+            android:exported="false" />
+        <activity
+            android:name=".category.YakultSeries"
+            android:exported="false" />
+        <activity
+            android:name=".category.MilkySeries"
+            android:exported="false" />
+        <activity
+            android:name=".category.ThaiSeries"
+            android:exported="false" />
+        <activity
+            android:name=".category.SquashSeries"
+            android:exported="false" />
+        <activity
+            android:name=".category.TeaSeries"
+            android:exported="false" />
+        <activity
             android:name=".activityLoginTrue.AboutLoggedInActivity"
             android:exported="false" />
         <activity

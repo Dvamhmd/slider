@@ -5,17 +5,17 @@
 
     <string name="hello_blank_fragment" tools:ignore="MissingTranslation">Hello blank fragment</string>
     <string name="skip" tools:ignore="MissingTranslation">Skip</string>
-    <string name="slider1_description">Pilih minuman teh kesukanmu dengan berbagai varian rasa dan jadikan hari mu menyenangkan</string>
-    <string name="choose_product">Choose Product</string>
-    <string name="make_payment">Make Payment</string>
-    <string name="slider2_description">Lalukan pembayaran dengan mudah dan cepat serta tidak khawatir uang cashmu akan habis</string>
-    <string name="get_your_order">Get Your Order</string>
-    <string name="slider3_description">Pesanan anda hanya datang dan nikmati dengan kesegaran Teh Idaman yang ngalahin teh pucuk</string>
-    <string name="next">Next</string>
-    <string name="prev">Prev</string>
-    <string name="get_started">Get Started</string>
-    <string name="welcome">You want\nAuthentic,\nhere you\ngo!</string>
-    <string name="find_it">Find it here, buy it now!</string>
+    <string name="slider1_description" tools:ignore="MissingTranslation">Pilih minuman teh kesukanmu dengan berbagai varian rasa dan jadikan hari mu menyenangkan</string>
+    <string name="choose_product" tools:ignore="MissingTranslation">Choose Product</string>
+    <string name="make_payment" tools:ignore="MissingTranslation">Make Payment</string>
+    <string name="slider2_description" tools:ignore="MissingTranslation">Lalukan pembayaran dengan mudah dan cepat serta tidak khawatir uang cashmu akan habis</string>
+    <string name="get_your_order" tools:ignore="MissingTranslation">Get Your Order</string>
+    <string name="slider3_description" tools:ignore="MissingTranslation">Pesanan anda hanya datang dan nikmati dengan kesegaran Teh Idaman yang ngalahin teh pucuk</string>
+    <string name="next" tools:ignore="MissingTranslation">Next</string>
+    <string name="prev" tools:ignore="MissingTranslation">Prev</string>
+    <string name="get_started" tools:ignore="MissingTranslation">Get Started</string>
+    <string name="welcome" tools:ignore="MissingTranslation">You want\nAuthentic,\nhere you\ngo!</string>
+    <string name="find_it" tools:ignore="MissingTranslation">Find it here, buy it now!</string>
     <string name="icon">icon</string>
     <string name="delivery_to">Delivery to</string>
     <string name="select_address">Mau diantar kemana nih??</string>
@@ -38,7 +38,7 @@
     <string name="promo_title2">Promo Spesial Pancasila</string>
     <string name="promo_title3">Promo Jum\'at Berkah</string>
     <string name="promo_desc1">Berlaku tanggal 05-06 Mei 2025</string>
-    <string name="promo_desc2">Berlaku tanggal 19-21 Mei 2025</string>
+    <string name="promo_desc2" tools:ignore="TypographyDashes">Berlaku tanggal 19-21 Mei 2025</string>
     <string name="promo_desc3">Berlaku setiap hari Jum\'at</string>
     <string name="jasmine_tea">Jasmine Tea</string>
     <string name="rp">Rp.</string>
@@ -52,7 +52,7 @@
     <string name="berry_squash">Berry Squash</string>
     <string name="taro_creamy">Taro Creamy</string>
     <string name="welcome_nback">Welcome\nBack!</string>
-    <string name="username_or_email">Username or Email</string>
+    <string name="username_or_email" tools:ignore="MissingTranslation">Username or Email</string>
     <string name="create_an_account">Create an\naccount</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm Password</string>
@@ -63,9 +63,9 @@
     <string name="welcome_back" tools:ignore="MissingTranslation">Welcome\nBack!</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="sign_up">Sign Up</string>
-    <string name="create_an_account_2">Create An Account</string>
+    <string name="create_an_account_2" tools:ignore="MissingTranslation">Create An Account</string>
     <string name="add_to_favorite">Add to Favorite</string>
-    <string name="favorite">Favorite</string>
+    <string name="favorite" tools:ignore="MissingTranslation">Favorite</string>
     <string name="no_favorit">Belum ada Favorit</string>
     <string name="add_now">Yuk tambahkan sekarang!</string>
     <string name="start_shopping">Start Shopping</string>
@@ -73,33 +73,67 @@
     <string name="empty_cart">Keranjangmu masih kosong</string>
     <string name="shopping_cart">Shopping Cart</string>
     <string name="my_order">My Order</string>
-    <string name="profile">Profile</string>
+    <string name="profile" tools:ignore="MissingTranslation">Profile</string>
     <string name="settings">Settings</string>
     <string name="fais_al_qori">Fais Al Qori</string>
-    <string name="faisbisa39_gmail_com">faisbisa39@gmail.com</string>
+    <string name="faisbisa39_gmail_com" tools:ignore="MissingTranslation">faisbisa39@gmail.com</string>
     <string name="dark_mode">Dark Mode</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="change_password">Change Password</string>
-    <string name="about_idaman">About Idaman</string>
+    <string name="about_idaman" tools:ignore="MissingTranslation">About Idaman</string>
     <string name="log_out">Log Out</string>
     <string name="chat">Chat</string>
     <string name="cari_chat_dengan_penjual">Cari Chat dengan penjual</string>
-    <string name="text_message">text_message</string>
-    <string name="store_name">store_name</string>
-    <string name="send_time">09.41</string>
-    <string name="about_teh_idaman">About Teh Idaman</string>
-    <string name="about_app">About App</string>
-    <string name="about_1">PT Idaman Anak Bangsa berdiri sejak Agustus 2023, merupakan pelopor dan pioneer kemitraan minuman es teh cup jumbo dengan harga Rp2.500 yang berlokasi di Yogyakarta, kami menyediakan jasa kemitraan atau franchise kepada para calon mitra.</string>
-    <string name="about_2"><![CDATA[Produk kemitraan yang kami tawarkan adalah “Teh Idaman” yaitu UMKM yang bergerak di segmen minuman kekinian. Tepat setahun setelah PT Idaman Anak Bangsa berdiri, terdapat lebih dari 200 mitra kami telah tersebar di beberapa provinsi seperti Yogyakarta, Jawa Tengah, Jawa Timur dan Jawa Barat.]]></string>
-    <string name="about_3">If you need help or you have any questions, feel free to contact me by email.</string>
-    <string name="marketing_tehidaman_gmail_com">marketing.tehidaman@gmail.com</string>
-    <string name="email">Email</string>
-    <string name="username">Username</string>
-    <string name="phone_number">Phone Number</string>
-    <string name="log_in">Log In</string>
-    <string name="create_account">Create Account</string>
-    <string name="personal_details">Personal Details</string>
-    <string name="_0895_4026_55123">0895-4026-55123</string>
-    <string name="message_description">Pesan sekarang dan rasakan\nnikmatnya Teh Idaman</string>
-    <string name="message_title">Belum ada pesanan</string>
+    <string name="text_message" tools:ignore="MissingTranslation">text_message</string>
+    <string name="store_name" tools:ignore="MissingTranslation">store_name</string>
+    <string name="send_time" tools:ignore="MissingTranslation">09.41</string>
+    <string name="about_teh_idaman" tools:ignore="MissingTranslation">About Teh Idaman</string>
+    <string name="about_app" tools:ignore="MissingTranslation">About App</string>
+    <string name="about_1" tools:ignore="MissingTranslation">PT Idaman Anak Bangsa berdiri sejak Agustus 2023, merupakan pelopor dan pioneer kemitraan minuman es teh cup jumbo dengan harga Rp2.500 yang berlokasi di Yogyakarta, kami menyediakan jasa kemitraan atau franchise kepada para calon mitra.</string>
+    <string name="about_2" tools:ignore="MissingTranslation"><![CDATA[Produk kemitraan yang kami tawarkan adalah “Teh Idaman” yaitu UMKM yang bergerak di segmen minuman kekinian. Tepat setahun setelah PT Idaman Anak Bangsa berdiri, terdapat lebih dari 200 mitra kami telah tersebar di beberapa provinsi seperti Yogyakarta, Jawa Tengah, Jawa Timur dan Jawa Barat.]]></string>
+    <string name="about_3" tools:ignore="MissingTranslation">If you need help or you have any questions, feel free to contact me by email.</string>
+    <string name="marketing_tehidaman_gmail_com" tools:ignore="MissingTranslation">marketing.tehidaman@gmail.com</string>
+    <string name="email" tools:ignore="MissingTranslation">Email</string>
+    <string name="username" tools:ignore="MissingTranslation">Username</string>
+    <string name="phone_number" tools:ignore="MissingTranslation">Phone Number</string>
+    <string name="log_in" tools:ignore="MissingTranslation">Log In</string>
+    <string name="create_account" tools:ignore="MissingTranslation">Create Account</string>
+    <string name="personal_details" tools:ignore="MissingTranslation">Personal Details</string>
+    <string name="_0895_4026_55123" tools:ignore="MissingTranslation">0895-4026-55123</string>
+    <string name="message_description" tools:ignore="MissingTranslation">Pesan sekarang dan rasakan\nnikmatnya Teh Idaman</string>
+    <string name="message_title" tools:ignore="MissingTranslation">Belum ada pesanan</string>
+
+    <string name="tea_tarik" tools:ignore="MissingTranslation">Tea Tarik</string>
+    <string name="lemon_tea">Lemon Tea</string>
+    <string name="grape_tea" tools:ignore="MissingTranslation">Grape Tea</string>
+    <string name="strawberry_tea" tools:ignore="MissingTranslation">Strawberry Tea</string>
+    <string name="markisa_tea">Markisa Tea</string>
+    <string name="lychee_tea">Lychee Tea</string>
+    <string name="mango_tea">Mango Tea</string>
+    <string name="melon_tea">Melon Tea</string>
+    <string name="apple_tea">Apple Tea</string>
+    <string name="choco_oreo_creamy">Choco Oreo\nCreamy</string>
+    <string name="caramel_creamy">Choco Caramel\nCreamy</string>
+    <string name="avocado_creamy">Avocado Creamy</string>
+    <string name="red_velvet_creamy">Red Velvet Creamy</string>
+    <string name="royal_choco_creamy">Royal Choco\nCreamy</string>
+    <string name="blackcurrant_creamy">Blackcurrant\nCreamy</string>
+    <string name="bubble_gum_creamy">Bubble Gum\nCreamy</string>
+    <string name="silverqueen_creamy">Silverqueen\nCreamy</string>
+    <string name="strawberry_squash">Strawberry Squash</string>
+    <string name="orange_squash">Orange Squash</string>
+    <string name="lychee_squash">Lychee Squash</string>
+    <string name="grape_squash">Grape Squash</string>
+    <string name="thai_tea_original">Thai Tea Original</string>
+    <string name="thai_tea_macchiato">Thai Tea Macchiato</string>
+    <string name="thai_tea_oreo">Thai Tea Oreo</string>
+    <string name="thai_tea_choco">Thai Tea Choco</string>
+    <string name="yakult_strawberry">Yakult Strawberry</string>
+    <string name="yakult_mango">Yakult Mango</string>
+    <string name="yakult_orange">Yakult Orange</string>
+    <string name="yakult_grape">Yakult Grape</string>
+    <string name="yakult_lychee">Yakult Lychee</string>
+    <string name="yakult_melon">Yakult Melon</string>
+
+
 </resources>
