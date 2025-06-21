@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".category.SeeAll">
+    tools:context=".categoryOut.SeeAllOut">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/title"
@@ -65,13 +65,14 @@
                 android:id="@+id/tea_series_tittle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/tea_series"
-                android:textSize="@dimen/_18ssp"
-                android:textAlignment="center"
-                android:fontFamily="@font/poppins_semi_bold"
-                android:textColor="@color/text_bright_green"
                 android:layout_marginTop="@dimen/_16sdp"
-                android:layout_marginBottom="@dimen/_16sdp" />
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="@string/tea_series"
+                android:textAlignment="center"
+                android:textColor="@color/text_bright_green"
+                android:textSize="@dimen/_18ssp"
+                tools:ignore="TextContrastCheck" />
 
             <include
                 android:id="@+id/series1"
@@ -95,15 +96,13 @@
 
 
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp" />
+
 
             <TextView
                 android:id="@+id/squash_series_tittle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/tea_series"
+                android:text="@string/squash_series"
                 android:textSize="@dimen/_18ssp"
                 android:textAlignment="center"
                 android:fontFamily="@font/poppins_semi_bold"
@@ -120,15 +119,101 @@
                 layout="@layout/item_product" />
 
 
+
+
+            <TextView
+                android:id="@+id/milky_series_tittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="@string/milky_series"
+                android:textAlignment="center"
+                android:textColor="@color/text_bright_green"
+                android:textSize="@dimen/_18ssp"
+                tools:ignore="TextContrastCheck" />
+
+            <include
+                android:id="@+id/series8"
+                layout="@layout/item_product" />
+
+            <include
+                android:id="@+id/series9"
+                layout="@layout/item_product" />
+
+            <include
+                android:id="@+id/series10"
+                layout="@layout/item_product" />
+
+            <include
+                android:id="@+id/series11"
+                layout="@layout/item_product" />
+
+            <include
+                android:id="@+id/series12"
+                layout="@layout/item_product" />
+
+
+
+            <TextView
+                android:id="@+id/thai_series_tittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="@string/thai_series"
+                android:textAlignment="center"
+                android:textColor="@color/text_bright_green"
+                android:textSize="@dimen/_18ssp"
+                tools:ignore="TextContrastCheck" />
+
+            <include
+                android:id="@+id/series13"
+                layout="@layout/item_product" />
+
+            <include
+                android:id="@+id/series14"
+                layout="@layout/item_product" />
+
+
+
+            <TextView
+                android:id="@+id/yakult_series_tittle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="@string/yakult_series"
+                android:textAlignment="center"
+                android:textColor="@color/text_bright_green"
+                android:textSize="@dimen/_18ssp"
+                tools:ignore="TextContrastCheck" />
+
+            <include
+                android:id="@+id/series15"
+                layout="@layout/item_product" />
+
+            <include
+                android:id="@+id/series16"
+                layout="@layout/item_product" />
+
+            <include
+                android:id="@+id/series17"
+                layout="@layout/item_product" />
+
+
+
+
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_40sdp" />
+                android:layout_height="@dimen/_100sdp" />
 
 
         </LinearLayout>
 
     </ScrollView>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

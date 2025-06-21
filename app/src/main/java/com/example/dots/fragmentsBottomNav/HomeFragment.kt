@@ -12,7 +12,9 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.dots.LoginPleaseActivity
 import com.example.dots.R
 import com.example.dots.adapter.PromoBestAdapter
+import com.example.dots.category.SeeAll
 import com.example.dots.categoryOut.MilkySeriesOut
+import com.example.dots.categoryOut.SeeAllOut
 import com.example.dots.categoryOut.SquashSeriesOut
 import com.example.dots.categoryOut.TeaSeriesOut
 import com.example.dots.categoryOut.ThaiSeriesOut
@@ -84,6 +86,9 @@ class HomeFragment : Fragment() {
         yakultSeriesImage.setImageResource(R.drawable.yakult_series)
         yakultSeriesName.text = getString(R.string.yakult_series)
 
+        //see all
+        val seeAllProducts =view.findViewById<TextView>(R.id.see_products)
+
         teaSeriesLayout.setOnClickListener{
             val intent = Intent(requireContext(), TeaSeriesOut::class.java)
             startActivity(intent)
@@ -106,6 +111,11 @@ class HomeFragment : Fragment() {
 
         yakultSeriesLayout.setOnClickListener{
             val intent = Intent(requireContext(), YakultSeriesOut::class.java)
+            startActivity(intent)
+        }
+
+        seeAllProducts.setOnClickListener{
+            val intent = Intent(requireContext(), SeeAllOut::class.java)
             startActivity(intent)
         }
 
