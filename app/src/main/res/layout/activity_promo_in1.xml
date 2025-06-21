@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".detailPromo.PromoActivityIn1">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_255sdp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"/>
+
+
+            <View
+                android:layout_width="@dimen/_400sdp"
+                android:layout_height="@dimen/_400sdp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/top_curve"
+                android:translationY="-230dp"
+                tools:ignore="VisualLintBounds" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/promo_image"
+                    android:contentDescription="@string/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_158sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_80sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:src="@drawable/promo_2" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_30sdp">
+
+                    <TextView
+                        android:id="@+id/promo_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:text="@string/diskon_40"
+                        android:fontFamily="@font/poppins_semi_bold"
+                        android:textColor="@color/text_bright_green"
+                        android:textSize="@dimen/_16ssp"
+                        tools:ignore="TextContrastCheck,VisualLintOverlap" />
+
+                    <TextView
+                        android:id="@+id/promo_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:layout_marginTop="@dimen/_19sdp"
+                        android:text="@string/diskon_5_5_gila_gilaan"
+                        android:textColor="@color/text_main"
+                        android:textSize="@dimen/_17ssp"/>
+
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:orientation="horizontal"
+                    tools:ignore="UseCompoundDrawables,TextSizeCheck">
+
+                    <ImageView
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/image"
+                        android:src="@drawable/clock" />
+
+
+                    <TextView
+                        android:id="@+id/promo_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/berlaku_sampai_6_mei_2025"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/_10ssp"/>
+
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:id="@+id/promo_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/promo_desc_1"
+                    android:textSize="@dimen/_12ssp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/dark_gray"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    tools:ignore="UnusedAttribute,VisualLintLongText"
+                    android:justificationMode="inter_word"/>
+
+                <TextView
+                    android:id="@+id/promo_term_of_use_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:text="@string/syarat_ketentuan"
+                    android:textColor="@color/text_main"
+                    android:textSize="@dimen/_14ssp"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp">
+
+                    <View
+                        android:layout_width="@dimen/_3sdp"
+                        android:layout_height="@dimen/_3sdp"
+                        android:background="@drawable/rounded"
+                        android:backgroundTint="@color/dark_gray"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/term_of_use_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tos_v1"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/dark_gray"
+                        android:layout_gravity="center"
+                        tools:ignore="UnusedAttribute" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp">
+
+                    <View
+                        android:layout_width="@dimen/_3sdp"
+                        android:layout_height="@dimen/_3sdp"
+                        android:background="@drawable/rounded"
+                        android:backgroundTint="@color/dark_gray"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/term_of_use_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tos_v2"
+                        android:textSize="@dimen/_12ssp"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/dark_gray"
+                        android:layout_gravity="center"
+                        tools:ignore="UnusedAttribute" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_20sdp">
+
+                    <View
+                        android:layout_width="@dimen/_3sdp"
+                        android:layout_height="@dimen/_3sdp"
+                        android:background="@drawable/rounded"
+                        android:backgroundTint="@color/dark_gray"
+                        android:layout_marginEnd="@dimen/_8sdp"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/term_of_use_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="@string/tos_v3"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/_12ssp"
+                        tools:ignore="UnusedAttribute,TextContrastCheck" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/promo_product_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/pm_product_title"
+                    android:textColor="@color/text_main"
+                    android:textSize="@dimen/_14ssp"
+                    tools:ignore="TextContrastCheck" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <include
+                        android:id="@+id/product_promo1"
+                        layout="@layout/item_list_promo" />
+
+                    <include
+                        android:id="@+id/product_promo2"
+                        layout="@layout/item_list_promo" />
+
+                    <include
+                        android:id="@+id/product_promo3"
+                        layout="@layout/item_list_promo" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp" />
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+        </FrameLayout>
+
+
+
+
+
+
+
+
+
+    </ScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        app:cardBackgroundColor="@color/top_curve"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:contentDescription="@string/icon"
+                android:src="@drawable/ic_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:fontFamily="@font/dmsans_semi_bold"
+                android:text="@string/detail_promo"
+                android:textAlignment="center"
+                android:textColor="@color/text_main"
+                android:textSize="@dimen/_18ssp" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/back_to_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:backgroundTint="@color/green"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:text="@string/kembali_ke_menu"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            tools:ignore="VisualLintButtonSize,TextContrastCheck" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

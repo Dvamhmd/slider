@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragmentsBestPromo.PromoFragmentIn">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_10sdp" />
+
+    <include
+        android:id="@+id/promo_2"
+        layout="@layout/item_promo"/>
+
+    <include
+        android:id="@+id/promo_3"
+        layout="@layout/item_promo" />
+
+    <include
+        android:id="@+id/promo_4"
+        layout="@layout/item_promo" />
+
+</LinearLayout>

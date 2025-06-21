@@ -10,10 +10,11 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.dots.R
-import com.example.dots.detailPromo.PromoActivityOut1
+import com.example.dots.detailPromo.PromoActivityIn1
 
 
-class PromoFragment : Fragment() {
+class PromoFragmentIn : Fragment() {
+
 
 
     override fun onCreateView(
@@ -62,7 +63,7 @@ class PromoFragment : Fragment() {
 
         //navigasi promo 2
         promoLayout2.setOnClickListener{
-            val intent = Intent(requireContext(), PromoActivityOut1::class.java)
+            val intent = Intent(requireContext(), PromoActivityIn1::class.java)
 
             //mengirim layout promo
             intent.putExtra("GAMBAR_PROMO", R.drawable.promo_2)
@@ -96,7 +97,7 @@ class PromoFragment : Fragment() {
 
         //navigasi promo 3
         promoLayout3.setOnClickListener{
-            val intent = Intent(requireContext(), PromoActivityOut1::class.java)
+            val intent = Intent(requireContext(), PromoActivityIn1::class.java)
 
             //mengirim layout promo
             intent.putExtra("GAMBAR_PROMO", R.drawable.promo_3)
@@ -129,7 +130,7 @@ class PromoFragment : Fragment() {
 
         //navigasi promo 4
         promoLayout4.setOnClickListener{
-            val intent = Intent(requireContext(), PromoActivityOut1::class.java)
+            val intent = Intent(requireContext(), PromoActivityIn1::class.java)
 
             //mengirim layout promo
             intent.putExtra("GAMBAR_PROMO", R.drawable.promo_4)
@@ -164,6 +165,9 @@ class PromoFragment : Fragment() {
 
         // Inflate the layout for this fragment
         return view
+
+
+
     }
 
 

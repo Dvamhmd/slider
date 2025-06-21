@@ -19,11 +19,16 @@
     <color name="line">#E2E4E9</color>
 
     <color name="text_green">#517E4D</color>
+    <color name="text_bright_green">#28B446</color>
     <color name="text_dark_green">#51643E</color>
     <color name="text_red">#327B40</color>
     <color name="text_main">#172B4D</color>22000000
 
     <color name="ripple_dark">#7F000000</color>
-    <color name="gray_border">#C8C8C8</color>
+    <color name="gray_border">#C8C8C8</color>F2FFE6
+
+    <color name="top_curve">#F2FFE6</color>
+
+
 
 </resources>

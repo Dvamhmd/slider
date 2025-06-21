@@ -8,6 +8,8 @@
     android:orientation="horizontal">
 
 
+
+
     <androidx.cardview.widget.CardView
         android:id="@+id/itemLeft"
         android:layout_width="wrap_content"

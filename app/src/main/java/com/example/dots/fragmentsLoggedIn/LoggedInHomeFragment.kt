@@ -12,7 +12,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.dots.R
 import com.example.dots.activityLoginTrue.ChatLoggedInActivity
 import com.example.dots.activityLoginTrue.SettingsLoggedInActivity
-import com.example.dots.adapter.PromoBestAdapter
+import com.example.dots.adapter.PromoBestAdapterIn
 import com.example.dots.category.MilkySeries
 import com.example.dots.category.SquashSeries
 import com.example.dots.category.TeaSeries
@@ -125,7 +125,7 @@ class LoggedInHomeFragment : Fragment() {
         viewPager = view.findViewById(R.id.viewPager)
         tabLayout = view.findViewById(R.id.tabLayout)
 
-        val adapter = PromoBestAdapter(requireActivity())
+        val adapter = PromoBestAdapterIn(requireActivity())
         viewPager.adapter = adapter
 
         //Link TabLayout dan ViewPager2
