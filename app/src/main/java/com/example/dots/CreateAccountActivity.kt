@@ -28,6 +28,7 @@ class CreateAccountActivity : AppCompatActivity() {
         gotoLogin.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
     }

@@ -34,9 +34,16 @@ class LoginActivity : AppCompatActivity() {
         val passwordInput = findViewById<TextInputEditText>(R.id.passwordInput)
 
 
+        val signUp = findViewById<TextView>(R.id.signUp)
 
         val goToHome = findViewById<Button>(R.id.login)
-        val signUp = findViewById<TextView>(R.id.signUp)
+
+
+        signUp.setOnClickListener{
+            val intent = Intent(this, CreateAccountActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         goToHome.setOnClickListener{
             val username = usernameInput.text.toString()
@@ -61,12 +68,18 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Kolom tidak boleh kosong!", Toast.LENGTH_SHORT).show()
 
             }
+
+
+
+
+
+
+
+
+
         }
 
-        signUp.setOnClickListener{
-            val intent = Intent(this, CreateAccountActivity::class.java)
-            startActivity(intent)
-        }
+
 
 
 
