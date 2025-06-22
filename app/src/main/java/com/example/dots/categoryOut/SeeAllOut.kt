@@ -393,73 +393,152 @@ class SeeAllOut : AppCompatActivity() {
         priceRight17.text = formatter.format(priceYakultSeries)
 
 
-        series1.setOnClickListener{
+        leftImage1.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series2.setOnClickListener{
+        leftImage2.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series3.setOnClickListener{
+        leftImage3.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series4.setOnClickListener{
+        leftImage4.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series5.setOnClickListener{
+        leftImage5.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series6.setOnClickListener{
+        leftImage6.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series7.setOnClickListener{
+        leftImage7.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series8.setOnClickListener{
+        leftImage8.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series9.setOnClickListener{
+        leftImage9.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series10.setOnClickListener{
+        leftImage10.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series11.setOnClickListener{
+        leftImage11.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series12.setOnClickListener{
+        leftImage12.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series13.setOnClickListener{
+        leftImage13.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series14.setOnClickListener{
+        leftImage14.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series15.setOnClickListener{
+        leftImage15.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series16.setOnClickListener{
+        leftImage16.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series17.setOnClickListener{
+        leftImage17.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
+
+
+
+
+
+
+
+
+
+
+        rightImage1.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage2.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage3.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage4.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage5.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage6.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage7.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage8.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage9.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage10.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage11.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage12.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage13.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage14.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage15.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage16.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage17.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+
 
        
 

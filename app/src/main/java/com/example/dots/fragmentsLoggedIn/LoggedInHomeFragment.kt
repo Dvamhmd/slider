@@ -91,13 +91,13 @@ class LoggedInHomeFragment : Fragment() {
         val seeAllProducts =view.findViewById<TextView>(R.id.see_products)
 
         //navigasi tea series
-        teaSeriesImage.setOnClickListener{
+        teaSeriesLayout.setOnClickListener{
             val intent = Intent(requireContext(), TeaSeries::class.java)
             startActivity(intent)
         }
 
         //navigasi squash series
-        squashSeriesImage.setOnClickListener{
+        squashSeriesLayout.setOnClickListener{
             val intent = Intent(requireContext(), SquashSeries::class.java)
             startActivity(intent)
         }

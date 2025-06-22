@@ -4,6 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackgroundBorderless"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal">
 
@@ -14,9 +17,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_8sdp"
         android:layout_marginEnd="@dimen/_16sdp"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:orientation="vertical"
         app:cardBackgroundColor="@color/white"
         app:cardElevation="0dp"
@@ -31,9 +31,12 @@
                 android:id="@+id/productImage_left"
                 android:layout_width="@dimen/_120sdp"
                 android:layout_height="@dimen/_121sdp"
+                android:clickable="true"
                 android:contentDescription="@string/image"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:src="@drawable/jasmine_tea"
-                tools:ignore="ImageContrastCheck" />
+                tools:ignore="ImageContrastCheck,DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/productTitle_left"
@@ -105,9 +108,6 @@
         android:orientation="vertical"
         app:cardElevation="0dp"
         app:cardBackgroundColor="@color/white"
-        android:clickable="true"
-        android:focusable="true"
-        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:layout_marginEnd="@dimen/_8sdp"
         android:layout_marginStart="@dimen/_16sdp">
 
@@ -121,6 +121,9 @@
                 android:layout_width="@dimen/_120sdp"
                 android:layout_height="@dimen/_121sdp"
                 android:contentDescription="@string/image"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
                 android:src="@drawable/jasmine_tea"
                 tools:ignore="ImageContrastCheck" />
 

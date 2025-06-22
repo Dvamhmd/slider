@@ -124,13 +124,24 @@ class ThaiSeriesOut : AppCompatActivity() {
 
 
 
-        series1.setOnClickListener{
+        leftImage1.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series2.setOnClickListener{
+        leftImage2.setOnClickListener {
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
+
+
+
+        rightImage1.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage2.setOnClickListener {
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
 
 
 

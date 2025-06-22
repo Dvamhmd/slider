@@ -151,23 +151,47 @@ class MilkySeriesOut : AppCompatActivity() {
         priceRight5.text = formatter.format(priceMilkySeries)
 
 
-        series1.setOnClickListener{
+        leftImage1.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series2.setOnClickListener{
+        leftImage2.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series3.setOnClickListener{
+        leftImage3.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series4.setOnClickListener{
+        leftImage4.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        series5.setOnClickListener{
+        leftImage5.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+
+
+
+
+        rightImage1.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage2.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage3.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage4.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage5.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 

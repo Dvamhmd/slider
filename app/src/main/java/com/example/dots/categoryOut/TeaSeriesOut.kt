@@ -166,26 +166,49 @@ class TeaSeriesOut : AppCompatActivity() {
 
 
 
-        teaSeries1.setOnClickListener{
+        leftImage1.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        teaSeries2.setOnClickListener{
+        leftImage2.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        teaSeries3.setOnClickListener{
+        leftImage3.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        teaSeries4.setOnClickListener{
+        leftImage4.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
-        teaSeries5.setOnClickListener{
+        leftImage5.setOnClickListener{
             Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
         }
 
+
+
+
+
+        rightImage1.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage2.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage3.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage4.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        rightImage5.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
 
 
 

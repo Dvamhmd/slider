@@ -27,6 +27,9 @@
         android:textSize="@dimen/_11ssp"
         android:textColor="@color/text_main"
         android:layout_gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:fontFamily="@font/dmsans_medium" />
 
 </LinearLayout>
