@@ -1,6 +1,7 @@
 package com.example.dots.category
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -11,6 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.example.dots.R
+import com.example.dots.activityLoginTrue.DetailProductInActivity
 import java.text.NumberFormat
 import java.util.Locale
 
@@ -127,8 +129,81 @@ class YakultSeries : AppCompatActivity() {
 
 
 
+
+
+        leftImage1.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ys_stw_core)
+            intent.putExtra("HARGA_PRODUK", priceYakultSeries)
+            intent.putExtra("NAMA_PRODUK", R.string.yakult_strawberry)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ys_strawberry_desc)
+
+            startActivity(intent)
+        }
+
+        leftImage2.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ys_mango_core)
+            intent.putExtra("HARGA_PRODUK", priceYakultSeries)
+            intent.putExtra("NAMA_PRODUK", R.string.yakult_mango)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ys_mango_desc)
+
+            startActivity(intent)
+        }
+
+        leftImage3.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ys_orange_core)
+            intent.putExtra("HARGA_PRODUK", priceYakultSeries)
+            intent.putExtra("NAMA_PRODUK", R.string.yakult_orange)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ys_orange_desc)
+
+            startActivity(intent)
+        }
+
+
+
+
+
+
+
+
+        rightImage1.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ys_grape_core)
+            intent.putExtra("HARGA_PRODUK", priceYakultSeries)
+            intent.putExtra("NAMA_PRODUK", R.string.yakult_grape)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ys_grape_desc)
+
+            startActivity(intent)
+        }
+
+        rightImage2.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ys_lychee_core)
+            intent.putExtra("HARGA_PRODUK", priceYakultSeries)
+            intent.putExtra("NAMA_PRODUK", R.string.yakult_lychee)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ys_lychee_desc)
+
+            startActivity(intent)
+        }
+
+        rightImage3.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ys_melon_core)
+            intent.putExtra("HARGA_PRODUK", priceYakultSeries)
+            intent.putExtra("NAMA_PRODUK", R.string.yakult_melon)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ys_melon_desc)
+
+            startActivity(intent)
+        }
+
     }
-
-
 
 }

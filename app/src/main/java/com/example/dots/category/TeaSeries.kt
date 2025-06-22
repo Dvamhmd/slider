@@ -1,5 +1,6 @@
 package com.example.dots.category
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -10,6 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.example.dots.R
+import com.example.dots.activityLoginTrue.DetailProductInActivity
 import java.text.NumberFormat
 import java.util.Locale
 
@@ -162,6 +164,126 @@ class TeaSeries : AppCompatActivity() {
         priceRight3.text = formatter.format(priceFlavouredTea)
         priceRight4.text = formatter.format(priceFlavouredTea)
         priceRight5.text = formatter.format(priceFlavouredTea)
+
+
+
+
+        leftImage1.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_jasmine_core)
+            intent.putExtra("HARGA_PRODUK", priceJasmineTea)
+            intent.putExtra("NAMA_PRODUK", R.string.jasmine_tea)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ts_jasmine_desc)
+
+            startActivity(intent)
+        }
+
+        leftImage2.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_tarik_core)
+            intent.putExtra("HARGA_PRODUK", priceTarikTea)
+            intent.putExtra("NAMA_PRODUK", R.string.tea_tarik)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ts_tehtarik_desc)
+
+            startActivity(intent)
+        }
+
+        leftImage3.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_lemon_core)
+            intent.putExtra("HARGA_PRODUK", priceFlavouredTea)
+            intent.putExtra("NAMA_PRODUK", R.string.lemon_tea)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ts_lemon_desc)
+
+            startActivity(intent)
+        }
+
+        leftImage4.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_grape_core)
+            intent.putExtra("HARGA_PRODUK", priceFlavouredTea)
+            intent.putExtra("NAMA_PRODUK", R.string.grape_tea)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ts_grape_desc)
+
+            startActivity(intent)
+        }
+
+        leftImage5.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_stw_core)
+            intent.putExtra("HARGA_PRODUK", priceFlavouredTea)
+            intent.putExtra("NAMA_PRODUK", R.string.strawberry_tea)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ts_strawberry_desc)
+
+            startActivity(intent)
+        }
+
+
+
+
+
+
+
+
+        rightImage1.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_markisa_core)
+            intent.putExtra("HARGA_PRODUK", priceFlavouredTea)
+            intent.putExtra("NAMA_PRODUK", R.string.markisa_tea)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ts_markisa_desc)
+
+            startActivity(intent)
+        }
+
+        rightImage2.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_lychee_core)
+            intent.putExtra("HARGA_PRODUK", priceFlavouredTea)
+            intent.putExtra("NAMA_PRODUK", R.string.lychee_tea)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ts_leci_desc)
+
+            startActivity(intent)
+        }
+
+        rightImage3.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_mango_core)
+            intent.putExtra("HARGA_PRODUK", priceFlavouredTea)
+            intent.putExtra("NAMA_PRODUK", R.string.mango_tea)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ts_mango_desc)
+
+            startActivity(intent)
+        }
+
+        rightImage4.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_melon_core)
+            intent.putExtra("HARGA_PRODUK", priceFlavouredTea)
+            intent.putExtra("NAMA_PRODUK", R.string.melon_tea)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ts_melon_desc)
+
+            startActivity(intent)
+        }
+
+        rightImage5.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_apple_core)
+            intent.putExtra("HARGA_PRODUK", priceFlavouredTea)
+            intent.putExtra("NAMA_PRODUK", R.string.apple_tea)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ts_apple_desc)
+
+            startActivity(intent)
+        }
 
 
 

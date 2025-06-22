@@ -113,13 +113,19 @@
     <string name="melon_tea">Melon Tea</string>
     <string name="apple_tea">Apple Tea</string>
     <string name="choco_oreo_creamy">Choco Oreo\nCreamy</string>
+    <string name="choco_oreo_creamy2">Choco Oreo Creamy</string>
     <string name="caramel_creamy">Choco Caramel\nCreamy</string>
+    <string name="caramel_creamy2">Choco Caramel Creamy</string>
     <string name="avocado_creamy">Avocado Creamy</string>
     <string name="red_velvet_creamy">Red Velvet Creamy</string>
     <string name="royal_choco_creamy">Royal Choco\nCreamy</string>
+    <string name="royal_choco_creamy2">Royal Choco Creamy</string>
     <string name="blackcurrant_creamy">Blackcurrant\nCreamy</string>
+    <string name="blackcurrant_creamy2">Blackcurrant Creamy</string>
     <string name="bubble_gum_creamy">Bubble Gum\nCreamy</string>
+    <string name="bubble_gum_creamy2">Bubble Gum Creamy</string>
     <string name="silverqueen_creamy">Silverqueen\nCreamy</string>
+    <string name="silverqueen_creamy2">Silverqueen Creamy</string>
     <string name="strawberry_squash">Strawbery Squash</string>
     <string name="orange_squash">Orange Squash</string>
     <string name="lychee_squash">Lychee Squash</string>
@@ -174,6 +180,37 @@
     <string name="tt_oreo_desc">Thai tea yang creamy dipaduin sama taburan Oreo crunchy di setiap tegukan. Bikin tiap seruput berasa dapet bonus ngemil!</string>
     <string name="tt_choco_desc">Perpaduan antara teh Thailand yang khas dan cokelat premium menciptakan rasa baru yang kaya, manis, dan super comforting.</string>
     <string name="tt_machiatto_desc">Teh Thailand creamy dengan topping foam macchiato yang lembut dan gurih. Rasanya balance antara manis dan sedikit asin, cocok buat kamu yang suka minuman dengan depth rasa.</string>
+
+    <string name="ts_jasmine_desc">Teh melati dengan aroma bunga yang menenangkan dan rasa teh yang lembut di lidah. Cocok dinikmati saat ingin relaks, memberi ketenangan dalam setiap tegukan dan bikin pikiran adem kayak pagi di pegunungan.</string>
+    <string name="ts_tehtarik_desc">Kombinasi teh hitam pekat dan susu creamy ala mamak-mamak Malaysia, disajikan dengan manis pas dan buih lembut di atasnya. Rasanya kaya dan memuaskan, sempurna untuk pencinta teh manis nan creamy.</string>
+    <string name="ts_lemon_desc">Perpaduan rasa asam segar dari lemon dengan teh pilihan menciptakan minuman yang menyegarkan dan bikin melek. Cocok banget buat nemenin siang panas atau recharge energi setelah aktivitas padat.</string>
+    <string name="ts_grape_desc">Teh dengan cita rasa anggur manis dan aroma buah yang menggoda. Cocok buat kamu yang suka rasa unik tapi tetap ringan. Manisnya pas, segarnya dapet, bikin gak cukup cuma satu gelas!</string>
+    <string name="ts_strawberry_desc">Rasakan manis dan sedikit asam dari buah stroberi segar yang menyatu sempurna dengan teh yang menenangkan. Ideal untuk kamu yang suka minuman dengan karakter ceria dan menyegarkan.</string>
+    <string name="ts_markisa_desc">Teh markisa yang eksotis dengan rasa asam-manis yang khas, pas banget buat kamu yang suka rasa tropical yang beda. Setiap seruputannya bikin seger, cocok buat penghilang penat di tengah kesibukan.</string>
+    <string name="ts_leci_desc">Kombinasi lembut antara teh pilihan dan rasa leci yang elegan. Memberikan pengalaman minum teh yang manis, harum, dan classy. Pas banget buat kamu yang suka vibe calm tapi tetap fancy.</string>
+    <string name="ts_mango_desc">Manis segarnya mangga tropis dipadukan dengan teh yang ringan menjadikan minuman ini favorit semua kalangan. Aromanya wangi, rasanya menyenangkan, cocok dinikmati kapan pun dan di mana pun.</string>
+    <string name="ts_melon_desc">Teh dengan rasa melon yang manis, segar, dan aromatik. Cocok banget buat teman ngemil atau nugas. Rasanya ringan tapi ngena, kayak senyuman gebetan — bikin nagih terus!</string>
+    <string name="ts_apple_desc">Teh apel yang menyegarkan dengan aroma khas buah apel segar, memberikan sensasi ringan dan natural. Cocok untuk kamu yang suka rasa fruity tapi tetap kalem, pas buat nemenin hari santaimu.</string>
+
+    <string name="ms_choco_oreo_desc">Perpaduan cokelat creamy dan remahan Oreo renyah yang meleleh di mulut. Milky vibes-nya dapet banget, bikin tiap tegukan serasa ngemil cokelat sambil ngopi santai di café hits!</string>
+    <string name="ms_choco_caramel_desc">Cokelat manis yang lembut disiram dengan rasa caramel gurih, menciptakan perpaduan yang super indulgent. Kayak minum pelukan hangat—comforting dan bikin jatuh cinta dari seruput pertama.</string>
+    <string name="ms_bubble_gum_desc">Minuman dengan rasa permen karet khas yang playful dan nostalgic. Manis, wangi, dan bikin mood auto good! Cocok buat kamu yang fun, ceria, dan nggak suka yang biasa-biasa aja.</string>
+    <string name="ms_avocado_desc">Rasa alpukat creamy yang khas berpadu dengan susu manis yang halus. Kaya rasa, lembut di lidah, dan pastinya bikin kenyang plus senang! Cocok buat kamu yang suka rasa klasik tapi tetap spesial.</string>
+    <string name="ms_red_velvet_desc">Perpaduan elegan antara susu dan rasa red velvet yang lembut, manis, dan berkelas. Warnanya cantik, rasanya pun mewah. Tiap seruput bikin kamu ngerasa fancy — like a royal!</string>
+    <string name="ms_royal_choco_desc">Cokelat premium dengan rasa rich dan tekstur creamy yang memanjakan lidah. Minuman ini diciptakan buat choco lovers sejati yang gak main-main soal kenikmatan. Royal taste in every sip!</string>
+    <string name="ms_silver_queen_desc">Gabungan susu milky dan potongan cokelat SilverQueen yang legit dan lumer. Sensasi nyoklat yang crunchy dan lembut sekaligus — minuman + cemilan dalam satu gelas!</string>
+    <string name="ms_blackcurrant_desc">Rasa unik dari buah blackcurrant yang manis-asam, berpadu dengan susu creamy bikin minuman ini standout banget. Segar tapi tetap lembut — cocok buat yang suka eksplor rasa beda.</string>
+    <string name="ms_matcha_desc">Matcha otentik dari Jepang yang earthy dan sedikit pahit, berpadu manis dengan susu kental nan lembut. Cocok buat kamu pecinta matcha sejati yang suka rasa calm tapi dalam.</string>
+    <string name="ms_taro_desc">Rasa talas khas taro yang manis dan wangi banget, dikombinasi dengan susu lembut yang creamy. Warnanya ungu, rasanya dreamy — mood booster banget buat hari kamu yang sibuk!</string>
+
+    <string name="ys_strawberry_desc">Perpaduan rasa manis-asam stroberi segar dengan Yakult yang khas. Rasanya ringan, nyegerin, dan bikin suasana hati auto cerah. Cocok banget buat nemenin hari sibuk kamu!</string>
+    <string name="ys_mango_desc">Yakult berpadu dengan mangga tropis yang juicy dan manis alami. Minuman ini punya rasa yang seimbang antara segar, creamy, dan fruity. Gak cuma enak, tapi juga bikin fresh!</string>
+    <string name="ys_orange_desc">Yakult jeruk dengan rasa citrus yang segar dan sedikit asam — bikin mata melek dan mulut senang. Sensasi Yakult-nya bikin badan seger dan perut adem, cocok diminum kapan aja!</string>
+    <string name="ys_grape_desc">Yakult dengan sentuhan rasa anggur manis yang khas. Rasanya unik, sedikit asam tapi tetap smooth. Cocok buat kamu yang pengen minuman beda dari yang lain tapi tetap fun!</string>
+    <string name="ys_lychee_desc">Yakult leci yang manis dan aromatik, memberikan sensasi menyegarkan yang classy. Tiap tegukan rasanya elegan tapi tetap playful — pas banget buat siang hari yang panas!</string>
+    <string name="ys_melon_desc">Melon segar bertemu Yakult dalam satu cup yang penuh kesegaran. Manis, creamy, dan sejuk di tenggorokan. Minuman andalan buat ngilangin penat dan boost semangatmu!</string>
+
+
 
 
 </resources>
