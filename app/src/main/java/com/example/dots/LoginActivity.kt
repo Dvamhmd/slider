@@ -3,6 +3,7 @@ package com.example.dots
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -35,6 +36,7 @@ class LoginActivity : AppCompatActivity() {
 
 
         val goToHome = findViewById<Button>(R.id.login)
+        val signUp = findViewById<TextView>(R.id.signUp)
 
         goToHome.setOnClickListener{
             val username = usernameInput.text.toString()
@@ -59,18 +61,12 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Kolom tidak boleh kosong!", Toast.LENGTH_SHORT).show()
 
             }
-
-
-
-
-
-
-
-
-
         }
 
-
+        signUp.setOnClickListener{
+            val intent = Intent(this, CreateAccountActivity::class.java)
+            startActivity(intent)
+        }
 
 
 

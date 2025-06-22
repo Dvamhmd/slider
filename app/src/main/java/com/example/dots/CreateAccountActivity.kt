@@ -1,6 +1,8 @@
 package com.example.dots
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,6 +22,13 @@ class CreateAccountActivity : AppCompatActivity() {
 
         val windowInsetsController = WindowInsetsControllerCompat(window, window.decorView)
         windowInsetsController.isAppearanceLightStatusBars = true
+
+        val gotoLogin = findViewById<TextView>(R.id.go_to_login)
+
+        gotoLogin.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 }
