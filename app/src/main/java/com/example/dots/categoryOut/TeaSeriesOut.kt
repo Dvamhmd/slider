@@ -1,16 +1,15 @@
 package com.example.dots.categoryOut
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import com.example.dots.HomeActivityLogOut
 import com.example.dots.R
 import java.text.NumberFormat
 import java.util.Locale
@@ -32,8 +31,7 @@ class TeaSeriesOut : AppCompatActivity() {
         val back = findViewById<ImageView>(R.id.back)
 
         back.setOnClickListener{
-            val intent = Intent(this, HomeActivityLogOut::class.java)
-            startActivity(intent)
+            onBackPressedDispatcher.onBackPressed()
             finish()
         }
 
@@ -165,6 +163,31 @@ class TeaSeriesOut : AppCompatActivity() {
         priceRight3.text = formatter.format(priceFlavouredTea)
         priceRight4.text = formatter.format(priceFlavouredTea)
         priceRight5.text = formatter.format(priceFlavouredTea)
+
+
+
+        teaSeries1.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        teaSeries2.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        teaSeries3.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        teaSeries4.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        teaSeries5.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+
+
 
     }
 }

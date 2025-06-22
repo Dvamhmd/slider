@@ -8,22 +8,24 @@
     android:orientation="horizontal">
 
 
-
-
     <androidx.cardview.widget.CardView
         android:id="@+id/itemLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:cardElevation="0dp"
-        app:cardBackgroundColor="@color/white"
+        android:layout_marginStart="@dimen/_8sdp"
         android:layout_marginEnd="@dimen/_16sdp"
-        android:layout_marginStart="@dimen/_8sdp">
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="0dp"
+        tools:ignore="DuplicateSpeakableTextCheck">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/productImage_left"
@@ -37,43 +39,43 @@
                 android:id="@+id/productTitle_left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/jasmine_tea"
-                android:textSize="@dimen/_14ssp"
-                android:textColor="@color/text_main"
+                android:layout_marginTop="@dimen/_4sdp"
                 android:fontFamily="@font/dmsans_medium"
-                android:layout_marginTop="@dimen/_4sdp"/>
+                android:text="@string/jasmine_tea"
+                android:textColor="@color/text_main"
+                android:textSize="@dimen/_14ssp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="@dimen/_4sdp">
+                android:layout_marginTop="@dimen/_4sdp"
+                android:orientation="horizontal">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/rp"
-                    android:textSize="@dimen/_11ssp"
-                    android:textColor="@color/text_red"
+                    android:layout_marginEnd="@dimen/_4sdp"
                     android:fontFamily="@font/dmsans_medium"
-                    android:layout_marginEnd="@dimen/_4sdp"/>
+                    android:text="@string/rp"
+                    android:textColor="@color/text_red"
+                    android:textSize="@dimen/_11ssp" />
 
                 <TextView
                     android:id="@+id/productPrice_left"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/price"
-                    android:textSize="@dimen/_11ssp"
-                    android:textColor="@color/text_red"
+                    android:layout_weight="1"
                     android:fontFamily="@font/dmsans_medium"
-                    android:layout_weight="1"/>
+                    android:text="@string/price"
+                    android:textColor="@color/text_red"
+                    android:textSize="@dimen/_11ssp" />
 
                 <View
                     android:layout_width="@dimen/_2sdp"
                     android:layout_height="@dimen/_2sdp"
                     android:layout_gravity="center"
-                    android:background="@drawable/rounded"
-                    android:layout_marginEnd="@dimen/_10sdp"/>
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/rounded" />
 
                 <TextView
                     android:id="@+id/productStock_left"
@@ -84,8 +86,6 @@
                     android:textColor="@color/soft_gray"
                     android:textSize="@dimen/_11ssp"
                     tools:ignore="TextContrastCheck" />
-
-
 
 
             </LinearLayout>
@@ -105,6 +105,9 @@
         android:orientation="vertical"
         app:cardElevation="0dp"
         app:cardBackgroundColor="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
         android:layout_marginEnd="@dimen/_8sdp"
         android:layout_marginStart="@dimen/_16sdp">
 

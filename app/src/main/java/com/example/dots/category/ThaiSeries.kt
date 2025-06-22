@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.example.dots.R
-import com.example.dots.activityLoginTrue.HomeLoggedInActivity
+import com.example.dots.activityLoginTrue.DetailProductInActivity
 import java.text.NumberFormat
 import java.util.Locale
 
@@ -34,8 +34,7 @@ class ThaiSeries : AppCompatActivity() {
         val back = findViewById<ImageView>(R.id.back)
 
         back.setOnClickListener{
-            val intent = Intent(this, HomeLoggedInActivity::class.java)
-            startActivity(intent)
+            onBackPressedDispatcher.onBackPressed()
             finish()
         }
 
@@ -118,6 +117,51 @@ class ThaiSeries : AppCompatActivity() {
         //Setting Best Seller Price kanan
         priceRight1.text = formatter.format(priceThaiTeaMachiato)
         priceRight2.text = formatter.format(priceThaiTeaChoco)
+
+
+        leftImage1.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.tt_ori_core)
+            intent.putExtra("HARGA_PRODUK", priceThaiTeaOri)
+            intent.putExtra("NAMA_PRODUK", R.string.thai_tea_original)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.tt_ori_desc)
+
+            startActivity(intent)
+        }
+
+        leftImage2.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.tt_oreo_core)
+            intent.putExtra("HARGA_PRODUK", priceThaiTeaOreo)
+            intent.putExtra("NAMA_PRODUK", R.string.thai_tea_oreo)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.tt_oreo_desc)
+
+            startActivity(intent)
+        }
+
+        rightImage1.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.tt_machiatto_core)
+            intent.putExtra("HARGA_PRODUK", priceThaiTeaMachiato)
+            intent.putExtra("NAMA_PRODUK", R.string.thai_tea_macchiato)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.tt_machiatto_desc)
+
+            startActivity(intent)
+        }
+
+        rightImage2.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.tt_choco_core)
+            intent.putExtra("HARGA_PRODUK", priceThaiTeaChoco)
+            intent.putExtra("NAMA_PRODUK", R.string.thai_tea_choco)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.tt_choco_desc)
+
+            startActivity(intent)
+        }
 
 
 

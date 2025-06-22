@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.example.dots.R
-import com.example.dots.activityLoginTrue.HomeLoggedInActivity
+import com.example.dots.activityLoginTrue.DetailProductInActivity
 import java.text.NumberFormat
 import java.util.Locale
 
@@ -34,8 +34,7 @@ class SquashSeries : AppCompatActivity() {
         val back = findViewById<ImageView>(R.id.back)
 
         back.setOnClickListener{
-            val intent = Intent(this, HomeLoggedInActivity::class.java)
-            startActivity(intent)
+            onBackPressedDispatcher.onBackPressed()
             finish()
         }
 
@@ -93,9 +92,6 @@ class SquashSeries : AppCompatActivity() {
 
 
 
-
-
-
         //Setting Best Seller Title Kiri
         leftTitle1.text = getString(R.string.strawberry_squash)
         leftTitle2.text = getString(R.string.orange_squash)
@@ -116,6 +112,49 @@ class SquashSeries : AppCompatActivity() {
         priceRight1.text = formatter.format(priceSquashSeries)
         priceRight2.text = formatter.format(priceSquashSeries)
 
+        leftImage1.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ss_stw_core)
+            intent.putExtra("HARGA_PRODUK", priceSquashSeries)
+            intent.putExtra("NAMA_PRODUK", R.string.strawberry_squash)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ss_strawberry_desc)
+
+            startActivity(intent)
+        }
+
+        leftImage2.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ss_org_core)
+            intent.putExtra("HARGA_PRODUK", priceSquashSeries)
+            intent.putExtra("NAMA_PRODUK", R.string.orange_squash)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ss_orange_desc)
+
+            startActivity(intent)
+        }
+
+        rightImage1.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ss_lyche_core)
+            intent.putExtra("HARGA_PRODUK", priceSquashSeries)
+            intent.putExtra("NAMA_PRODUK", R.string.lychee_squash)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ss_lychee_desc)
+
+            startActivity(intent)
+        }
+
+        rightImage2.setOnClickListener{
+            val intent = Intent(this, DetailProductInActivity::class.java)
+
+            intent.putExtra("GAMBAR_PRODUK", R.drawable.ss_grape_core)
+            intent.putExtra("HARGA_PRODUK", priceSquashSeries)
+            intent.putExtra("NAMA_PRODUK", R.string.grape_squash)
+            intent.putExtra("DESKRIPSI_PRODUK", R.string.ss_grape_desc)
+
+            startActivity(intent)
+        }
 
 
 

@@ -159,6 +159,21 @@
     <string name="berlaku_setiap_jumat">Berlaku setiap hari Jum\'at</string>
     <string name="promo_desc_3">Nikmati hari Jumat dengan lebih berkah bareng Matcha Creamy dari Teh Idaman! Cuma dengan 15 ribu kamu udah bisa dapet 2 cup Matcha Creamy yang segar dan creamy banget.</string>
     <string name="see_all_products">See All Products</string>
+    <string name="rp_8_000">Rp. 8.000</string>
+    <string name="pesan_sekarang">Pesan Sekarang</string>
+    <string name="ss_orange_desc">Segarnya jeruk pilihan langsung menyapa lidahmu! Orange Squash ini dibuat dari ekstrak jeruk berkualitas dengan rasa manis-asam yang bikin nagih. Cocok banget diminum pas siang hari atau nemenin kerjaan. Vitamin C-nya nendang, segarnya maksimal!</string>
+    <string name="ss_strawberry_desc">Rasakan cinta pada sedotan pertama! Strawberry Squash ini punya rasa manis alami buah stroberi yang segar dan bikin mood naik drastis. Warnanya cantik, rasanya romantis. Cocok banget buat yang pengen chill atau pengen manis-manis.</string>
+    <string name="ss_grape_desc">Anggur ungu yang juicy banget, diblender dengan cita rasa asam-manis yang pas di lidah. Grape Squash ini adalah minuman para sultan wannabe—elegan, mewah, dan bikin nagih! Sekali coba</string>
+    <string name="ss_lychee_desc">Eksotis dan lembut, Lychee Squash hadir buat kamu yang pengen rasa unik nan elegan. Dingin-dingin minum ini? Fix, langsung adem hati. Kombinasi rasa manis dan aroma khas leci-nya bikin tiap tegukan nggak bisa berhenti.</string>
+    <string name="quantity">Quantity</string>
+    <string name="order_now">Pesan Sekarang</string>
+    <string name="_1_50_lbs">1.50 lbs</string>
+    <string name="_4_5">4.5</string>
+    <string name="_5_0">5.0</string>
+    <string name="tt_ori_desc">Rasakan sensasi segarnya teh hitam berpadu dengan creamy-nya susu kental manis yang bikin nagih. Cocok banget buat yang cari rasa klasik yang gak pernah salah.</string>
+    <string name="tt_oreo_desc">Thai tea yang creamy dipaduin sama taburan Oreo crunchy di setiap tegukan. Bikin tiap seruput berasa dapet bonus ngemil!</string>
+    <string name="tt_choco_desc">Perpaduan antara teh Thailand yang khas dan cokelat premium menciptakan rasa baru yang kaya, manis, dan super comforting.</string>
+    <string name="tt_machiatto_desc">Teh Thailand creamy dengan topping foam macchiato yang lembut dan gurih. Rasanya balance antara manis dan sedikit asin, cocok buat kamu yang suka minuman dengan depth rasa.</string>
 
 
 </resources>

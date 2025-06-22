@@ -1,17 +1,16 @@
 package com.example.dots.categoryOut
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.example.dots.R
-import com.example.dots.activityLoginTrue.HomeLoggedInActivity
 import java.text.NumberFormat
 import java.util.Locale
 
@@ -32,8 +31,7 @@ class SeeAllOut : AppCompatActivity() {
         val back = findViewById<ImageView>(R.id.back)
 
         back.setOnClickListener{
-            val intent = Intent(this, HomeLoggedInActivity::class.java)
-            startActivity(intent)
+            onBackPressedDispatcher.onBackPressed()
             finish()
         }
 
@@ -284,6 +282,192 @@ class SeeAllOut : AppCompatActivity() {
         rightImage15.setImageResource(R.drawable.ys_grape)
         rightImage16.setImageResource(R.drawable.ys_lychee)
         rightImage17.setImageResource(R.drawable.ys_melon)
+
+
+
+
+
+
+        leftTitle1.text = getString(R.string.jasmine_tea)
+        leftTitle2.text = getString(R.string.tea_tarik)
+        leftTitle3.text = getString(R.string.lemon_tea)
+        leftTitle4.text = getString(R.string.grape_tea)
+        leftTitle5.text = getString(R.string.strawberry_tea)
+
+        leftTitle6.text = getString(R.string.strawberry_squash)
+        leftTitle7.text = getString(R.string.orange_squash)
+
+        leftTitle8.text = getString(R.string.choco_oreo_creamy)
+        leftTitle9.text = getString(R.string.caramel_creamy)
+        leftTitle10.text = getString(R.string.bubble_gum_creamy)
+        leftTitle11.text = getString(R.string.avocado_creamy)
+        leftTitle12.text = getString(R.string.red_velvet_creamy)
+
+        leftTitle13.text = getString(R.string.thai_tea_original)
+        leftTitle14.text = getString(R.string.thai_tea_oreo)
+
+        leftTitle15.text = getString(R.string.yakult_strawberry)
+        leftTitle16.text = getString(R.string.yakult_mango)
+        leftTitle17.text = getString(R.string.yakult_orange)
+
+
+
+
+
+
+
+
+        rightTitle1.text = getString(R.string.markisa_tea)
+        rightTitle2.text = getString(R.string.lychee_tea)
+        rightTitle3.text = getString(R.string.mango_tea)
+        rightTitle4.text = getString(R.string.melon_tea)
+        rightTitle5.text = getString(R.string.apple_tea)
+
+        rightTitle6.text = getString(R.string.lychee_squash)
+        rightTitle7.text = getString(R.string.grape_squash)
+
+        rightTitle8.text = getString(R.string.royal_choco_creamy)
+        rightTitle9.text = getString(R.string.silverqueen_creamy)
+        rightTitle10.text = getString(R.string.blackcurrant_creamy)
+        rightTitle11.text = getString(R.string.matcha_creamy)
+        rightTitle12.text = getString(R.string.taro_creamy)
+
+        rightTitle13.text = getString(R.string.thai_tea_macchiato)
+        rightTitle14.text = getString(R.string.thai_tea_choco)
+
+        rightTitle15.text = getString(R.string.yakult_grape)
+        rightTitle16.text = getString(R.string.yakult_lychee)
+        rightTitle17.text = getString(R.string.yakult_melon)
+
+
+
+
+
+        //Setting Best Seller Price kiri
+        priceLeft1.text = formatter.format(priceJasmineTea)
+        priceLeft2.text = formatter.format(priceTarikTea)
+        priceLeft3.text = formatter.format(priceFlavouredTea)
+        priceLeft4.text = formatter.format(priceFlavouredTea)
+        priceLeft5.text = formatter.format(priceFlavouredTea)
+
+        priceLeft6.text = formatter.format(priceSquashSeries)
+        priceLeft7.text = formatter.format(priceSquashSeries)
+
+        priceLeft8.text = formatter.format(priceMilkySeries)
+        priceLeft9.text = formatter.format(priceMilkySeries)
+        priceLeft10.text = formatter.format(priceMilkySeries)
+        priceLeft11.text = formatter.format(priceMilkySeries)
+        priceLeft12.text = formatter.format(priceMilkySeries)
+
+        priceLeft13.text = formatter.format(priceThaiTeaOri)
+        priceLeft14.text = formatter.format(priceThaiTeaOreo)
+
+        priceLeft15.text = formatter.format(priceYakultSeries)
+        priceLeft16.text = formatter.format(priceYakultSeries)
+        priceLeft17.text = formatter.format(priceYakultSeries)
+
+
+
+
+        //Setting Best Seller Price kanan
+        priceRight1.text = formatter.format(priceFlavouredTea)
+        priceRight2.text = formatter.format(priceFlavouredTea)
+        priceRight3.text = formatter.format(priceFlavouredTea)
+        priceRight4.text = formatter.format(priceFlavouredTea)
+        priceRight5.text = formatter.format(priceFlavouredTea)
+
+        priceRight6.text = formatter.format(priceSquashSeries)
+        priceRight7.text = formatter.format(priceSquashSeries)
+
+        priceRight8.text = formatter.format(priceMilkySeries)
+        priceRight9.text = formatter.format(priceMilkySeries)
+        priceRight10.text = formatter.format(priceMilkySeries)
+        priceRight11.text = formatter.format(priceMilkySeries)
+        priceRight12.text = formatter.format(priceMilkySeries)
+
+        priceRight13.text = formatter.format(priceThaiTeaMachiato)
+        priceRight14.text = formatter.format(priceThaiTeaChoco)
+
+        priceRight15.text = formatter.format(priceYakultSeries)
+        priceRight16.text = formatter.format(priceYakultSeries)
+        priceRight17.text = formatter.format(priceYakultSeries)
+
+
+        series1.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        series2.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        series3.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        series4.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        series5.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        series6.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        series7.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        series8.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        series9.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        series10.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        series11.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        series12.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        series13.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        series14.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        series15.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        series16.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+        series17.setOnClickListener{
+            Toast.makeText(this, "Login dulu yuk! sebelum lanjut", Toast.LENGTH_SHORT).show()
+        }
+
+       
+
+
+
+
+
+
 
 
 

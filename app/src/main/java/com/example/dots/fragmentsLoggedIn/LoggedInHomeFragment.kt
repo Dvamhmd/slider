@@ -14,6 +14,7 @@ import com.example.dots.activityLoginTrue.ChatLoggedInActivity
 import com.example.dots.activityLoginTrue.SettingsLoggedInActivity
 import com.example.dots.adapter.PromoBestAdapterIn
 import com.example.dots.category.MilkySeries
+import com.example.dots.category.SeeAll
 import com.example.dots.category.SquashSeries
 import com.example.dots.category.TeaSeries
 import com.example.dots.category.ThaiSeries
@@ -86,6 +87,8 @@ class LoggedInHomeFragment : Fragment() {
         yakultSeriesImage.setImageResource(R.drawable.yakult_series)
         yakultSeriesName.text = getString(R.string.yakult_series)
 
+        //see all
+        val seeAllProducts =view.findViewById<TextView>(R.id.see_products)
 
         //navigasi tea series
         teaSeriesImage.setOnClickListener{
@@ -114,6 +117,11 @@ class LoggedInHomeFragment : Fragment() {
         //navigasi yakult series
         yakultSeriesLayout.setOnClickListener{
             val intent = Intent(requireContext(), YakultSeries::class.java)
+            startActivity(intent)
+        }
+
+        seeAllProducts.setOnClickListener{
+            val intent = Intent(requireContext(), SeeAll::class.java)
             startActivity(intent)
         }
 

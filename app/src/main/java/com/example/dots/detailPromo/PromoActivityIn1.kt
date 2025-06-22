@@ -32,8 +32,7 @@ class PromoActivityIn1 : AppCompatActivity() {
         val backToMenu = findViewById<Button>(R.id.back_to_menu)
 
         back.setOnClickListener{
-            val intent = Intent(this, HomeLoggedInActivity::class.java)
-            startActivity(intent)
+            onBackPressedDispatcher.onBackPressed()
             finish()
         }
 

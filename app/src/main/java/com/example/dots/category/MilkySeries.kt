@@ -1,6 +1,5 @@
 package com.example.dots.category
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -11,7 +10,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.example.dots.R
-import com.example.dots.activityLoginTrue.HomeLoggedInActivity
 import java.text.NumberFormat
 import java.util.Locale
 
@@ -32,8 +30,7 @@ class MilkySeries : AppCompatActivity() {
         val back = findViewById<ImageView>(R.id.back)
 
         back.setOnClickListener{
-            val intent = Intent(this, HomeLoggedInActivity::class.java)
-            startActivity(intent)
+            onBackPressedDispatcher.onBackPressed()
             finish()
         }
 
@@ -124,16 +121,16 @@ class MilkySeries : AppCompatActivity() {
         //Setting Best Seller Title Kiri
         leftTitle1.text = getString(R.string.choco_oreo_creamy)
         leftTitle2.text = getString(R.string.caramel_creamy)
-        leftTitle3.text = getString(R.string.taro_creamy)
+        leftTitle3.text = getString(R.string.bubble_gum_creamy)
         leftTitle4.text = getString(R.string.avocado_creamy)
         leftTitle5.text = getString(R.string.red_velvet_creamy)
 
         //Setting Best Seller Title Kanan
         rightTitle1.text = getString(R.string.royal_choco_creamy)
-        rightTitle2.text = getString(R.string.blackcurrant_creamy)
-        rightTitle3.text = getString(R.string.bubble_gum_creamy)
-        rightTitle4.text = getString(R.string.silverqueen_creamy)
-        rightTitle5.text = getString(R.string.matcha_creamy)
+        rightTitle2.text = getString(R.string.silverqueen_creamy)
+        rightTitle3.text = getString(R.string.blackcurrant_creamy)
+        rightTitle4.text = getString(R.string.matcha_creamy)
+        rightTitle5.text = getString(R.string.taro_creamy)
 
 
 

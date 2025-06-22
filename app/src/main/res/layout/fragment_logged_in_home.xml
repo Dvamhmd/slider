@@ -213,6 +213,7 @@
                             android:textColor="@color/text_main"/>
 
                         <TextView
+                            android:id="@+id/see_products"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"

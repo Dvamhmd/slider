@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Dots"
         tools:targetApi="31">
         <activity
+            android:name=".activityLoginTrue.DetailProductInActivity"
+            android:exported="false" />
+        <activity
             android:name=".categoryOut.SeeAllOut"
             android:exported="false" />
         <activity
