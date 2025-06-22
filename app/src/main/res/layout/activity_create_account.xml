@@ -249,7 +249,10 @@
                 android:text="@string/log_in"
                 android:textColor="@color/text_main"
                 android:textSize="@dimen/_12ssp"
-                android:fontFamily="@font/montserrat_bold"/>
+                android:fontFamily="@font/montserrat_bold"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"/>
 
 
 
