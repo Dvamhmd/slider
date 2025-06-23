@@ -19,7 +19,11 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "API_BASE_URL", "\"https://sharp-sheep-gladly.ngrok-free.app/tehidaman/api/\"")
+        }
         release {
+            buildConfigField("String", "API_BASE_URL", "\"https://sharp-sheep-gladly.ngrok-free.app/tehidaman/api/\"")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -32,6 +36,7 @@ android {
         viewBinding = true
         //noinspection DataBindingWithoutKapt
         dataBinding = true
+        buildConfig = true
     }
 
 
@@ -66,6 +71,17 @@ dependencies {
     //ios switch
     implementation(libs.switch.button)
 
+    // Retrofit untuk Networking
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
+
+    // Coroutines untuk menjalankan network call
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+
+    // Midtrans Mobile SDK v2
+    implementation(libs.uikit)
 
 
 

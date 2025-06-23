@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dots.R
 import com.example.dots.adapter.ChatAdapter
-import com.example.dots.dataClass.ChatItem
+import com.example.dots.models.ChatItem
 
 class ChatLoggedInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
