@@ -68,16 +68,15 @@
             android:exported="false" />
         <activity
             android:name=".fragmentsLoggedIn.LoggedInProfilFragment"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".activityLoginTrue.HomeLoggedInActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
-        <activity
-            android:name=".fragmentsSlider.LoginActivity"
-            android:exported="false" />
+
         <activity
             android:name=".LoginPleaseActivity"
             android:exported="false" />
