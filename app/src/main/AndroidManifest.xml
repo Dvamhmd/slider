@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Dots"
         tools:targetApi="31">
         <activity
+            android:name=".activityLoginTrue.EditProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".activityLoginTrue.DetailProductInActivity"
             android:exported="false" />
         <activity
@@ -76,14 +79,13 @@
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
-
         <activity
             android:name=".LoginPleaseActivity"
             android:exported="false" />
         <activity
             android:name=".CreateAccountActivity"
-            android:windowSoftInputMode="adjustPan"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".HomeActivityLogOut"
             android:exported="false" />

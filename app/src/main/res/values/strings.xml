@@ -209,8 +209,7 @@
     <string name="ys_grape_desc">Yakult dengan sentuhan rasa anggur manis yang khas. Rasanya unik, sedikit asam tapi tetap smooth. Cocok buat kamu yang pengen minuman beda dari yang lain tapi tetap fun!</string>
     <string name="ys_lychee_desc">Yakult leci yang manis dan aromatik, memberikan sensasi menyegarkan yang classy. Tiap tegukan rasanya elegan tapi tetap playful — pas banget buat siang hari yang panas!</string>
     <string name="ys_melon_desc">Melon segar bertemu Yakult dalam satu cup yang penuh kesegaran. Manis, creamy, dan sejuk di tenggorokan. Minuman andalan buat ngilangin penat dan boost semangatmu!</string>
-
-
+    <string name="edit_personal_details">Edit personal details</string>
 
 
 </resources>

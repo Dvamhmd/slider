@@ -130,6 +130,9 @@ class LoggedInHomeFragment : Fragment() {
 
 
 
+
+
+
         viewPager = view.findViewById(R.id.viewPager)
         tabLayout = view.findViewById(R.id.tabLayout)
 
