@@ -24,7 +24,10 @@ object Network {
 
             // Ambil token dari TokenManager
             val token = TokenManager.getToken()
-            if (!token.isNullOrEmpty()) {
+            val requestUrl = chain.request().url.toString()
+
+            // Hanya sisipkan Authorization kalau bukan endpoint login/register
+            if (!requestUrl.contains("/auth/login") && !requestUrl.contains("/auth/register") && token != null) {
                 requestBuilder.addHeader("Authorization", "Bearer $token")
             }
 

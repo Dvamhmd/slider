@@ -29,6 +29,7 @@
 
         <!-- Layout Text field username -->
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/usernameLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_30sdp"
@@ -63,6 +64,7 @@
 
         <!-- Layout Text field password -->
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_16sdp"
@@ -172,6 +174,14 @@
 
 
 
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/_48sdp"
+            android:layout_height="@dimen/_48sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:visibility="gone"
+            style="?android:attr/progressBarStyleLarge" />
 
 
 
