@@ -4,10 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.ProgressBar
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,6 +15,8 @@ import com.example.dots.activityLoginTrue.HomeLoggedInActivity
 import com.example.dots.viewmodel.LoginViewModel
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import org.json.JSONObject
+import java.net.SocketTimeoutException
 
 class LoginActivity : AppCompatActivity() {
 
@@ -38,7 +37,6 @@ class LoginActivity : AppCompatActivity() {
         val windowInsetsController = WindowInsetsControllerCompat(window, window.decorView)
         windowInsetsController.isAppearanceLightStatusBars = true
 
-        // Inisialisasi ViewModel
         viewModel = ViewModelProvider(this)[LoginViewModel::class.java]
 
         val usernameLayout = findViewById<TextInputLayout>(R.id.usernameLayout)
@@ -48,20 +46,16 @@ class LoginActivity : AppCompatActivity() {
         val passwordInput = findViewById<TextInputEditText>(R.id.passwordInput)
         val signUp = findViewById<TextView>(R.id.signUp)
         val goToHome = findViewById<Button>(R.id.login)
+        val loadingOverlay = findViewById<FrameLayout>(R.id.loadingOverlay)
 
-        val progressBar = findViewById<ProgressBar>(R.id.progressBar)
 
-
-        // Tombol daftar
         signUp.setOnClickListener {
-            val intent = Intent(this, CreateAccountActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, CreateAccountActivity::class.java))
             finish()
         }
 
-        // Observasi hasil login
         viewModel.loginResult.observe(this) { result ->
-            progressBar.visibility = View.GONE
+            loadingOverlay.visibility = View.GONE
             goToHome.isEnabled = true
 
             result.onSuccess {
@@ -69,57 +63,59 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(Intent(this, HomeLoggedInActivity::class.java))
                 finish()
             }.onFailure { e ->
-                val errorMsg = when (e) {
+                when (e) {
                     is retrofit2.HttpException -> {
                         try {
                             val errorBody = e.response()?.errorBody()?.string()
-                            val json = org.json.JSONObject(errorBody ?: "{}")
+                            val json = JSONObject(errorBody ?: "{}")
                             val message = json.getString("message")
 
                             when (message.lowercase()) {
-                                "akun tidak ditemukan." -> {
-                                    usernameLayout.error = message
-                                }
-                                "password salah." -> {
-                                    passwordLayout.error = message
-                                }
-                                else -> {
-                                    Toast.makeText(this, "Login gagal: $message", Toast.LENGTH_SHORT).show()
-                                }
+                                "akun tidak ditemukan." -> usernameLayout.error = message
+                                "password salah." -> passwordLayout.error = message
+                                else -> Toast.makeText(this, "Login gagal: $message", Toast.LENGTH_SHORT).show()
                             }
-
-                            message
                         } catch (ex: Exception) {
-                            "Terjadi kesalahan. [${e.code()}]"
+                            Toast.makeText(this, "Kesalahan server: [${e.code()}]", Toast.LENGTH_SHORT).show()
                         }
                     }
+                    is SocketTimeoutException -> {
+                        Toast.makeText(this, "Timeout: Server tidak merespon dalam 10 detik", Toast.LENGTH_SHORT).show()
+                    }
                     else -> {
-                        "Gagal terhubung ke server: ${e.localizedMessage}"
+                        Toast.makeText(this, "Gagal terhubung ke server: ${e.localizedMessage}", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
         }
 
-
-        // Tombol login
         goToHome.setOnClickListener {
             val login = usernameInput.text.toString()
             val password = passwordInput.text.toString()
 
-            if (login.isNotEmpty() && password.isNotEmpty()) {
-                if (login == "ilmu" && password == "1736"){
-                    val intent = Intent(this, HomeLoggedInActivity::class.java)
-                    startActivity(intent)
-                    finish()
-                }
-                usernameLayout.error = null
-                passwordLayout.error = null
-                goToHome.isEnabled = false
-                progressBar.visibility = View.VISIBLE
-                viewModel.login(login, password)
-            } else {
-                Toast.makeText(this, "Kolom tidak boleh kosong!", Toast.LENGTH_SHORT).show()
+            usernameLayout.error = null
+            passwordLayout.error = null
+
+            if (login.isEmpty()) {
+                usernameLayout.error = "Wajib diisi"
+                return@setOnClickListener
             }
+
+            if (password.isEmpty()) {
+                passwordLayout.error = "Wajib diisi"
+                return@setOnClickListener
+            }
+
+            if (login == "ilmu" && password == "1736"){
+                Toast.makeText(this, "Login berhasil. Selamat datang", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, HomeLoggedInActivity::class.java))
+                finish()
+            }
+
+            goToHome.isEnabled = false
+            loadingOverlay.visibility = View.VISIBLE
+
+            viewModel.login(login, password)
         }
     }
 }
