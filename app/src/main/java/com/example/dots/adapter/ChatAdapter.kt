@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.dots.dataClass.ChatItem
+import com.example.dots.models.ChatItem
 import com.example.dots.R
 
 

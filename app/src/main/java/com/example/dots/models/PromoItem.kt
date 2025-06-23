@@ -1,4 +1,4 @@
-package com.example.dots.dataClass
+package com.example.dots.models
 
 
 data class PromoItem(
