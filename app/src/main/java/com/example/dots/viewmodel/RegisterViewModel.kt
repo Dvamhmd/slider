@@ -22,21 +22,21 @@ class RegisterViewModel(private val repository: UserRepository) : ViewModel() {
         viewModelScope.launch {
             try {
                 val result = repository.register(data)
-                Log.d("RegisterViewModel", "result: $result")
+                Log.d("RegisterViewModel 1", "result: $result")
                 _registerResult.value = result
             } catch (e: HttpException) {
                 val errorBodyStr = e.response()?.errorBody()?.string()
-                Log.d("RegisterViewModel", "errorBody: $errorBodyStr") // Log isi JSON
+                Log.d("RegisterViewModel 2", "errorBody: $errorBodyStr") // Log isi JSON
 
                 val errors = mutableMapOf<String, String>()
 
                 if (!errorBodyStr.isNullOrEmpty()) {
                     try {
                         val json = JSONObject(errorBodyStr)
-                        Log.d("RegisterViewModel", "full json: $json")
+                        Log.d("RegisterViewModel 3", "full json: $json")
                         if (json.has("errors")) {
                             val fieldErrors = json.getJSONObject("errors")
-                            Log.d("RegisterViewModel", "fieldErrors: $fieldErrors")
+                            Log.d("RegisterViewModel 4", "fieldErrors: $fieldErrors")
                             val keys = fieldErrors.keys()
 
                             while (keys.hasNext()) {
@@ -49,10 +49,10 @@ class RegisterViewModel(private val repository: UserRepository) : ViewModel() {
                             return@launch
                         }
                     } catch (ex: Exception) {
-                        Log.e("RegisterViewModel", "Parsing error: ${ex.message}")
+                        Log.e("RegisterViewModel 5", "Parsing error: ${ex.message}")
                     }
                 }
-
+                Log.e("RegisterViewModel 6", "log: $e")
                 _registerResult.value = Result.failure(e)
             }
 
