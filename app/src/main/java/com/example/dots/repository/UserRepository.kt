@@ -36,16 +36,21 @@ class UserRepository(private val context: Context) {
             try {
                 val response = api.register(data)
                 if (response.isSuccessful) {
-                    response.body()?.data?.token?.let { TokenManager.saveToken(it) }
+                    response.body()?.token?.let { TokenManager.saveToken(it) }
                     Result.success(response.body()!!)
                 } else {
-                    Result.failure(HttpException(response))
+                    // Ambil error response JSON
+                    val errorJson = response.errorBody()?.string()
+                    throw HttpException(response.apply {
+                        errorBody()?.close()
+                    }) // tetap lempar untuk ViewModel handle
                 }
             } catch (e: Exception) {
                 Result.failure(e)
             }
         }
     }
+
 
     fun logout() {
         TokenManager.clearToken()

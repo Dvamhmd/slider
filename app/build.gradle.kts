@@ -84,6 +84,8 @@ dependencies {
     implementation(libs.uikit)
 
 
+    //lottie loading animation
+    implementation(libs.lottie)
 
 
     testImplementation(libs.junit)
