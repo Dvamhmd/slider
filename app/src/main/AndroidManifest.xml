@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Dots"
         tools:targetApi="31">
         <activity
+            android:name=".activityLoginTrue.OrderTypeActivity"
+            android:exported="false" />
+        <activity
             android:name=".activityLoginTrue.EditProfileActivity"
             android:exported="false" />
         <activity
