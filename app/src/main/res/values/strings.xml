@@ -1,16 +1,16 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name" tools:ignore="MissingTranslation">Teh Idaman</string>
+    <string name="app_name" tools:ignore="MissingTranslation,Typos">Teh Idaman</string>
     <string name="selamat_datang" tools:ignore="MissingTranslation">Selamat Datang</string>
     <string name="image_slider" tools:ignore="MissingTranslation">image slider</string>
 
     <string name="hello_blank_fragment" tools:ignore="MissingTranslation">Hello blank fragment</string>
     <string name="skip" tools:ignore="MissingTranslation">Skip</string>
-    <string name="slider1_description" tools:ignore="MissingTranslation">Pilih minuman teh kesukanmu dengan berbagai varian rasa dan jadikan hari mu menyenangkan</string>
+    <string name="slider1_description" tools:ignore="MissingTranslation,Typos">Pilih minuman teh kesukanmu dengan berbagai varian rasa dan jadikan hari mu menyenangkan</string>
     <string name="choose_product" tools:ignore="MissingTranslation">Choose Product</string>
     <string name="make_payment" tools:ignore="MissingTranslation">Make Payment</string>
     <string name="slider2_description" tools:ignore="MissingTranslation">Lalukan pembayaran dengan mudah dan cepat serta tidak khawatir uang cashmu akan habis</string>
     <string name="get_your_order" tools:ignore="MissingTranslation">Get Your Order</string>
-    <string name="slider3_description" tools:ignore="MissingTranslation">Pesanan anda hanya datang dan nikmati dengan kesegaran Teh Idaman yang ngalahin teh pucuk</string>
+    <string name="slider3_description" tools:ignore="MissingTranslation,Typos">Pesanan anda hanya datang dan nikmati dengan kesegaran Teh Idaman yang ngalahin teh pucuk</string>
     <string name="next" tools:ignore="MissingTranslation">Next</string>
     <string name="prev" tools:ignore="MissingTranslation">Prev</string>
     <string name="get_started" tools:ignore="MissingTranslation">Get Started</string>
@@ -19,78 +19,78 @@
     <string name="icon" tools:ignore="MissingTranslation">icon</string>
     <string name="delivery_to" tools:ignore="MissingTranslation">Delivery to</string>
     <string name="select_address" tools:ignore="MissingTranslation">Mau diantar kemana nih??</string>
-    <string name="mau_yang_seger_ketik_aja">Mau yang seger? Ketik aja!</string>
+    <string name="mau_yang_seger_ketik_aja" tools:ignore="MissingTranslation">Mau yang seger? Ketik aja!</string>
     <string name="address" tools:ignore="MissingTranslation">Mau diantar kemana nih??</string>
     <string name="search" tools:ignore="MissingTranslation">Mau yang seger? Ketik aja!</string>
-    <string name="category">Category</string>
+    <string name="category" tools:ignore="MissingTranslation">Category</string>
     <string name="see_all" tools:ignore="MissingTranslation">See all</string>
-    <string name="image">image</string>
-    <string name="tea_series">Tea Series</string>
-    <string name="squash_series">Squash Series</string>
-    <string name="thai_series">Thai Series</string>
-    <string name="yakult_series">Yakult Series</string>
-    <string name="milky_series">Milky Series</string>
-    <string name="favorit">Favorit</string>
-    <string name="judul_promo">Judul Promo</string>
-    <string name="deskripsi_promo">deskripsi promo</string>
-    <string name="yuk_coba">Yuk! coba</string>
-    <string name="promo_title1">Diskon 5.5 Gila-Gilaan</string>
-    <string name="promo_title2">Promo Spesial Pancasila</string>
-    <string name="promo_title3">Promo Jum\'at Berkah</string>
-    <string name="promo_desc1">Berlaku tanggal 05-06 Mei 2025</string>
-    <string name="promo_desc2" tools:ignore="TypographyDashes">Berlaku tanggal 19-21 Mei 2025</string>
-    <string name="promo_desc3">Berlaku setiap hari Jum\'at</string>
-    <string name="jasmine_tea">Jasmine Tea</string>
-    <string name="rp">Rp.</string>
-    <string name="price">2.500</string>
-    <string name="stok_ada">Stok ada</string>
-    <string name="scroll">scroll</string>
-    <string name="closing">Alirkan Kedamaian\nTebarkan Kesejahteraan</string>
-    <string name="thai_tea_ori">Thai Tea Ori</string>
-    <string name="matcha_creamy">Matcha Creamy</string>
-    <string name="choco_oreo">Choco Oreo</string>
-    <string name="berry_squash">Berry Squash</string>
-    <string name="taro_creamy">Taro Creamy</string>
-    <string name="welcome_nback">Welcome\nBack!</string>
+    <string name="image" tools:ignore="MissingTranslation">image</string>
+    <string name="tea_series" tools:ignore="MissingTranslation">Tea Series</string>
+    <string name="squash_series" tools:ignore="MissingTranslation">Squash Series</string>
+    <string name="thai_series" tools:ignore="MissingTranslation">Thai Series</string>
+    <string name="yakult_series" tools:ignore="MissingTranslation">Yakult Series</string>
+    <string name="milky_series" tools:ignore="MissingTranslation">Milky Series</string>
+    <string name="favorit" tools:ignore="MissingTranslation">Favorit</string>
+    <string name="judul_promo" tools:ignore="MissingTranslation">Judul Promo</string>
+    <string name="deskripsi_promo" tools:ignore="MissingTranslation">deskripsi promo</string>
+    <string name="yuk_coba" tools:ignore="MissingTranslation">Yuk! coba</string>
+    <string name="promo_title1" tools:ignore="MissingTranslation">Diskon 5.5 Gila-Gilaan</string>
+    <string name="promo_title2" tools:ignore="MissingTranslation">Promo Spesial Pancasila</string>
+    <string name="promo_title3" tools:ignore="MissingTranslation">Promo Jum\'at Berkah</string>
+    <string name="promo_desc1" tools:ignore="MissingTranslation,TypographyDashes">Berlaku tanggal 05-06 Mei 2025</string>
+    <string name="promo_desc2" tools:ignore="MissingTranslation,TypographyDashes">Berlaku tanggal 19-21 Mei 2025</string>
+    <string name="promo_desc3" tools:ignore="MissingTranslation">Berlaku setiap hari Jum\'at</string>
+    <string name="jasmine_tea" tools:ignore="MissingTranslation">Jasmine Tea</string>
+    <string name="rp" tools:ignore="MissingTranslation">Rp.</string>
+    <string name="price" tools:ignore="MissingTranslation">2.500</string>
+    <string name="stok_ada" tools:ignore="MissingTranslation">Stok ada</string>
+    <string name="scroll" tools:ignore="MissingTranslation">scroll</string>
+    <string name="closing" tools:ignore="MissingTranslation">Alirkan Kedamaian\nTebarkan Kesejahteraan</string>
+    <string name="thai_tea_ori" tools:ignore="MissingTranslation">Thai Tea Ori</string>
+    <string name="matcha_creamy" tools:ignore="MissingTranslation">Matcha Creamy</string>
+    <string name="choco_oreo" tools:ignore="MissingTranslation">Choco Oreo</string>
+    <string name="berry_squash" tools:ignore="MissingTranslation">Berry Squash</string>
+    <string name="taro_creamy" tools:ignore="MissingTranslation">Taro Creamy</string>
+    <string name="welcome_nback" tools:ignore="MissingTranslation">Welcome\nBack!</string>
     <string name="username_or_email" tools:ignore="MissingTranslation">Username or Email</string>
-    <string name="create_an_account">Create an\naccount</string>
-    <string name="password">Password</string>
-    <string name="confirm_password">Confirm Password</string>
-    <string name="eh_kamu_belum_login_nih">Eh Kamu belum Login nih!</string>
+    <string name="create_an_account" tools:ignore="MissingTranslation">Create an\naccount</string>
+    <string name="password" tools:ignore="MissingTranslation">Password</string>
+    <string name="confirm_password" tools:ignore="MissingTranslation">Confirm Password</string>
+    <string name="eh_kamu_belum_login_nih" tools:ignore="MissingTranslation">Eh Kamu belum Login nih!</string>
     <string name="yuk_login_dulu_biar_bisa_akses_fitur_ini" translatable="false">Yuk login dulu biar bisa akses fitur ini</string>
     <string name="login" tools:ignore="MissingTranslation">Login</string>
     <string name="back" tools:ignore="MissingTranslation">Back</string>
     <string name="welcome_back" tools:ignore="MissingTranslation">Welcome\nBack!</string>
-    <string name="forgot_password">Forgot Password?</string>
-    <string name="sign_up">Sign Up</string>
+    <string name="forgot_password" tools:ignore="MissingTranslation">Forgot Password?</string>
+    <string name="sign_up" tools:ignore="MissingTranslation">Sign Up</string>
     <string name="create_an_account_2" tools:ignore="MissingTranslation">Create An Account</string>
-    <string name="add_to_favorite">Add to Favorite</string>
+    <string name="add_to_favorite" tools:ignore="MissingTranslation">Add to Favorite</string>
     <string name="favorite" tools:ignore="MissingTranslation">Favorite</string>
-    <string name="no_favorit">Belum ada Favorit</string>
-    <string name="add_now">Yuk tambahkan sekarang!</string>
-    <string name="start_shopping">Start Shopping</string>
-    <string name="shop_now">Yuk mulai belanja sekarang!</string>
-    <string name="empty_cart">Keranjangmu masih kosong</string>
-    <string name="shopping_cart">Shopping Cart</string>
-    <string name="my_order">My Order</string>
+    <string name="no_favorit" tools:ignore="MissingTranslation">Belum ada Favorit</string>
+    <string name="add_now" tools:ignore="MissingTranslation">Yuk tambahkan sekarang!</string>
+    <string name="start_shopping" tools:ignore="MissingTranslation">Start Shopping</string>
+    <string name="shop_now" tools:ignore="MissingTranslation">Yuk mulai belanja sekarang!</string>
+    <string name="empty_cart" tools:ignore="MissingTranslation">Keranjangmu masih kosong</string>
+    <string name="shopping_cart" tools:ignore="MissingTranslation">Shopping Cart</string>
+    <string name="my_order" tools:ignore="MissingTranslation">My Order</string>
     <string name="profile" tools:ignore="MissingTranslation">Profile</string>
-    <string name="settings">Settings</string>
-    <string name="fais_al_qori">Fais Al Qori</string>
+    <string name="settings" tools:ignore="MissingTranslation">Settings</string>
+    <string name="fais_al_qori" tools:ignore="MissingTranslation">Fais Al Qori</string>
     <string name="faisbisa39_gmail_com" tools:ignore="MissingTranslation">faisbisa39@gmail.com</string>
-    <string name="dark_mode">Dark Mode</string>
-    <string name="edit_profile">Edit Profile</string>
-    <string name="change_password">Change Password</string>
+    <string name="dark_mode" tools:ignore="MissingTranslation">Dark Mode</string>
+    <string name="edit_profile" tools:ignore="MissingTranslation">Edit Profile</string>
+    <string name="change_password" tools:ignore="MissingTranslation">Change Password</string>
     <string name="about_idaman" tools:ignore="MissingTranslation">About Idaman</string>
-    <string name="log_out">Log Out</string>
-    <string name="chat">Chat</string>
-    <string name="cari_chat_dengan_penjual">Cari Chat dengan penjual</string>
+    <string name="log_out" tools:ignore="MissingTranslation">Log Out</string>
+    <string name="chat" tools:ignore="MissingTranslation">Chat</string>
+    <string name="cari_chat_dengan_penjual" tools:ignore="MissingTranslation">Cari Chat dengan penjual</string>
     <string name="text_message" tools:ignore="MissingTranslation">text_message</string>
     <string name="store_name" tools:ignore="MissingTranslation">store_name</string>
     <string name="send_time" tools:ignore="MissingTranslation">09.41</string>
-    <string name="about_teh_idaman" tools:ignore="MissingTranslation">About Teh Idaman</string>
+    <string name="about_teh_idaman" tools:ignore="MissingTranslation,Typos">About Teh Idaman</string>
     <string name="about_app" tools:ignore="MissingTranslation">About App</string>
-    <string name="about_1" tools:ignore="MissingTranslation">PT Idaman Anak Bangsa berdiri sejak Agustus 2023, merupakan pelopor dan pioneer kemitraan minuman es teh cup jumbo dengan harga Rp2.500 yang berlokasi di Yogyakarta, kami menyediakan jasa kemitraan atau franchise kepada para calon mitra.</string>
-    <string name="about_2" tools:ignore="MissingTranslation"><![CDATA[Produk kemitraan yang kami tawarkan adalah “Teh Idaman” yaitu UMKM yang bergerak di segmen minuman kekinian. Tepat setahun setelah PT Idaman Anak Bangsa berdiri, terdapat lebih dari 200 mitra kami telah tersebar di beberapa provinsi seperti Yogyakarta, Jawa Tengah, Jawa Timur dan Jawa Barat.]]></string>
+    <string name="about_1" tools:ignore="MissingTranslation,Typos">PT Idaman Anak Bangsa berdiri sejak Agustus 2023, merupakan pelopor dan pioneer kemitraan minuman es teh cup jumbo dengan harga Rp2.500 yang berlokasi di Yogyakarta, kami menyediakan jasa kemitraan atau franchise kepada para calon mitra.</string>
+    <string name="about_2" tools:ignore="MissingTranslation,Typos"><![CDATA[Produk kemitraan yang kami tawarkan adalah “Teh Idaman” yaitu UMKM yang bergerak di segmen minuman kekinian. Tepat setahun setelah PT Idaman Anak Bangsa berdiri, terdapat lebih dari 200 mitra kami telah tersebar di beberapa provinsi seperti Yogyakarta, Jawa Tengah, Jawa Timur dan Jawa Barat.]]></string>
     <string name="about_3" tools:ignore="MissingTranslation">If you need help or you have any questions, feel free to contact me by email.</string>
     <string name="marketing_tehidaman_gmail_com" tools:ignore="MissingTranslation">marketing.tehidaman@gmail.com</string>
     <string name="email" tools:ignore="MissingTranslation">Email</string>
@@ -99,117 +99,149 @@
     <string name="log_in" tools:ignore="MissingTranslation">Log In</string>
     <string name="create_account" tools:ignore="MissingTranslation">Create Account</string>
     <string name="personal_details" tools:ignore="MissingTranslation">Personal Details</string>
-    <string name="_0895_4026_55123" tools:ignore="MissingTranslation">0895-4026-55123</string>
-    <string name="message_description" tools:ignore="MissingTranslation">Pesan sekarang dan rasakan\nnikmatnya Teh Idaman</string>
+    <string name="_0895_4026_55123" tools:ignore="MissingTranslation,TypographyDashes">0895-4026-55123</string>
+    <string name="message_description" tools:ignore="MissingTranslation,Typos">Pesan sekarang dan rasakan\nnikmatnya Teh Idaman</string>
     <string name="message_title" tools:ignore="MissingTranslation">Belum ada pesanan</string>
 
     <string name="tea_tarik" tools:ignore="MissingTranslation">Tea Tarik</string>
-    <string name="lemon_tea">Lemon Tea</string>
+    <string name="lemon_tea" tools:ignore="MissingTranslation">Lemon Tea</string>
     <string name="grape_tea" tools:ignore="MissingTranslation">Grape Tea</string>
     <string name="strawberry_tea" tools:ignore="MissingTranslation">Strawberry Tea</string>
-    <string name="markisa_tea">Markisa Tea</string>
-    <string name="lychee_tea">Lychee Tea</string>
-    <string name="mango_tea">Mango Tea</string>
-    <string name="melon_tea">Melon Tea</string>
-    <string name="apple_tea">Apple Tea</string>
-    <string name="choco_oreo_creamy">Choco Oreo\nCreamy</string>
-    <string name="choco_oreo_creamy2">Choco Oreo Creamy</string>
-    <string name="caramel_creamy">Choco Caramel\nCreamy</string>
-    <string name="caramel_creamy2">Choco Caramel Creamy</string>
-    <string name="avocado_creamy">Avocado Creamy</string>
-    <string name="red_velvet_creamy">Red Velvet Creamy</string>
-    <string name="royal_choco_creamy">Royal Choco\nCreamy</string>
-    <string name="royal_choco_creamy2">Royal Choco Creamy</string>
-    <string name="blackcurrant_creamy">Blackcurrant\nCreamy</string>
-    <string name="blackcurrant_creamy2">Blackcurrant Creamy</string>
-    <string name="bubble_gum_creamy">Bubble Gum\nCreamy</string>
-    <string name="bubble_gum_creamy2">Bubble Gum Creamy</string>
-    <string name="silverqueen_creamy">Silverqueen\nCreamy</string>
-    <string name="silverqueen_creamy2">Silverqueen Creamy</string>
-    <string name="strawberry_squash">Strawbery Squash</string>
-    <string name="orange_squash">Orange Squash</string>
-    <string name="lychee_squash">Lychee Squash</string>
-    <string name="grape_squash">Grape Squash</string>
-    <string name="thai_tea_original">Thai Tea Original</string>
-    <string name="thai_tea_macchiato">Thai Tea Macchiato</string>
-    <string name="thai_tea_oreo">Thai Tea Oreo</string>
-    <string name="thai_tea_choco">Thai Tea Choco</string>
-    <string name="yakult_strawberry">Yakult Strawberry</string>
-    <string name="yakult_mango">Yakult Mango</string>
-    <string name="yakult_orange">Yakult Orange</string>
-    <string name="yakult_grape">Yakult Grape</string>
-    <string name="yakult_lychee">Yakult Lychee</string>
-    <string name="yakult_melon">Yakult Melon</string>
-    <string name="detail_promo">Detail Promo</string>
-    <string name="diskon_5_5_gila_gilaan">Diskon 5.5 Gila-Gilaan!</string>
-    <string name="promo_spesial_pancasila">Promo Spesial Pancasila!</string>
+    <string name="markisa_tea" tools:ignore="MissingTranslation">Markisa Tea</string>
+    <string name="lychee_tea" tools:ignore="MissingTranslation">Lychee Tea</string>
+    <string name="mango_tea" tools:ignore="MissingTranslation">Mango Tea</string>
+    <string name="melon_tea" tools:ignore="MissingTranslation">Melon Tea</string>
+    <string name="apple_tea" tools:ignore="MissingTranslation">Apple Tea</string>
+    <string name="choco_oreo_creamy" tools:ignore="MissingTranslation">Choco Oreo\nCreamy</string>
+    <string name="choco_oreo_creamy2" tools:ignore="MissingTranslation">Choco Oreo Creamy</string>
+    <string name="caramel_creamy" tools:ignore="MissingTranslation">Choco Caramel\nCreamy</string>
+    <string name="caramel_creamy2" tools:ignore="MissingTranslation">Choco Caramel Creamy</string>
+    <string name="avocado_creamy" tools:ignore="MissingTranslation">Avocado Creamy</string>
+    <string name="red_velvet_creamy" tools:ignore="MissingTranslation">Red Velvet Creamy</string>
+    <string name="royal_choco_creamy" tools:ignore="MissingTranslation">Royal Choco\nCreamy</string>
+    <string name="royal_choco_creamy2" tools:ignore="MissingTranslation">Royal Choco Creamy</string>
+    <string name="blackcurrant_creamy" tools:ignore="MissingTranslation">Blackcurrant\nCreamy</string>
+    <string name="blackcurrant_creamy2" tools:ignore="MissingTranslation">Blackcurrant Creamy</string>
+    <string name="bubble_gum_creamy" tools:ignore="MissingTranslation">Bubble Gum\nCreamy</string>
+    <string name="bubble_gum_creamy2" tools:ignore="MissingTranslation">Bubble Gum Creamy</string>
+    <string name="silverqueen_creamy" tools:ignore="MissingTranslation">Silverqueen\nCreamy</string>
+    <string name="silverqueen_creamy2" tools:ignore="MissingTranslation">Silverqueen Creamy</string>
+    <string name="strawberry_squash" tools:ignore="MissingTranslation">Strawbery Squash</string>
+    <string name="orange_squash" tools:ignore="MissingTranslation">Orange Squash</string>
+    <string name="lychee_squash" tools:ignore="MissingTranslation">Lychee Squash</string>
+    <string name="grape_squash" tools:ignore="MissingTranslation">Grape Squash</string>
+    <string name="thai_tea_original" tools:ignore="MissingTranslation">Thai Tea Original</string>
+    <string name="thai_tea_macchiato" tools:ignore="MissingTranslation">Thai Tea Macchiato</string>
+    <string name="thai_tea_oreo" tools:ignore="MissingTranslation">Thai Tea Oreo</string>
+    <string name="thai_tea_choco" tools:ignore="MissingTranslation">Thai Tea Choco</string>
+    <string name="yakult_strawberry" tools:ignore="MissingTranslation">Yakult Strawberry</string>
+    <string name="yakult_mango" tools:ignore="MissingTranslation">Yakult Mango</string>
+    <string name="yakult_orange" tools:ignore="MissingTranslation">Yakult Orange</string>
+    <string name="yakult_grape" tools:ignore="MissingTranslation">Yakult Grape</string>
+    <string name="yakult_lychee" tools:ignore="MissingTranslation">Yakult Lychee</string>
+    <string name="yakult_melon" tools:ignore="MissingTranslation">Yakult Melon</string>
+    <string name="detail_promo" tools:ignore="MissingTranslation">Detail Promo</string>
+    <string name="diskon_5_5_gila_gilaan" tools:ignore="MissingTranslation">Diskon 5.5 Gila-Gilaan!</string>
+    <string name="promo_spesial_pancasila" tools:ignore="MissingTranslation">Promo Spesial Pancasila!</string>
 
-    <string name="diskon_40">Diskon 40%</string>
-    <string name="diskon_60">Diskon 60%</string>
+    <string name="diskon_40" tools:ignore="MissingTranslation">Diskon 40%</string>
+    <string name="diskon_60" tools:ignore="MissingTranslation">Diskon 60%</string>
 
-    <string name="berlaku_sampai_6_mei_2025">Berlaku sampai : 6 Mei 2025</string>
-    <string name="berlaku_sampai_21_mei_2025">Berlaku dari : 19-21 Mei 2025</string>
+    <string name="berlaku_sampai_6_mei_2025" tools:ignore="MissingTranslation">Berlaku sampai : 6 Mei 2025</string>
+    <string name="berlaku_sampai_21_mei_2025" tools:ignore="MissingTranslation,TypographyDashes">Berlaku dari : 19-21 Mei 2025</string>
 
-    <string name="promo_desc_1">Nikmati diskon hingga 40% untuk varian teh favoritmu! Berlaku di seluruh outlet Teh Idaman melalui pemesanan via aplikasi.</string>
-    <string name="promo_desc_2">Dalam rangka memperingati Hari Pancasila, Teh Idaman kasih kejutan promo spesial buat kamu! Minuman Thai Tea favoritmu bisa kamu dapetin dengan diskon sampai 60%. Yuk rayakan semangat nasionalisme dengan minuman lokal rasa juara!</string>
+    <string name="promo_desc_1" tools:ignore="MissingTranslation,Typos">Nikmati diskon hingga 40% untuk varian teh favoritmu! Berlaku di seluruh outlet Teh Idaman melalui pemesanan via aplikasi.</string>
+    <string name="promo_desc_2" tools:ignore="MissingTranslation,Typos">Dalam rangka memperingati Hari Pancasila, Teh Idaman kasih kejutan promo spesial buat kamu! Minuman Thai Tea favoritmu bisa kamu dapetin dengan diskon sampai 60%. Yuk rayakan semangat nasionalisme dengan minuman lokal rasa juara!</string>
 
-    <string name="syarat_ketentuan"><![CDATA[Syarat & Ketentuan]]></string>
-    <string name="tos_v1">Berlaku hanya untuk pembelian melalui aplikasi.</string>
-    <string name="tos_v2">Minimal pembelian Rp 15.000</string>
-    <string name="tos_v3">Tidak bisa digabung dengan promo lainnya.</string>
-    <string name="pm_product_title">Produk yang termasuk Promo</string>
-    <string name="kembali_ke_menu">Kembali ke menu</string>
-    <string name="thai_tea">Thai_Tea</string>
-    <string name="diskon_matcha">2 Matcha Creamy 15K</string>
-    <string name="promo_jumat">Promo Spesial Jum\'at Berkah!</string>
-    <string name="berlaku_setiap_jumat">Berlaku setiap hari Jum\'at</string>
-    <string name="promo_desc_3">Nikmati hari Jumat dengan lebih berkah bareng Matcha Creamy dari Teh Idaman! Cuma dengan 15 ribu kamu udah bisa dapet 2 cup Matcha Creamy yang segar dan creamy banget.</string>
-    <string name="see_all_products">See All Products</string>
-    <string name="rp_8_000">Rp. 8.000</string>
-    <string name="pesan_sekarang">Pesan Sekarang</string>
-    <string name="ss_orange_desc">Segarnya jeruk pilihan langsung menyapa lidahmu! Orange Squash ini dibuat dari ekstrak jeruk berkualitas dengan rasa manis-asam yang bikin nagih. Cocok banget diminum pas siang hari atau nemenin kerjaan. Vitamin C-nya nendang, segarnya maksimal!</string>
-    <string name="ss_strawberry_desc">Rasakan cinta pada sedotan pertama! Strawberry Squash ini punya rasa manis alami buah stroberi yang segar dan bikin mood naik drastis. Warnanya cantik, rasanya romantis. Cocok banget buat yang pengen chill atau pengen manis-manis.</string>
-    <string name="ss_grape_desc">Anggur ungu yang juicy banget, diblender dengan cita rasa asam-manis yang pas di lidah. Grape Squash ini adalah minuman para sultan wannabe—elegan, mewah, dan bikin nagih! Sekali coba</string>
-    <string name="ss_lychee_desc">Eksotis dan lembut, Lychee Squash hadir buat kamu yang pengen rasa unik nan elegan. Dingin-dingin minum ini? Fix, langsung adem hati. Kombinasi rasa manis dan aroma khas leci-nya bikin tiap tegukan nggak bisa berhenti.</string>
-    <string name="quantity">Quantity</string>
-    <string name="order_now">Pesan Sekarang</string>
-    <string name="_1_50_lbs">1.50 lbs</string>
-    <string name="_4_5">4.5</string>
-    <string name="_5_0">5.0</string>
-    <string name="tt_ori_desc">Rasakan sensasi segarnya teh hitam berpadu dengan creamy-nya susu kental manis yang bikin nagih. Cocok banget buat yang cari rasa klasik yang gak pernah salah.</string>
-    <string name="tt_oreo_desc">Thai tea yang creamy dipaduin sama taburan Oreo crunchy di setiap tegukan. Bikin tiap seruput berasa dapet bonus ngemil!</string>
-    <string name="tt_choco_desc">Perpaduan antara teh Thailand yang khas dan cokelat premium menciptakan rasa baru yang kaya, manis, dan super comforting.</string>
-    <string name="tt_machiatto_desc">Teh Thailand creamy dengan topping foam macchiato yang lembut dan gurih. Rasanya balance antara manis dan sedikit asin, cocok buat kamu yang suka minuman dengan depth rasa.</string>
+    <string name="syarat_ketentuan" tools:ignore="MissingTranslation"><![CDATA[Syarat & Ketentuan]]></string>
+    <string name="tos_v1" tools:ignore="MissingTranslation">Berlaku hanya untuk pembelian melalui aplikasi.</string>
+    <string name="tos_v2" tools:ignore="MissingTranslation">Minimal pembelian Rp 15.000</string>
+    <string name="tos_v3" tools:ignore="MissingTranslation">Tidak bisa digabung dengan promo lainnya.</string>
+    <string name="pm_product_title" tools:ignore="MissingTranslation">Produk yang termasuk Promo</string>
+    <string name="kembali_ke_menu" tools:ignore="MissingTranslation">Kembali ke menu</string>
+    <string name="thai_tea" tools:ignore="MissingTranslation">Thai_Tea</string>
+    <string name="diskon_matcha" tools:ignore="MissingTranslation">2 Matcha Creamy 15K</string>
+    <string name="promo_jumat" tools:ignore="MissingTranslation">Promo Spesial Jum\'at Berkah!</string>
+    <string name="berlaku_setiap_jumat" tools:ignore="MissingTranslation">Berlaku setiap hari Jum\'at</string>
+    <string name="promo_desc_3" tools:ignore="MissingTranslation,Typos">Nikmati hari Jumat dengan lebih berkah bareng Matcha Creamy dari Teh Idaman! Cuma dengan 15 ribu kamu udah bisa dapet 2 cup Matcha Creamy yang segar dan creamy banget.</string>
+    <string name="see_all_products" tools:ignore="MissingTranslation">See All Products</string>
+    <string name="rp_8_000" tools:ignore="MissingTranslation">Rp. 8.000</string>
+    <string name="pesan_sekarang" tools:ignore="MissingTranslation">Pesan Sekarang</string>
+    <string name="ss_orange_desc" tools:ignore="MissingTranslation">Segarnya jeruk pilihan langsung menyapa lidahmu! Orange Squash ini dibuat dari ekstrak jeruk berkualitas dengan rasa manis-asam yang bikin nagih. Cocok banget diminum pas siang hari atau nemenin kerjaan. Vitamin C-nya nendang, segarnya maksimal!</string>
+    <string name="ss_strawberry_desc" tools:ignore="MissingTranslation">Rasakan cinta pada sedotan pertama! Strawberry Squash ini punya rasa manis alami buah stroberi yang segar dan bikin mood naik drastis. Warnanya cantik, rasanya romantis. Cocok banget buat yang pengen chill atau pengen manis-manis.</string>
+    <string name="ss_grape_desc" tools:ignore="MissingTranslation">Anggur ungu yang juicy banget, diblender dengan cita rasa asam-manis yang pas di lidah. Grape Squash ini adalah minuman para sultan wannabe—elegan, mewah, dan bikin nagih! Sekali coba</string>
+    <string name="ss_lychee_desc" tools:ignore="MissingTranslation">Eksotis dan lembut, Lychee Squash hadir buat kamu yang pengen rasa unik nan elegan. Dingin-dingin minum ini? Fix, langsung adem hati. Kombinasi rasa manis dan aroma khas leci-nya bikin tiap tegukan nggak bisa berhenti.</string>
+    <string name="quantity" tools:ignore="MissingTranslation">Quantity</string>
+    <string name="order_now" tools:ignore="MissingTranslation">Pesan Sekarang</string>
+    <string name="_1_50_lbs" tools:ignore="MissingTranslation">1.50 lbs</string>
+    <string name="_4_5" tools:ignore="MissingTranslation">4.5</string>
+    <string name="_5_0" tools:ignore="MissingTranslation">5.0</string>
+    <string name="tt_ori_desc" tools:ignore="MissingTranslation,Typos">Rasakan sensasi segarnya teh hitam berpadu dengan creamy-nya susu kental manis yang bikin nagih. Cocok banget buat yang cari rasa klasik yang gak pernah salah.</string>
+    <string name="tt_oreo_desc" tools:ignore="MissingTranslation">Thai tea yang creamy dipaduin sama taburan Oreo crunchy di setiap tegukan. Bikin tiap seruput berasa dapet bonus ngemil!</string>
+    <string name="tt_choco_desc" tools:ignore="MissingTranslation,Typos">Perpaduan antara teh Thailand yang khas dan cokelat premium menciptakan rasa baru yang kaya, manis, dan super comforting.</string>
+    <string name="tt_machiatto_desc" tools:ignore="MissingTranslation,Typos">Teh Thailand creamy dengan topping foam macchiato yang lembut dan gurih. Rasanya balance antara manis dan sedikit asin, cocok buat kamu yang suka minuman dengan depth rasa.</string>
 
-    <string name="ts_jasmine_desc">Teh melati dengan aroma bunga yang menenangkan dan rasa teh yang lembut di lidah. Cocok dinikmati saat ingin relaks, memberi ketenangan dalam setiap tegukan dan bikin pikiran adem kayak pagi di pegunungan.</string>
-    <string name="ts_tehtarik_desc">Kombinasi teh hitam pekat dan susu creamy ala mamak-mamak Malaysia, disajikan dengan manis pas dan buih lembut di atasnya. Rasanya kaya dan memuaskan, sempurna untuk pencinta teh manis nan creamy.</string>
-    <string name="ts_lemon_desc">Perpaduan rasa asam segar dari lemon dengan teh pilihan menciptakan minuman yang menyegarkan dan bikin melek. Cocok banget buat nemenin siang panas atau recharge energi setelah aktivitas padat.</string>
-    <string name="ts_grape_desc">Teh dengan cita rasa anggur manis dan aroma buah yang menggoda. Cocok buat kamu yang suka rasa unik tapi tetap ringan. Manisnya pas, segarnya dapet, bikin gak cukup cuma satu gelas!</string>
-    <string name="ts_strawberry_desc">Rasakan manis dan sedikit asam dari buah stroberi segar yang menyatu sempurna dengan teh yang menenangkan. Ideal untuk kamu yang suka minuman dengan karakter ceria dan menyegarkan.</string>
-    <string name="ts_markisa_desc">Teh markisa yang eksotis dengan rasa asam-manis yang khas, pas banget buat kamu yang suka rasa tropical yang beda. Setiap seruputannya bikin seger, cocok buat penghilang penat di tengah kesibukan.</string>
-    <string name="ts_leci_desc">Kombinasi lembut antara teh pilihan dan rasa leci yang elegan. Memberikan pengalaman minum teh yang manis, harum, dan classy. Pas banget buat kamu yang suka vibe calm tapi tetap fancy.</string>
-    <string name="ts_mango_desc">Manis segarnya mangga tropis dipadukan dengan teh yang ringan menjadikan minuman ini favorit semua kalangan. Aromanya wangi, rasanya menyenangkan, cocok dinikmati kapan pun dan di mana pun.</string>
-    <string name="ts_melon_desc">Teh dengan rasa melon yang manis, segar, dan aromatik. Cocok banget buat teman ngemil atau nugas. Rasanya ringan tapi ngena, kayak senyuman gebetan — bikin nagih terus!</string>
-    <string name="ts_apple_desc">Teh apel yang menyegarkan dengan aroma khas buah apel segar, memberikan sensasi ringan dan natural. Cocok untuk kamu yang suka rasa fruity tapi tetap kalem, pas buat nemenin hari santaimu.</string>
+    <string name="ts_jasmine_desc" tools:ignore="MissingTranslation,Typos">Teh melati dengan aroma bunga yang menenangkan dan rasa teh yang lembut di lidah. Cocok dinikmati saat ingin relaks, memberi ketenangan dalam setiap tegukan dan bikin pikiran adem kayak pagi di pegunungan.</string>
+    <string name="ts_tehtarik_desc" tools:ignore="MissingTranslation,Typos">Kombinasi teh hitam pekat dan susu creamy ala mamak-mamak Malaysia, disajikan dengan manis pas dan buih lembut di atasnya. Rasanya kaya dan memuaskan, sempurna untuk pencinta teh manis nan creamy.</string>
+    <string name="ts_lemon_desc" tools:ignore="MissingTranslation,Typos">Perpaduan rasa asam segar dari lemon dengan teh pilihan menciptakan minuman yang menyegarkan dan bikin melek. Cocok banget buat nemenin siang panas atau recharge energi setelah aktivitas padat.</string>
+    <string name="ts_grape_desc" tools:ignore="MissingTranslation,Typos">Teh dengan cita rasa anggur manis dan aroma buah yang menggoda. Cocok buat kamu yang suka rasa unik tapi tetap ringan. Manisnya pas, segarnya dapet, bikin gak cukup cuma satu gelas!</string>
+    <string name="ts_strawberry_desc" tools:ignore="MissingTranslation,Typos">Rasakan manis dan sedikit asam dari buah stroberi segar yang menyatu sempurna dengan teh yang menenangkan. Ideal untuk kamu yang suka minuman dengan karakter ceria dan menyegarkan.</string>
+    <string name="ts_markisa_desc" tools:ignore="MissingTranslation,Typos">Teh markisa yang eksotis dengan rasa asam-manis yang khas, pas banget buat kamu yang suka rasa tropical yang beda. Setiap seruputannya bikin seger, cocok buat penghilang penat di tengah kesibukan.</string>
+    <string name="ts_leci_desc" tools:ignore="MissingTranslation,Typos">Kombinasi lembut antara teh pilihan dan rasa leci yang elegan. Memberikan pengalaman minum teh yang manis, harum, dan classy. Pas banget buat kamu yang suka vibe calm tapi tetap fancy.</string>
+    <string name="ts_mango_desc" tools:ignore="MissingTranslation,Typos">Manis segarnya mangga tropis dipadukan dengan teh yang ringan menjadikan minuman ini favorit semua kalangan. Aromanya wangi, rasanya menyenangkan, cocok dinikmati kapan pun dan di mana pun.</string>
+    <string name="ts_melon_desc" tools:ignore="MissingTranslation,Typos">Teh dengan rasa melon yang manis, segar, dan aromatik. Cocok banget buat teman ngemil atau nugas. Rasanya ringan tapi ngena, kayak senyuman gebetan — bikin nagih terus!</string>
+    <string name="ts_apple_desc" tools:ignore="MissingTranslation,Typos">Teh apel yang menyegarkan dengan aroma khas buah apel segar, memberikan sensasi ringan dan natural. Cocok untuk kamu yang suka rasa fruity tapi tetap kalem, pas buat nemenin hari santaimu.</string>
 
-    <string name="ms_choco_oreo_desc">Perpaduan cokelat creamy dan remahan Oreo renyah yang meleleh di mulut. Milky vibes-nya dapet banget, bikin tiap tegukan serasa ngemil cokelat sambil ngopi santai di café hits!</string>
-    <string name="ms_choco_caramel_desc">Cokelat manis yang lembut disiram dengan rasa caramel gurih, menciptakan perpaduan yang super indulgent. Kayak minum pelukan hangat—comforting dan bikin jatuh cinta dari seruput pertama.</string>
-    <string name="ms_bubble_gum_desc">Minuman dengan rasa permen karet khas yang playful dan nostalgic. Manis, wangi, dan bikin mood auto good! Cocok buat kamu yang fun, ceria, dan nggak suka yang biasa-biasa aja.</string>
-    <string name="ms_avocado_desc">Rasa alpukat creamy yang khas berpadu dengan susu manis yang halus. Kaya rasa, lembut di lidah, dan pastinya bikin kenyang plus senang! Cocok buat kamu yang suka rasa klasik tapi tetap spesial.</string>
-    <string name="ms_red_velvet_desc">Perpaduan elegan antara susu dan rasa red velvet yang lembut, manis, dan berkelas. Warnanya cantik, rasanya pun mewah. Tiap seruput bikin kamu ngerasa fancy — like a royal!</string>
-    <string name="ms_royal_choco_desc">Cokelat premium dengan rasa rich dan tekstur creamy yang memanjakan lidah. Minuman ini diciptakan buat choco lovers sejati yang gak main-main soal kenikmatan. Royal taste in every sip!</string>
-    <string name="ms_silver_queen_desc">Gabungan susu milky dan potongan cokelat SilverQueen yang legit dan lumer. Sensasi nyoklat yang crunchy dan lembut sekaligus — minuman + cemilan dalam satu gelas!</string>
-    <string name="ms_blackcurrant_desc">Rasa unik dari buah blackcurrant yang manis-asam, berpadu dengan susu creamy bikin minuman ini standout banget. Segar tapi tetap lembut — cocok buat yang suka eksplor rasa beda.</string>
-    <string name="ms_matcha_desc">Matcha otentik dari Jepang yang earthy dan sedikit pahit, berpadu manis dengan susu kental nan lembut. Cocok buat kamu pecinta matcha sejati yang suka rasa calm tapi dalam.</string>
-    <string name="ms_taro_desc">Rasa talas khas taro yang manis dan wangi banget, dikombinasi dengan susu lembut yang creamy. Warnanya ungu, rasanya dreamy — mood booster banget buat hari kamu yang sibuk!</string>
+    <string name="ms_choco_oreo_desc" tools:ignore="MissingTranslation">Perpaduan cokelat creamy dan remahan Oreo renyah yang meleleh di mulut. Milky vibes-nya dapet banget, bikin tiap tegukan serasa ngemil cokelat sambil ngopi santai di café hits!</string>
+    <string name="ms_choco_caramel_desc" tools:ignore="MissingTranslation">Cokelat manis yang lembut disiram dengan rasa caramel gurih, menciptakan perpaduan yang super indulgent. Kayak minum pelukan hangat—comforting dan bikin jatuh cinta dari seruput pertama.</string>
+    <string name="ms_bubble_gum_desc" tools:ignore="MissingTranslation">Minuman dengan rasa permen karet khas yang playful dan nostalgic. Manis, wangi, dan bikin mood auto good! Cocok buat kamu yang fun, ceria, dan nggak suka yang biasa-biasa aja.</string>
+    <string name="ms_avocado_desc" tools:ignore="MissingTranslation">Rasa alpukat creamy yang khas berpadu dengan susu manis yang halus. Kaya rasa, lembut di lidah, dan pastinya bikin
+        kenyang plus senang! Cocok buat kamu yang suka rasa klasik tapi tetap spesial.</string>
+    <string name="ms_red_velvet_desc" tools:ignore="MissingTranslation">Perpaduan elegan antara susu dan rasa red velvet yang lembut, manis, dan berkelas. Warnanya cantik, rasanya pun mewah. Tiap seruput bikin kamu ngerasa fancy — like a royal!</string>
+    <string name="ms_royal_choco_desc" tools:ignore="MissingTranslation">Cokelat premium dengan rasa rich dan tekstur creamy yang memanjakan lidah. Minuman ini diciptakan buat choco lovers sejati yang gak main-main soal kenikmatan. Royal taste in every sip!</string>
+    <string name="ms_silver_queen_desc" tools:ignore="MissingTranslation">Gabungan susu milky dan potongan cokelat SilverQueen yang legit dan lumer. Sensasi nyoklat yang crunchy dan lembut sekaligus — minuman + cemilan dalam satu gelas!</string>
+    <string name="ms_blackcurrant_desc" tools:ignore="MissingTranslation">Rasa unik dari buah blackcurrant yang manis-asam, berpadu dengan susu creamy bikin minuman ini standout banget. Segar tapi tetap lembut — cocok buat yang suka eksplor rasa beda.</string>
+    <string name="ms_matcha_desc" tools:ignore="MissingTranslation">Matcha otentik dari Jepang yang earthy dan sedikit pahit, berpadu manis dengan susu kental nan lembut. Cocok buat kamu pecinta matcha sejati yang suka rasa calm tapi dalam.</string>
+    <string name="ms_taro_desc" tools:ignore="MissingTranslation">Rasa talas khas taro yang manis dan wangi banget, dikombinasi dengan susu lembut yang creamy. Warnanya ungu, rasanya dreamy — mood booster banget buat hari kamu yang sibuk!</string>
 
-    <string name="ys_strawberry_desc">Perpaduan rasa manis-asam stroberi segar dengan Yakult yang khas. Rasanya ringan, nyegerin, dan bikin suasana hati auto cerah. Cocok banget buat nemenin hari sibuk kamu!</string>
-    <string name="ys_mango_desc">Yakult berpadu dengan mangga tropis yang juicy dan manis alami. Minuman ini punya rasa yang seimbang antara segar, creamy, dan fruity. Gak cuma enak, tapi juga bikin fresh!</string>
-    <string name="ys_orange_desc">Yakult jeruk dengan rasa citrus yang segar dan sedikit asam — bikin mata melek dan mulut senang. Sensasi Yakult-nya bikin badan seger dan perut adem, cocok diminum kapan aja!</string>
-    <string name="ys_grape_desc">Yakult dengan sentuhan rasa anggur manis yang khas. Rasanya unik, sedikit asam tapi tetap smooth. Cocok buat kamu yang pengen minuman beda dari yang lain tapi tetap fun!</string>
-    <string name="ys_lychee_desc">Yakult leci yang manis dan aromatik, memberikan sensasi menyegarkan yang classy. Tiap tegukan rasanya elegan tapi tetap playful — pas banget buat siang hari yang panas!</string>
-    <string name="ys_melon_desc">Melon segar bertemu Yakult dalam satu cup yang penuh kesegaran. Manis, creamy, dan sejuk di tenggorokan. Minuman andalan buat ngilangin penat dan boost semangatmu!</string>
-    <string name="edit_personal_details">Edit personal details</string>
+    <string name="ys_strawberry_desc" translatable="false">Perpaduan rasa manis-asam stroberi segar dengan Yakult yang khas. Rasanya ringan, nyegerin, dan bikin suasana hati auto cerah. Cocok banget buat nemenin hari sibuk kamu!</string>
+    <string name="ys_mango_desc" translatable="false">Yakult berpadu dengan mangga tropis yang juicy dan manis alami. Minuman ini punya rasa yang seimbang antara segar, creamy, dan fruity. Gak cuma enak, tapi juga bikin fresh!</string>
+    <string name="ys_orange_desc" translatable="false">Yakult jeruk dengan rasa citrus yang segar dan sedikit asam — bikin mata melek dan mulut senang. Sensasi Yakult-nya bikin badan seger dan perut adem, cocok diminum kapan aja!</string>
+    <string name="ys_grape_desc" tools:ignore="MissingTranslation">Yakult dengan sentuhan rasa anggur manis yang khas. Rasanya unik, sedikit asam tapi tetap smooth. Cocok buat kamu yang pengen minuman beda dari yang lain tapi tetap fun!</string>
+    <string name="ys_lychee_desc" tools:ignore="MissingTranslation">Yakult leci yang manis dan aromatik, memberikan sensasi menyegarkan yang classy. Tiap tegukan rasanya elegan tapi tetap playful — pas banget buat siang hari yang panas!</string>
+    <string name="ys_melon_desc" tools:ignore="MissingTranslation">Melon segar bertemu Yakult dalam satu cup yang penuh kesegaran. Manis, creamy, dan sejuk di tenggorokan. Minuman andalan buat ngilangin penat dan boost semangatmu!</string>
+    <string name="edit_personal_details" tools:ignore="MissingTranslation">Edit personal details</string>
+    <string name="pick_up" tools:ignore="MissingTranslation">Pick Up</string>
+    <string name="delivery" tools:ignore="MissingTranslation">Delivery</string>
+    <string name="order_type" tools:ignore="MissingTranslation">Order Type</string>
+    <string name="daftar_alamat" tools:ignore="MissingTranslation">Daftar Alamat</string>
+    <string name="tambah_alamat" tools:ignore="MissingTranslation">+ Tambah Alamat</string>
+    <string name="belum_ada_alamat_tersimpan" tools:ignore="MissingTranslation">Belum ada alamat tersimpan</string>
+    <string name="teh_idaman_terdekat" tools:ignore="MissingTranslation,Typos">Teh Idaman terdekat</string>
+    <string name="teh_idaman_concat" tools:ignore="MissingTranslation,Typos">Teh Idaman Concat</string>
+    <string name="concat_address" tools:ignore="MissingTranslation">Jl. Tantular No.11, Kaliwaru, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281</string>
+    <string name="_1_5_km" tools:ignore="MissingTranslation">1.5 km</string>
+    <string name="_2_km" tools:ignore="MissingTranslation">2 km</string>
+    <string name="_12_km" tools:ignore="MissingTranslation">12 km</string>
+    <string name="_07_00_22_00" tools:ignore="MissingTranslation,TypographyDashes">07.00 - 22.00</string>
+    <string name="gunakan_alamat" tools:ignore="MissingTranslation">Gunakan Alamat</string>
+    <string name="teh_idaman_wonosari" tools:ignore="MissingTranslation,Typos">Teh Idaman Wonosari</string>
+    <string name="teh_idaman_gejayan" tools:ignore="MissingTranslation,Typos">Teh Idaman Gejayan</string>
+    <string name="gejayan_address" tools:ignore="MissingTranslation">Gg. Bayu Jl. Affandi No.15, Gejayan, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281</string>
+    <string name="wonosari_address" tools:ignore="MissingTranslation">Jl. Baron No.KM 1, Seneng, Siraman, Kec. Wonosari, Kabupaten Gunungkidul, Daerah Istimewa Yogyakarta 55851</string>
+    <string name="alamat_baru" tools:ignore="MissingTranslation">Alamat baru</string>
+    <string name="titik_lokasi_kamu" tools:ignore="MissingTranslation">Titik lokasi kamu</string>
+    <string name="note" tools:ignore="MissingTranslation">Sebelum mengisi, atur titik lokasi alamat kamu</string>
+    <string name="pilih_titik_lokasi" tools:ignore="MissingTranslation">Pilih titik lokasi</string>
+    <string name="simpan_lokasi" tools:ignore="MissingTranslation">Simpan Lokasi</string>
+    <string name="detail_alamat" tools:ignore="MissingTranslation">Detail Alamat</string>
+    <string name="tulis_nama_jalan_kantor_no_rumah" tools:ignore="MissingTranslation">Tulis nama jalan/kantor/no rumah</string>
+    <string name="label" tools:ignore="MissingTranslation">Label</string>
+    <string name="tulis_rumah_kos_kantor_dll" tools:ignore="MissingTranslation">Tulis Rumah/Kos/Kantor dll</string>
+    <string name="nama_penerima" tools:ignore="MissingTranslation">Nama penerima</string>
+    <string name="nomor_handphone" tools:ignore="MissingTranslation">Nomor Handphone</string>
+    <string name="simpan" tools:ignore="MissingTranslation">Simpan</string>
+    <string name="pilih_toko" tools:ignore="MissingTranslation">Pilih Toko</string>
 
 
 </resources>

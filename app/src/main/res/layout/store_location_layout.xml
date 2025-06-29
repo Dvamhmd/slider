@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="@dimen/_12sdp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/_8sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/_12sdp"
+        android:paddingHorizontal="@dimen/_16sdp"
+        android:gravity="center_vertical">
+
+        <!-- Kiri: Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- Nama Toko -->
+            <TextView
+                android:id="@+id/storeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/teh_idaman_concat"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/text_main"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:layout_marginBottom="@dimen/_4sdp" />
+
+            <!-- Alamat -->
+            <TextView
+                android:id="@+id/storeAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/concat_address"
+                android:textColor="@color/soft_gray"
+                android:textSize="@dimen/_8ssp"
+                tools:ignore="TextContrastCheck" />
+
+            <!-- Baris info lokasi dan jam -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                tools:ignore="UseCompoundDrawables">
+
+                <!-- Lokasi -->
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:contentDescription="@string/image"
+                    android:src="@drawable/location_map"
+                    tools:ignore="ImageContrastCheck" />
+
+                <TextView
+                    android:id="@+id/storeDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/_1_5_km"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/text_main"
+                    android:layout_marginEnd="@dimen/_12sdp" />
+
+                <!-- Jam -->
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:src="@drawable/clock"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:contentDescription="@string/image" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/_07_00_22_00"
+                    android:textSize="@dimen/_10ssp"
+                    android:textColor="@color/text_main" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Kanan: Icon Uncheck -->
+        <FrameLayout
+            android:id="@+id/check_container"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/check"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/uncheck"
+                android:layout_gravity="center|end"
+                android:contentDescription="@string/image" />
+        </FrameLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

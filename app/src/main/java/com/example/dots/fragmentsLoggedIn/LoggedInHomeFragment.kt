@@ -7,10 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.dots.R
 import com.example.dots.activityLoginTrue.ChatLoggedInActivity
+import com.example.dots.activityLoginTrue.OrderTypeActivity
 import com.example.dots.activityLoginTrue.SettingsLoggedInActivity
 import com.example.dots.adapter.PromoBestAdapterIn
 import com.example.dots.category.MilkySeries
@@ -52,6 +54,8 @@ class LoggedInHomeFragment : Fragment() {
             startActivity(intent)
         }
 
+        val deliveryLayout = view.findViewById<LinearLayout>(R.id.delivery_layout)
+
         // tea series
         val teaSeriesLayout = view.findViewById<View>(R.id.tea_series)
         val teaSeriesImage = teaSeriesLayout.findViewById<ImageView>(R.id.image_series)
@@ -87,6 +91,8 @@ class LoggedInHomeFragment : Fragment() {
         yakultSeriesImage.setImageResource(R.drawable.yakult_series)
         yakultSeriesName.text = getString(R.string.yakult_series)
 
+
+
         //see all
         val seeAllProducts =view.findViewById<TextView>(R.id.see_products)
 
@@ -120,8 +126,15 @@ class LoggedInHomeFragment : Fragment() {
             startActivity(intent)
         }
 
+        //navigasi see all series
         seeAllProducts.setOnClickListener{
             val intent = Intent(requireContext(), SeeAll::class.java)
+            startActivity(intent)
+        }
+
+        //navigasi order type
+        deliveryLayout.setOnClickListener{
+            val intent = Intent(requireContext(), OrderTypeActivity::class.java)
             startActivity(intent)
         }
 
