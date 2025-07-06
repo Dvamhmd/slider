@@ -242,6 +242,19 @@
     <string name="nomor_handphone" tools:ignore="MissingTranslation">Nomor Handphone</string>
     <string name="simpan" tools:ignore="MissingTranslation">Simpan</string>
     <string name="pilih_toko" tools:ignore="MissingTranslation">Pilih Toko</string>
+    <string name="check_out" tools:ignore="MissingTranslation">Check Out</string>
+    <string name="rp_30_000" tools:ignore="MissingTranslation">Rp 30.000,-</string>
+    <string name="x" tools:ignore="MissingTranslation">x</string>
+    <string name="_4" tools:ignore="MissingTranslation">4</string>
+    <string name="_32_000" tools:ignore="MissingTranslation">32.000</string>
+    <string name="rp_32_000" tools:ignore="MissingTranslation">Rp 32.000</string>
+    <string name="kepuhsari_rt_7_rw_05_maguwoharjo" tools:ignore="MissingTranslation">Kepuhsari, RT 7, RW 05, Maguwoharjo</string>
+    <string name="catatan_opsional" tools:ignore="MissingTranslation">Catatan (opsional)</string>
+    <string name="tinggalkan_catatan_untuk_penjual" tools:ignore="MissingTranslation">Tinggalkan catatan untuk penjual</string>
+    <string name="opsi_pengiriman" tools:ignore="MissingTranslation">Opsi Pengiriman</string>
+    <string name="promo_5_5">Promo 5.5</string>
+    <string name="min_beli_rp15rb">Min. Beli Rp15rb</string>
+    <string name="voucher">Voucher</string>
 
 
 </resources>

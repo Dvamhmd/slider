@@ -1,6 +1,7 @@
 package com.example.dots.activityLoginTrue
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.FrameLayout
 import android.widget.ImageView
@@ -49,6 +50,11 @@ class DetailProductInActivity : AppCompatActivity() {
         val cartLayout = findViewById<FrameLayout>(R.id.add_to_cart)
 
         val cart = cartLayout.findViewById<ImageView>(R.id.cart)
+
+        val checkOut = findViewById<FrameLayout>(R.id.goToCheckOut)
+
+
+
 
         //Format Currency Rupiah
         val formatter = NumberFormat.getInstance(Locale("in", "ID"))
@@ -159,6 +165,19 @@ class DetailProductInActivity : AppCompatActivity() {
                 updateQuantity()
             }
         }
+
+
+
+        checkOut.setOnClickListener{
+            val intent = Intent(this, CheckOutActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
+
+
+
 
 
 

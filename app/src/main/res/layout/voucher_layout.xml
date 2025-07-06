@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/voucherCheck"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="horizontal">
+
+
+    <ImageView
+        android:id="@+id/voucherImage"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/promo_2"
+        android:scaleType="centerCrop"
+        tools:ignore="UnusedAttribute" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:strokeColor="@color/soft_gray"
+        app:strokeWidth="@dimen/_1sdp"
+        tools:ignore="TextSizeCheck">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                tools:ignore="UselessParent">
+
+                <TextView
+                    android:id="@+id/voucherName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:text="@string/promo_5_5"
+                    android:textColor="@color/text_main"
+                    android:textSize="@dimen/_16ssp" />
+
+                <TextView
+                    android:id="@+id/voucherMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/min_beli_rp15rb"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/_9ssp"
+                    android:translationY="-8dp" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/checkStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:contentDescription="@string/image"
+                android:src="@drawable/uncheck" />
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+</LinearLayout>
+
