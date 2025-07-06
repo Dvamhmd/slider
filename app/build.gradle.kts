@@ -1,6 +1,9 @@
+import com.google.wireless.android.sdk.stats.AnnotationProcessorInfo.InclusionType.KSP
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -52,6 +55,16 @@ android {
 
 dependencies {
 
+
+
+    //glide
+    implementation(libs.glide)
+    ksp(libs.compiler)
+
+    implementation(libs.androidx.room.runtime)
+    ksp(libs.androidx.room.compiler)
+
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -87,8 +100,12 @@ dependencies {
     //lottie loading animation
     implementation(libs.lottie)
 
+    implementation(libs.shimmer)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
 }

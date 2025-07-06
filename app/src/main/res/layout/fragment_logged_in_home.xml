@@ -233,45 +233,19 @@
                         android:background="@color/line"
                         android:layout_marginBottom="@dimen/_16sdp"/>
 
-                    <HorizontalScrollView
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/kategoriRecyclerView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:scrollbars="none">
+                        android:paddingStart="@dimen/_14sdp"
+                        android:paddingEnd="@dimen/_14sdp"
+                        android:clipToPadding="false"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        tools:listitem="@layout/category"
+                        android:orientation="horizontal"
+                        android:overScrollMode="never"
+                        />
 
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginTop="@dimen/_4sdp"
-                            android:layout_marginStart="@dimen/_14sdp"
-                            android:paddingEnd="@dimen/_14sdp"
-                            tools:ignore="RtlSymmetry">
-
-                            <include
-                                android:id="@+id/tea_series"
-                                layout="@layout/category" />
-
-                            <include
-                                android:id="@+id/squash_series"
-                                layout="@layout/category"/>
-
-                            <include
-                                android:id="@+id/milky_series"
-                                layout="@layout/category"/>
-
-                            <include
-                                android:id="@+id/thai_series"
-                                layout="@layout/category"/>
-
-                            <include
-                                android:id="@+id/yakult_series"
-                                layout="@layout/category"/>
-
-
-                        </LinearLayout>
-
-
-                    </HorizontalScrollView>
 
                 </LinearLayout>
 

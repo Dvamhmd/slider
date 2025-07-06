@@ -98,7 +98,7 @@ interface ApiService {
     suspend fun getProduk(): Response<List<Produk>>
 
     @GET("kategori")
-    suspend fun getKategori(): Response<List<Kategori>>
+    suspend fun getKategori(): Response<BaseResponse<List<Kategori>>>
 
     // 📸 Upload Foto
     @Multipart
