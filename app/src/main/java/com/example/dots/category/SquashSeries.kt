@@ -115,6 +115,7 @@ class SquashSeries : AppCompatActivity() {
         leftImage1.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD021")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ss_stw_core)
             intent.putExtra("HARGA_PRODUK", priceSquashSeries)
             intent.putExtra("NAMA_PRODUK", R.string.strawberry_squash)
@@ -126,6 +127,7 @@ class SquashSeries : AppCompatActivity() {
         leftImage2.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD023")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ss_org_core)
             intent.putExtra("HARGA_PRODUK", priceSquashSeries)
             intent.putExtra("NAMA_PRODUK", R.string.orange_squash)
@@ -137,6 +139,7 @@ class SquashSeries : AppCompatActivity() {
         rightImage1.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD022")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ss_lyche_core)
             intent.putExtra("HARGA_PRODUK", priceSquashSeries)
             intent.putExtra("NAMA_PRODUK", R.string.lychee_squash)
@@ -148,6 +151,7 @@ class SquashSeries : AppCompatActivity() {
         rightImage2.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD024")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ss_grape_core)
             intent.putExtra("HARGA_PRODUK", priceSquashSeries)
             intent.putExtra("NAMA_PRODUK", R.string.grape_squash)

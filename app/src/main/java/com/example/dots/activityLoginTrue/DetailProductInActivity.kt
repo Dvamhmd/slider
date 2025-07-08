@@ -62,6 +62,7 @@ class DetailProductInActivity : AppCompatActivity() {
 
 
         //menerima variabel
+//        val getProductId = intent.getStringExtra("ID_PRODUK")
         val getProductImage = intent.getIntExtra("GAMBAR_PRODUK", 0)
         val getProductPrice = intent.getIntExtra("HARGA_PRODUK", 0)
         val getProductName = intent.getIntExtra("NAMA_PRODUK", 0)
@@ -94,17 +95,6 @@ class DetailProductInActivity : AppCompatActivity() {
         if (getProductDesc != 0){
             productDesc.setText(getProductDesc)
         }
-
-
-
-
-
-
-
-
-
-
-
 
 
         back.setOnClickListener{
@@ -144,10 +134,6 @@ class DetailProductInActivity : AppCompatActivity() {
 
         }
 
-
-
-
-
         btnPlus = findViewById(R.id.btnPlus)
         btnMinus = findViewById(R.id.btnMinus)
         tvQuantity = findViewById(R.id.tvQuantity)
@@ -166,21 +152,10 @@ class DetailProductInActivity : AppCompatActivity() {
             }
         }
 
-
-
         checkOut.setOnClickListener{
             val intent = Intent(this, CheckOutActivity::class.java)
             startActivity(intent)
         }
-
-
-
-
-
-
-
-
-
 
     }
 

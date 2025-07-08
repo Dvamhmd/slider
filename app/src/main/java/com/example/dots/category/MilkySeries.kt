@@ -155,6 +155,7 @@ class MilkySeries : AppCompatActivity() {
         leftImage1.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD011")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ms_chocooreo_core)
             intent.putExtra("HARGA_PRODUK", priceMilkySeries)
             intent.putExtra("NAMA_PRODUK", R.string.choco_oreo_creamy2)
@@ -166,6 +167,7 @@ class MilkySeries : AppCompatActivity() {
         leftImage2.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD013")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ms_caramel_core)
             intent.putExtra("HARGA_PRODUK", priceMilkySeries)
             intent.putExtra("NAMA_PRODUK", R.string.caramel_creamy2)
@@ -177,6 +179,7 @@ class MilkySeries : AppCompatActivity() {
         leftImage3.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD015")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ms_bgum_core)
             intent.putExtra("HARGA_PRODUK", priceMilkySeries)
             intent.putExtra("NAMA_PRODUK", R.string.bubble_gum_creamy2)
@@ -188,6 +191,7 @@ class MilkySeries : AppCompatActivity() {
         leftImage4.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD017")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ms_avocado_core)
             intent.putExtra("HARGA_PRODUK", priceMilkySeries)
             intent.putExtra("NAMA_PRODUK", R.string.avocado_creamy)
@@ -199,6 +203,7 @@ class MilkySeries : AppCompatActivity() {
         leftImage5.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD019")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ms_rv_core)
             intent.putExtra("HARGA_PRODUK", priceMilkySeries)
             intent.putExtra("NAMA_PRODUK", R.string.red_velvet_creamy)
@@ -217,6 +222,7 @@ class MilkySeries : AppCompatActivity() {
         rightImage1.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD012")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ms_royalchoco_core)
             intent.putExtra("HARGA_PRODUK", priceMilkySeries)
             intent.putExtra("NAMA_PRODUK", R.string.royal_choco_creamy2)
@@ -228,6 +234,7 @@ class MilkySeries : AppCompatActivity() {
         rightImage2.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD014")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ms_silverqueen_core)
             intent.putExtra("HARGA_PRODUK", priceMilkySeries)
             intent.putExtra("NAMA_PRODUK", R.string.silverqueen_creamy2)
@@ -239,6 +246,7 @@ class MilkySeries : AppCompatActivity() {
         rightImage3.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD016")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ms_blackcurrant_core)
             intent.putExtra("HARGA_PRODUK", priceMilkySeries)
             intent.putExtra("NAMA_PRODUK", R.string.blackcurrant_creamy2)
@@ -250,6 +258,7 @@ class MilkySeries : AppCompatActivity() {
         rightImage4.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD018")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ms_matcha_core)
             intent.putExtra("HARGA_PRODUK", priceMilkySeries)
             intent.putExtra("NAMA_PRODUK", R.string.matcha_creamy)
@@ -261,6 +270,7 @@ class MilkySeries : AppCompatActivity() {
         rightImage5.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD020")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ms_taro_core)
             intent.putExtra("HARGA_PRODUK", priceMilkySeries)
             intent.putExtra("NAMA_PRODUK", R.string.taro_creamy)

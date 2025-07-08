@@ -122,6 +122,7 @@ class ThaiSeries : AppCompatActivity() {
         leftImage1.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD025")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.tt_ori_core)
             intent.putExtra("HARGA_PRODUK", priceThaiTeaOri)
             intent.putExtra("NAMA_PRODUK", R.string.thai_tea_original)
@@ -133,6 +134,7 @@ class ThaiSeries : AppCompatActivity() {
         leftImage2.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD027")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.tt_oreo_core)
             intent.putExtra("HARGA_PRODUK", priceThaiTeaOreo)
             intent.putExtra("NAMA_PRODUK", R.string.thai_tea_oreo)
@@ -144,6 +146,7 @@ class ThaiSeries : AppCompatActivity() {
         rightImage1.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD026")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.tt_machiatto_core)
             intent.putExtra("HARGA_PRODUK", priceThaiTeaMachiato)
             intent.putExtra("NAMA_PRODUK", R.string.thai_tea_macchiato)
@@ -155,6 +158,7 @@ class ThaiSeries : AppCompatActivity() {
         rightImage2.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD028")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.tt_choco_core)
             intent.putExtra("HARGA_PRODUK", priceThaiTeaChoco)
             intent.putExtra("NAMA_PRODUK", R.string.thai_tea_choco)

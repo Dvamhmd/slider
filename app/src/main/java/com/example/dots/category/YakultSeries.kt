@@ -134,6 +134,7 @@ class YakultSeries : AppCompatActivity() {
         leftImage1.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD029")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ys_stw_core)
             intent.putExtra("HARGA_PRODUK", priceYakultSeries)
             intent.putExtra("NAMA_PRODUK", R.string.yakult_strawberry)
@@ -145,6 +146,7 @@ class YakultSeries : AppCompatActivity() {
         leftImage2.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD031")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ys_mango_core)
             intent.putExtra("HARGA_PRODUK", priceYakultSeries)
             intent.putExtra("NAMA_PRODUK", R.string.yakult_mango)
@@ -156,6 +158,7 @@ class YakultSeries : AppCompatActivity() {
         leftImage3.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD033")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ys_orange_core)
             intent.putExtra("HARGA_PRODUK", priceYakultSeries)
             intent.putExtra("NAMA_PRODUK", R.string.yakult_orange)
@@ -174,6 +177,7 @@ class YakultSeries : AppCompatActivity() {
         rightImage1.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD030")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ys_grape_core)
             intent.putExtra("HARGA_PRODUK", priceYakultSeries)
             intent.putExtra("NAMA_PRODUK", R.string.yakult_grape)
@@ -185,6 +189,7 @@ class YakultSeries : AppCompatActivity() {
         rightImage2.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD032")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ys_lychee_core)
             intent.putExtra("HARGA_PRODUK", priceYakultSeries)
             intent.putExtra("NAMA_PRODUK", R.string.yakult_lychee)
@@ -196,6 +201,7 @@ class YakultSeries : AppCompatActivity() {
         rightImage3.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD034")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ys_melon_core)
             intent.putExtra("HARGA_PRODUK", priceYakultSeries)
             intent.putExtra("NAMA_PRODUK", R.string.yakult_melon)

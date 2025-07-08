@@ -171,6 +171,7 @@ class TeaSeries : AppCompatActivity() {
         leftImage1.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD001")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_jasmine_core)
             intent.putExtra("HARGA_PRODUK", priceJasmineTea)
             intent.putExtra("NAMA_PRODUK", R.string.jasmine_tea)
@@ -182,6 +183,7 @@ class TeaSeries : AppCompatActivity() {
         leftImage2.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD003")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_tarik_core)
             intent.putExtra("HARGA_PRODUK", priceTarikTea)
             intent.putExtra("NAMA_PRODUK", R.string.tea_tarik)
@@ -193,6 +195,7 @@ class TeaSeries : AppCompatActivity() {
         leftImage3.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD005")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_lemon_core)
             intent.putExtra("HARGA_PRODUK", priceFlavouredTea)
             intent.putExtra("NAMA_PRODUK", R.string.lemon_tea)
@@ -204,6 +207,7 @@ class TeaSeries : AppCompatActivity() {
         leftImage4.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD007")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_grape_core)
             intent.putExtra("HARGA_PRODUK", priceFlavouredTea)
             intent.putExtra("NAMA_PRODUK", R.string.grape_tea)
@@ -215,6 +219,7 @@ class TeaSeries : AppCompatActivity() {
         leftImage5.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD009")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_stw_core)
             intent.putExtra("HARGA_PRODUK", priceFlavouredTea)
             intent.putExtra("NAMA_PRODUK", R.string.strawberry_tea)
@@ -233,6 +238,7 @@ class TeaSeries : AppCompatActivity() {
         rightImage1.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD002")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_markisa_core)
             intent.putExtra("HARGA_PRODUK", priceFlavouredTea)
             intent.putExtra("NAMA_PRODUK", R.string.markisa_tea)
@@ -244,6 +250,7 @@ class TeaSeries : AppCompatActivity() {
         rightImage2.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD004")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_lychee_core)
             intent.putExtra("HARGA_PRODUK", priceFlavouredTea)
             intent.putExtra("NAMA_PRODUK", R.string.lychee_tea)
@@ -255,6 +262,7 @@ class TeaSeries : AppCompatActivity() {
         rightImage3.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD006")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_mango_core)
             intent.putExtra("HARGA_PRODUK", priceFlavouredTea)
             intent.putExtra("NAMA_PRODUK", R.string.mango_tea)
@@ -266,6 +274,7 @@ class TeaSeries : AppCompatActivity() {
         rightImage4.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD008")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_melon_core)
             intent.putExtra("HARGA_PRODUK", priceFlavouredTea)
             intent.putExtra("NAMA_PRODUK", R.string.melon_tea)
@@ -277,6 +286,7 @@ class TeaSeries : AppCompatActivity() {
         rightImage5.setOnClickListener{
             val intent = Intent(this, DetailProductInActivity::class.java)
 
+            intent.putExtra("ID_PRODUK", "PROD010")
             intent.putExtra("GAMBAR_PRODUK", R.drawable.ts_apple_core)
             intent.putExtra("HARGA_PRODUK", priceFlavouredTea)
             intent.putExtra("NAMA_PRODUK", R.string.apple_tea)
