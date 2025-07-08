@@ -252,11 +252,11 @@
     <string name="catatan_opsional" tools:ignore="MissingTranslation">Catatan (opsional)</string>
     <string name="tinggalkan_catatan_untuk_penjual" tools:ignore="MissingTranslation">Tinggalkan catatan untuk penjual</string>
     <string name="opsi_pengiriman" tools:ignore="MissingTranslation">Opsi Pengiriman</string>
-    <string name="promo_5_5">Promo 5.5</string>
-    <string name="min_beli_rp15rb">Min. Beli Rp15rb</string>
-    <string name="voucher">Voucher</string>
-    <string name="promo_pancasila">Promo Pancasila</string>
-    <string name="promo_jum_at">Promo Jum\'at</string>
+    <string name="promo_5_5" tools:ignore="MissingTranslation">Promo 5.5</string>
+    <string name="min_beli_rp15rb" tools:ignore="MissingTranslation">Min. Beli Rp15rb</string>
+    <string name="voucher" tools:ignore="MissingTranslation">Voucher</string>
+    <string name="promo_pancasila" tools:ignore="MissingTranslation">Promo Pancasila</string>
+    <string name="promo_jum_at" tools:ignore="MissingTranslation">Promo Jum\'at</string>
 
 
 </resources>
