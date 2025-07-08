@@ -81,8 +81,24 @@ class LoggedInHomeFragment : Fragment() {
         kategoriViewModel.kategoriList.observe(viewLifecycleOwner) { kategoriList ->
             kategoriList?.let {
                 val adapterKategori = KategoriAdapter(it) { kategori ->
-                    Toast.makeText(requireContext(), "Klik: ${kategori.namaKategori}", Toast.LENGTH_SHORT).show()
-                    // Intent ke kategori bisa ditambahkan di sini
+                    val nama = kategori.namaKategori?.lowercase()
+
+                    val intent = when {
+                        nama?.contains("tea") == true && !nama.contains("thai") -> Intent(requireContext(), com.example.dots.category.TeaSeries::class.java)
+                        nama?.contains("squash") == true -> Intent(requireContext(), com.example.dots.category.SquashSeries::class.java)
+                        nama?.contains("milky") == true -> Intent(requireContext(), com.example.dots.category.MilkySeries::class.java)
+                        nama?.contains("thai") == true -> Intent(requireContext(), com.example.dots.category.ThaiSeries::class.java)
+                        nama?.contains("yakult") == true -> Intent(requireContext(), com.example.dots.category.YakultSeries::class.java)
+                        else -> null
+                    }
+
+                    startActivity(intent)
+
+//                    if (intent != null) {
+//                        startActivity(intent)
+//                    } else {
+//                        Toast.makeText(requireContext(), "Kategori belum tersedia", Toast.LENGTH_SHORT).show()
+//                    }
                 }
                 kategoriRecycler.adapter = adapterKategori
             }
@@ -93,7 +109,6 @@ class LoggedInHomeFragment : Fragment() {
                 Toast.makeText(requireContext(), "Error: $it", Toast.LENGTH_SHORT).show()
             }
         }
-
 
         kategoriViewModel.fetchKategori()
 

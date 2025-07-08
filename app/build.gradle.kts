@@ -23,10 +23,10 @@ android {
 
     buildTypes {
         debug {
-            buildConfigField("String", "API_BASE_URL", "\"https://sharp-sheep-gladly.ngrok-free.app/tehidaman/api/\"")
+            buildConfigField("String", "API_BASE_URL", "\"https://anala.my.id/tehidaman/api/\"")
         }
         release {
-            buildConfigField("String", "API_BASE_URL", "\"https://sharp-sheep-gladly.ngrok-free.app/tehidaman/api/\"")
+            buildConfigField("String", "API_BASE_URL", "\"https://anala.my.id/tehidaman/api/\"")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
