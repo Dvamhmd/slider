@@ -8,6 +8,7 @@
     android:background="@color/background"
     tools:context=".activityLoginTrue.CreateAddressActivity">
 
+    <!-- Title Bar -->
     <androidx.cardview.widget.CardView
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -49,6 +50,7 @@
 
     </androidx.cardview.widget.CardView>
 
+    <!-- Location Preview & Pilih Titik -->
     <androidx.cardview.widget.CardView
         android:id="@+id/location"
         android:layout_width="match_parent"
@@ -61,17 +63,19 @@
         android:layout_marginTop="@dimen/_12sdp"
         app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="VisualLintBounds">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:layout_marginStart="@dimen/_12sdp"
             android:layout_marginEnd="@dimen/_12sdp"
-            android:layout_marginTop="@dimen/_12sdp"
-            android:orientation="vertical">
+            android:layout_marginTop="@dimen/_12sdp">
 
             <TextView
+                android:id="@+id/titik_lokasi_kamu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/titik_lokasi_kamu"
@@ -80,6 +84,7 @@
                 android:fontFamily="@font/poppins_semi_bold"/>
 
             <TextView
+                android:id="@+id/note_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/note"
@@ -89,16 +94,48 @@
                 android:layout_marginBottom="@dimen/_6sdp"/>
 
             <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:visibility="gone"
+                android:id="@+id/map_preview_card"
+                app:cardCornerRadius="@dimen/_12sdp"
+                app:shapeAppearanceOverlay="@style/TopOnlyRounded"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp"
+                app:cardBackgroundColor="@color/white">
+
+                <FrameLayout
+                    android:id="@+id/map_preview_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginBottom="@dimen/_8sdp">
+
+                    <androidx.fragment.app.FragmentContainerView
+                        android:id="@+id/map_fragment"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </FrameLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/choose_location"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_34sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:clickable="true"
                 android:focusable="true"
                 android:foreground="?attr/selectableItemBackgroundBorderless"
                 app:cardBackgroundColor="@color/background"
                 app:strokeColor="@color/blue_stroke"
                 app:strokeWidth="@dimen/_1sdp"
-                android:layout_marginBottom="@dimen/_16sdp"
                 tools:ignore="TouchTargetSizeCheck">
 
                 <LinearLayout
@@ -123,27 +160,25 @@
                         android:textColor="@color/blue_stroke"
                         android:textSize="@dimen/_10ssp"
                         tools:ignore="TextContrastCheck" />
-
-
                 </LinearLayout>
-
             </com.google.android.material.card.MaterialCardView>
 
             <TextView
                 android:id="@+id/addressResult"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/belum_ada_lokasi_dipilih"
-                android:textColor="@color/text_main"
-                android:textSize="@dimen/_11ssp"
+                android:layout_marginBottom="@dimen/_8sdp"
                 android:fontFamily="@font/poppins_medium"
-                android:layout_marginBottom="@dimen/_8sdp"/>
-
-
+                android:text="@string/belum_ada_lokasi_dipilih"
+                android:textAlignment="center"
+                android:textColor="@color/soft_gray"
+                android:textSize="@dimen/_10ssp"
+                tools:ignore="TextContrastCheck" />
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
 
     <androidx.cardview.widget.CardView
         android:id="@+id/order_details"
@@ -165,6 +200,7 @@
             android:layout_marginEnd="@dimen/_16sdp"
             android:layout_marginTop="@dimen/_12sdp"
             android:orientation="vertical">
+
 
             <!-- Detail Alamat -->
             <com.google.android.material.textfield.TextInputLayout
@@ -258,7 +294,7 @@
 
 
 
-            <!-- Label Alamat -->
+            <!-- nama penerima -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/addressNameLayout"
                 android:layout_width="match_parent"
@@ -296,7 +332,7 @@
 
 
 
-            <!-- Label Alamat -->
+            <!-- nomor penerima -->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/addressPhoneLayout"
                 android:layout_width="match_parent"
@@ -344,32 +380,12 @@
                 android:textSize="@dimen/_12ssp"
                 tools:ignore="VisualLintButtonSize,TextContrastCheck" />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         </LinearLayout>
 
 
 
+
+
     </androidx.cardview.widget.CardView>
-
-
-
-
-
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

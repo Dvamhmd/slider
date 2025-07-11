@@ -90,8 +90,10 @@ dependencies {
     //preferences
     implementation(libs.androidx.preference)
 
-    //google play service location
+    //google play service
     implementation(libs.play.services.location)
+    implementation(libs.playservices.maps)
+
 
     //google maps
     implementation(libs.google.maps)

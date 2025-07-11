@@ -37,9 +37,8 @@ class PickLocationActivity : AppCompatActivity(), OnMapReadyCallback {
         geocoder = Geocoder(this, Locale.getDefault())
         fused = LocationServices.getFusedLocationProviderClient(this)
 
-        (supportFragmentManager
-            .findFragmentById(R.id.map_fragment) as SupportMapFragment)
-            .getMapAsync(this)
+        val mapFragment = supportFragmentManager.findFragmentById(R.id.map_fragment) as? SupportMapFragment
+        mapFragment?.getMapAsync(this)
 
         findViewById<Button>(R.id.btn_save).setOnClickListener {
             if (lastAddress != null && lastLatLng != null) {
@@ -75,7 +74,6 @@ class PickLocationActivity : AppCompatActivity(), OnMapReadyCallback {
             )
         }
 
-        // Trigger setiap kamera berhenti
         gMap.setOnCameraIdleListener {
             val center = gMap.cameraPosition.target
             reverseGeocode(center)
@@ -92,6 +90,7 @@ class PickLocationActivity : AppCompatActivity(), OnMapReadyCallback {
         } catch (e: Exception) {
             addressTv.text = "Gagal geocoder"
             lastAddress = null
+            lastLatLng = null
         }
     }
 
@@ -107,7 +106,7 @@ class PickLocationActivity : AppCompatActivity(), OnMapReadyCallback {
         if (requestCode == 100 && grantResults.isNotEmpty() &&
             grantResults[0] == PackageManager.PERMISSION_GRANTED
         ) {
-            recreate() // Refresh activity untuk aktifkan myLocation
+            recreate()
         } else {
             Toast.makeText(this, "Izin lokasi ditolak", Toast.LENGTH_SHORT).show()
         }

@@ -27,6 +27,7 @@ androidx-preference = "1.2.1"
 play-services-location = "21.3.0"
 gmsMaps    = "18.1.0"
 gmsLoc     = "21.0.1"
+playservices-maps = "18.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -60,6 +61,7 @@ androidx-preference = { group = "androidx.preference", name = "preference", vers
 play_services_location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "play-services-location" }
 google-maps      = { group = "com.google.android.gms", name = "play-services-maps",      version.ref = "gmsMaps" }
 google-location  = { group = "com.google.android.gms", name = "play-services-location",  version.ref = "gmsLoc" }
+playservices-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playservices-maps" }
 
 
 [plugins]
