@@ -1,4 +1,4 @@
-import com.google.wireless.android.sdk.stats.AnnotationProcessorInfo.InclusionType.KSP
+import org.gradle.kotlin.dsl.libs
 
 plugins {
     alias(libs.plugins.android.application)
@@ -83,6 +83,25 @@ dependencies {
 
     //ios switch
     implementation(libs.switch.button)
+
+    //osmdroid
+    implementation(libs.osmdroid)
+
+    //preferences
+    implementation(libs.androidx.preference)
+
+    //google play service location
+    implementation(libs.play.services.location)
+
+    //google maps
+    implementation(libs.google.maps)
+    implementation(libs.google.location)
+
+
+
+
+
+
 
     // Retrofit untuk Networking
     implementation(libs.retrofit)

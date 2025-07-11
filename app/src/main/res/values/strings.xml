@@ -257,6 +257,11 @@
     <string name="voucher" tools:ignore="MissingTranslation">Voucher</string>
     <string name="promo_pancasila" tools:ignore="MissingTranslation">Promo Pancasila</string>
     <string name="promo_jum_at" tools:ignore="MissingTranslation">Promo Jum\'at</string>
+    <string name="belum_ada_lokasi_dipilih" tools:ignore="MissingTranslation">Belum ada lokasi dipilih</string>
+    <string name="alamat" tools:ignore="MissingTranslation">Alamat</string>
+    <string name="lokasi_anda" tools:ignore="MissingTranslation">Lokasi anda</string>
+    <string name="google_maps_key">AIzaSyD1onlNz8rQjXIvoy_2UgiumsdQNBK3EyQ</string>
+
 
 
 </resources>

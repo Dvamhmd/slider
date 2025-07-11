@@ -22,6 +22,11 @@ shimmer = "0.5.0"
 switchbutton = "2.1.0"
 uikit = "2.0.0-SANDBOX"
 ksp = "1.9.24-1.0.20"
+osmdroid = "6.1.16"
+androidx-preference = "1.2.1"
+play-services-location = "21.3.0"
+gmsMaps    = "18.1.0"
+gmsLoc     = "21.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -50,8 +55,11 @@ sdp = { group = "com.intuit.sdp", name = "sdp-android", version = "1.0.6" }
 curved-bottom-navigation = { group = "com.github.qamarelsafadi", name = "CurvedBottomNavigation", version.ref = "curvedbottomnav" }
 switch-button = { group = "com.kyleduo.switchbutton", name = "library", version = "2.1.0" }
 uikit = { module = "com.midtrans:uikit", version.ref = "uikit" }
-
-
+osmdroid = { group = "org.osmdroid", name = "osmdroid-android", version.ref = "osmdroid" }
+androidx-preference = { group = "androidx.preference", name = "preference", version.ref = "androidx-preference" }
+play_services_location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "play-services-location" }
+google-maps      = { group = "com.google.android.gms", name = "play-services-maps",      version.ref = "gmsMaps" }
+google-location  = { group = "com.google.android.gms", name = "play-services-location",  version.ref = "gmsLoc" }
 
 
 [plugins]

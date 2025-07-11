@@ -129,6 +129,17 @@
 
             </com.google.android.material.card.MaterialCardView>
 
+            <TextView
+                android:id="@+id/addressResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/belum_ada_lokasi_dipilih"
+                android:textColor="@color/text_main"
+                android:textSize="@dimen/_11ssp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_marginBottom="@dimen/_8sdp"/>
+
+
 
         </LinearLayout>
 
