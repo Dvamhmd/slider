@@ -58,14 +58,12 @@
         android:layout_centerInParent="true"
         />
 
-    <com.google.android.material.card.MaterialCardView
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:cardBackgroundColor="@color/white"
-        app:cardElevation="@dimen/_12sdp"
-        app:cardCornerRadius="0dp"
-        app:strokeColor="@color/white">
+        android:background="@drawable/top_rounded_background"
+        android:elevation="12dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -82,7 +80,7 @@
                 android:textColor="@color/text_main"
                 android:fontFamily="@font/poppins_semi_bold"
                 android:textSize="@dimen/_16ssp"
-                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_12sdp"
                 android:layout_marginBottom="@dimen/_4sdp"/>
 
             <LinearLayout
@@ -145,8 +143,13 @@
         </LinearLayout>
 
 
+    </FrameLayout>
 
-    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
 
 
 
