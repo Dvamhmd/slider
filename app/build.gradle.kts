@@ -98,6 +98,8 @@ dependencies {
     //google maps
     implementation(libs.google.maps)
     implementation(libs.google.location)
+    implementation(libs.places)
+
 
 
 

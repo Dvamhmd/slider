@@ -75,7 +75,7 @@ class LoginActivity : AppCompatActivity() {
                                 "password salah." -> passwordLayout.error = message
                                 else -> Toast.makeText(this, "Login gagal: $message", Toast.LENGTH_SHORT).show()
                             }
-                        } catch (ex: Exception) {
+                        } catch (_: Exception) {
                             Toast.makeText(this, "Kesalahan server: [${e.code()}]", Toast.LENGTH_SHORT).show()
                         }
                     }

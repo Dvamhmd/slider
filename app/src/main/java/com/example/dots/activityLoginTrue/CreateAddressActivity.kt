@@ -3,6 +3,7 @@ package com.example.dots.activityLoginTrue
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -18,6 +19,8 @@ import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.material.card.MaterialCardView
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputLayout
 
 class CreateAddressActivity : AppCompatActivity() {
 
@@ -75,6 +78,99 @@ class CreateAddressActivity : AppCompatActivity() {
             val intent = Intent(this, PickLocationActivity::class.java)
             pickLocationLauncher.launch(intent)
         }
+
+
+
+        //variabel layout alamat
+        val addressDetailLayout = findViewById<TextInputLayout>(R.id.addressDetailLayout)
+        val addressLabelLayout = findViewById<TextInputLayout>(R.id.addressLabelLayout)
+        val addressNameLayout = findViewById<TextInputLayout>(R.id.addressNameLayout)
+        val addressPhoneLayout = findViewById<TextInputLayout>(R.id.addressPhoneLayout)
+
+
+
+        //variabel input alamat
+        val addressDetailInput = findViewById<TextInputEditText>(R.id.addressDetail)
+        val addressLabelInput = findViewById<TextInputEditText>(R.id.addressLabel)
+        val addressNameInput = findViewById<TextInputEditText>(R.id.addressName)
+        val addressPhoneInput = findViewById<TextInputEditText>(R.id.addressPhone)
+
+
+
+
+
+        //button simpan alamat
+        val saveAddress = findViewById<Button>(R.id.save)
+
+        //navigasi dan kirim variabel
+        saveAddress.setOnClickListener {
+
+            //variabel alamat
+            val address = addressResultTextView.text.toString()
+            val addressDetail = addressDetailInput.text.toString()
+            val addressLabel = addressLabelInput.text.toString()
+            val addressName = addressNameInput.text.toString()
+            val addressPhone = addressPhoneInput.text.toString()
+
+            //error handling
+            addressDetailLayout.error = null
+            addressLabelLayout.error = null
+            addressNameLayout.error = null
+            addressPhoneLayout.error = null
+
+            if (address.isEmpty()) {
+                Toast.makeText(this, "Pilih lokasi dulu!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
+            if (addressDetail.isEmpty()) {
+                addressDetailLayout.error = "Wajib diisi"
+                return@setOnClickListener
+            }
+
+            if (addressLabel.isEmpty()) {
+                addressLabelLayout.error = "Wajib diisi"
+                return@setOnClickListener
+            }
+
+            if (addressName.isEmpty()) {
+                addressNameLayout.error = "Wajib diisi"
+                return@setOnClickListener
+            }
+
+            if (addressPhone.isEmpty()) {
+                addressPhoneLayout.error = "Wajib diisi"
+                return@setOnClickListener
+            }
+
+            // Kirim balik data ke FragmentDelivery
+            val resultIntent = Intent().apply {
+                putExtra("ADDRESS", address)
+                putExtra("ADDRESS_DETAIL", addressDetail)
+                putExtra("ADDRESS_LABEL", addressLabel)
+                putExtra("ADDRESS_NAME", addressName)
+                putExtra("ADDRESS_PHONE", addressPhone)
+            }
+
+            setResult(RESULT_OK, resultIntent)
+            finish()
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     private fun showMapPreview() {

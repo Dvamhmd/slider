@@ -261,7 +261,12 @@
     <string name="alamat" tools:ignore="MissingTranslation">Alamat</string>
     <string name="lokasi_anda" tools:ignore="MissingTranslation">Lokasi anda</string>
     <string name="google_maps_key">AIzaSyD1onlNz8rQjXIvoy_2UgiumsdQNBK3EyQ</string>
-
+    <string name="gagal_geocoder">Gagal geocoder</string>
+    <string name="cari_alamat">Cari alamat</string>
+    <string name="tes">tes</string>
+    <string name="rumah">Rumah</string>
+    <string name="alamat_user">Jl, Cindelaras Gg Randu No 3 Kepuhsari-Maguwoharjo, Kec. Depok, 55598, Jl. Kepuhsari, RT.07/RW.05, Krodan, Maguwoharjo, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55282</string>
+    <string name="nama_no_hp">Nama - No HP</string>
 
 
 </resources>

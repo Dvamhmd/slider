@@ -45,6 +45,12 @@ class OrderTypeActivity : AppCompatActivity() {
         val toggleGroup = findViewById<LinearLayout>(R.id.toggleGroup)
 
 
+        if (savedInstanceState == null) {
+            showFragment(FragmentDelivery())
+        }
+
+
+
 
         toggleGroup.post {
             slider.layoutParams.width = toggleGroup.width / 2

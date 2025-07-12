@@ -14,9 +14,31 @@ import com.example.dots.R
 import com.example.dots.activityLoginTrue.CreateAddressActivity
 
 
+
 class FragmentDelivery : Fragment() {
 
     private lateinit var checkImages: List<ImageView>
+    private lateinit var addressEmptyCard: View
+    private val addressList = mutableListOf<Map<String, String>>()
+    private lateinit var addressContainer: ViewGroup
+
+
+    private val addressResultLauncher = registerForActivityResult(
+        androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == android.app.Activity.RESULT_OK) {
+            val data = result.data
+            val newAddress = mapOf(
+                "address" to (data?.getStringExtra("ADDRESS") ?: "-"),
+                "label" to (data?.getStringExtra("ADDRESS_LABEL") ?: "-"),
+                "detail" to (data?.getStringExtra("ADDRESS_DETAIL") ?: "-"),
+                "name" to (data?.getStringExtra("ADDRESS_NAME") ?: "-"),
+                "phone" to (data?.getStringExtra("ADDRESS_PHONE") ?: "-")
+            )
+            addressList.add(newAddress)
+            renderAllAddresses()
+        }
+    }
 
 
 
@@ -25,6 +47,42 @@ class FragmentDelivery : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_delivery, container, false)
+
+        //alamat kosong sebelum tambah alamat
+        addressEmptyCard = view.findViewById(R.id.address_empty_card)
+        addressContainer = view.findViewById(R.id.address_container)
+
+
+        //variabel alamat
+        val address = arguments?.getString("ADDRESS")
+        val addressDetail = arguments?.getString("ADDRESS_DETAIL")
+        val addressLabel = arguments?.getString("ADDRESS_LABEL")
+        val addressName =  arguments?.getString("ADDRESS_NAME")
+        val addressPhone = arguments?.getString("ADDRESS_PHONE")
+
+
+
+
+        if (!addressDetail.isNullOrEmpty()) {
+            val firstAddress = mapOf(
+                "address" to (address ?: "_"),
+                "label" to (addressLabel ?: "-"),
+                "detail" to addressDetail,
+                "name" to (addressName ?: "-"),
+                "phone" to (addressPhone ?: "-")
+            )
+            addressList.add(firstAddress)
+        }
+        renderAllAddresses()
+
+
+
+
+
+
+
+
+
 
         //mencari nearest store
         val nearestStore1 = view.findViewById<CardView>(R.id.nearest_store1)
@@ -54,9 +112,9 @@ class FragmentDelivery : Fragment() {
 
         val addAddress = view.findViewById<TextView>(R.id.add_address)
 
-        addAddress.setOnClickListener{
+        addAddress.setOnClickListener {
             val intent = Intent(requireContext(), CreateAddressActivity::class.java)
-            startActivity(intent)
+            addressResultLauncher.launch(intent)
         }
 
 
@@ -112,6 +170,27 @@ class FragmentDelivery : Fragment() {
 
 
     }
+
+    private fun renderAllAddresses() {
+        addressContainer.removeAllViews()
+        if (addressList.isEmpty()) {
+            addressEmptyCard.visibility = View.VISIBLE
+        } else {
+            addressEmptyCard.visibility = View.GONE
+            for (address in addressList) {
+                val addressView = layoutInflater.inflate(R.layout.item_address, addressContainer, false)
+
+                addressView.findViewById<TextView>(R.id.address_label).text = address["label"]
+                addressView.findViewById<TextView>(R.id.address_detail).text = address["detail"]
+                addressView.findViewById<TextView>(R.id.address_name_phone).text = "${address["name"]} - ${address["phone"]}"
+                addressView.findViewById<TextView>(R.id.address).text = address["address"]
+
+                addressContainer.addView(addressView)
+            }
+        }
+    }
+
+
 
 
 }

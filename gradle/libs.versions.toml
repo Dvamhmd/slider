@@ -28,6 +28,11 @@ play-services-location = "21.3.0"
 gmsMaps    = "18.1.0"
 gmsLoc     = "21.0.1"
 playservices-maps = "18.1.0"
+places = "3.4.0"
+
+
+
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -62,7 +67,7 @@ play_services_location = { group = "com.google.android.gms", name = "play-servic
 google-maps      = { group = "com.google.android.gms", name = "play-services-maps",      version.ref = "gmsMaps" }
 google-location  = { group = "com.google.android.gms", name = "play-services-location",  version.ref = "gmsLoc" }
 playservices-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playservices-maps" }
-
+places = { group = "com.google.android.libraries.places", name = "places", version.ref = "places" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

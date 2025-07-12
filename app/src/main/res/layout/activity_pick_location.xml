@@ -6,11 +6,47 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main">
 
+
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_search_bar"
+        android:padding="@dimen/_10sdp"
+        android:elevation="@dimen/_5sdp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:contentDescription="@string/icon"
+            android:src="@drawable/search"
+            app:tint="@color/soft_gray"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_12sdp"
+            android:text="@string/cari_alamat"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/soft_gray"
+            tools:ignore="TextContrastCheck" />
+    </LinearLayout>
+
+
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/map_fragment"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"/>
+
 
 
     <ImageView
@@ -19,7 +55,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/pin_location"
-        android:layout_gravity="center"
         android:layout_centerInParent="true"
         />
 
