@@ -36,9 +36,9 @@ class AlamatAdapter(
     override fun onBindViewHolder(holder: AlamatViewHolder, position: Int) {
           val alamat = alamatList[position]
           holder.label.text = alamat.labelAlamat ?: "-"
-          holder.namePhone.text = "${alamat.namaPenerima} | ${alamat.noHpPenerima}"
-          holder.detail.text = alamat.alamat ?: "-"
-          holder.fullAlamat.text = "Lat: ${alamat.latitude ?: "-"}, Lng: ${alamat.longitude ?: "-"}"
+          holder.namePhone.text = "${alamat.namaPenerima} - ${alamat.noHpPenerima}"
+          holder.detail.text = alamat.detailAlamat ?: "-"
+          holder.fullAlamat.text = alamat.alamat ?: "-"
 
           // Checklist
         val newImage = if (alamat.status == "utama") R.drawable.checked else R.drawable.uncheck

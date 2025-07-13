@@ -84,7 +84,7 @@ class AlamatViewModel(application: Application) : AndroidViewModel(application) 
                 val result = repository.deleteAlamat(id)
                 _loading.value = false
                 result.onSuccess {
-                  fetchAlamat() // refresh data
+                  fetchAlamat()
                   _error.value = null
                 }.onFailure {
                   _error.value = it.message

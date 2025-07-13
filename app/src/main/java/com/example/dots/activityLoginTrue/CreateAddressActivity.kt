@@ -32,6 +32,8 @@ class CreateAddressActivity : AppCompatActivity() {
     private lateinit var mapPreviewCard: MaterialCardView
     private lateinit var mapTitle: TextView
     private lateinit var mapNote: TextView
+    private lateinit var loadingOverlay: View
+
 
     private var selectedLatLng: LatLng? = null
     private var selectedAddress: String? = null
@@ -75,6 +77,8 @@ class CreateAddressActivity : AppCompatActivity() {
         mapPreviewCard = findViewById(R.id.map_preview_card)
         mapTitle = findViewById(R.id.titik_lokasi_kamu)
         mapNote = findViewById(R.id.note_text)
+        loadingOverlay = findViewById(R.id.addressLoadingOverlay)
+
 
         findViewById<ImageView>(R.id.back).setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
@@ -119,12 +123,12 @@ class CreateAddressActivity : AppCompatActivity() {
             addressPhoneInput.setText(intent.getStringExtra("HP"))
             addressDetailInput.setText(intent.getStringExtra("DETAIL"))
 
-            selectedAddress = intent.getStringExtra("DETAIL")
+            selectedAddress = intent.getStringExtra("ALAMAT")
             selectedLatLng = LatLng(
                 intent.getDoubleExtra("LAT", 0.0),
                 intent.getDoubleExtra("LNG", 0.0)
             )
-            addressResultTextView.text = intent.getStringExtra("DETAIL")
+            addressResultTextView.text = intent.getStringExtra("ALAMAT")
             showMapPreview()
         }
 
@@ -175,66 +179,43 @@ class CreateAddressActivity : AppCompatActivity() {
                     labelAlamat = addressLabel,
                     namaPenerima = addressName,
                     noHpPenerima = addressPhone,
-                    alamat = "$address, $addressDetail",
+                    alamat = address,
+                    detailAlamat = addressDetail,
                     latitude = selectedLatLng?.latitude,
                     longitude = selectedLatLng?.longitude,
                     status = "tambahan",
                 )
 
+                showLoading(true)
                 alamatViewModel.editAlamat(alamat)
             } else {
                 val alamat = Alamat( // isi di ViewModel lewat token login
                     labelAlamat = addressLabel,
                     namaPenerima = addressName,
                     noHpPenerima = addressPhone,
-                    alamat = "$address, $addressDetail",
+                    alamat = address,
+                    detailAlamat = addressDetail,
                     latitude = selectedLatLng?.latitude,
                     longitude = selectedLatLng?.longitude,
                     status = "tambahan"
                 )
 
                 // Simpan ke server
+                showLoading(true)
                 alamatViewModel.tambahAlamat(alamat)
             }
 
 
-
-            alamatViewModel.tambahAlamatResult.observe(this) { response ->
-                if (response != null) {
-                    Toast.makeText(this, "Alamat berhasil disimpan", Toast.LENGTH_SHORT).show()
-                    setResult(RESULT_OK)
-                    finish()
-                }
-            }
-
             val observer = if (isEditMode) alamatViewModel.editAlamatResult else alamatViewModel.tambahAlamatResult
             observer.observe(this) { response ->
+                showLoading(false)
                 if (response != null) {
                     Toast.makeText(this, "Alamat berhasil disimpan", Toast.LENGTH_SHORT).show()
                     setResult(RESULT_OK)
                     finish()
                 }
             }
-
-
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     private fun showMapPreview() {
@@ -258,4 +239,9 @@ class CreateAddressActivity : AppCompatActivity() {
             }
         }
     }
+
+    private fun showLoading(show: Boolean) {
+        loadingOverlay.visibility = if (show) View.VISIBLE else View.GONE
+    }
+
 }

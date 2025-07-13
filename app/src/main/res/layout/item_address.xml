@@ -114,9 +114,13 @@
                 android:src="@drawable/edit_address"
                 android:contentDescription="@string/icon" />
 
+            <!-- Pembatas -->
             <View
-                android:layout_width="@dimen/_8sdp"
-                android:layout_height="match_parent" />
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:background="#CCCCCC"/>
 
             <ImageView
                 android:id="@+id/delete_button"

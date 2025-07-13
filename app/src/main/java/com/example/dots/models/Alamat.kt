@@ -9,6 +9,7 @@ data class Alamat(
     @SerializedName("nama_penerima") val namaPenerima: String? = null,
     @SerializedName("no_hp_penerima") val noHpPenerima: String? = null,
     @SerializedName("alamat") val alamat: String? = null,
+    @SerializedName("detail_alamat") val detailAlamat: String? = null,
     @SerializedName("latitude") val latitude: Double? = null,
     @SerializedName("longitude") val longitude: Double? = null,
     @SerializedName("status") var status: String? = null,

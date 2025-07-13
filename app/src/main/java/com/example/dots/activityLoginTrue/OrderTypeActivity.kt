@@ -75,21 +75,10 @@ class OrderTypeActivity : AppCompatActivity() {
         }
 
 
-
         back.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
             finish()
         }
-
-
-
-
-
-
-
-
-
-
     }
 
     private fun showFragment(fragment: Fragment) {
@@ -97,6 +86,4 @@ class OrderTypeActivity : AppCompatActivity() {
             .replace(R.id.fragmentContainer, fragment)
             .commit()
     }
-
-
 }

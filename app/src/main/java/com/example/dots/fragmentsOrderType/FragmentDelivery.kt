@@ -64,7 +64,8 @@ class FragmentDelivery : Fragment() {
                     putExtra("LABEL", alamat.labelAlamat)
                     putExtra("NAMA", alamat.namaPenerima)
                     putExtra("HP", alamat.noHpPenerima)
-                    putExtra("DETAIL", alamat.alamat)
+                    putExtra("ALAMAT", alamat.alamat)
+                    putExtra("DETAIL", alamat.detailAlamat)
                     putExtra("LAT", alamat.latitude)
                     putExtra("LNG", alamat.longitude)
                 }
@@ -111,9 +112,9 @@ class FragmentDelivery : Fragment() {
                 Toast.makeText(requireContext(), "Gagal memuat alamat: $it", Toast.LENGTH_SHORT).show()
             }
         }
-
-        alamatViewModel.fetchAlamat()
         showLoading(true) // Mulai loading
+        alamatViewModel.fetchAlamat()
+
 
 
         // ============ TOKO LOGIC TETAP SAMA ============
