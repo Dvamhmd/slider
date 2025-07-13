@@ -29,23 +29,23 @@ interface ApiService {
 
     // 📍 Alamat
     @POST("tambah-alamat")
-    suspend fun tambahAlamat(@Body alamat: Alamat): Response<Alamat>
+    suspend fun tambahAlamat(@Body alamat: Alamat): Response<BaseResponse<List<Alamat>>>
 
     @GET("get-alamat")
-    suspend fun getAlamat(): Response<List<Alamat>>
+    suspend fun getAlamat(): Response<BaseResponse<List<Alamat>>>
 
     @POST("edit-alamat")
-    suspend fun editAlamat(@Body alamat: Alamat): Response<Alamat>
+    suspend fun editAlamat(@Body alamat: Alamat): Response<BaseResponse<Alamat>>
 
     @POST("delete-alamat")
-    suspend fun deleteAlamat(@Body idAlamat: Map<String, String>): Response<ApiResponse<Any?>>
+    suspend fun deleteAlamat(@Body id: Map<String, String>): Response<BaseResponse<List<Alamat>>>
 
     // ❤️ Favorit
     @POST("tambah-favorit")
     suspend fun tambahFavorit(@Body favorit: Favorit): Response<ApiResponse<Any?>>
 
     @GET("get-favorit")
-    suspend fun getFavorit(): Response<List<Favorit>>
+    suspend fun getFavorit(): Response<BaseResponse<List<Favorit>>>
 
     @POST("delete-favorit")
     suspend fun deleteFavorit(@Body favorit: Favorit): Response<ApiResponse<Any?>>

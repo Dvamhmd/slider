@@ -13,7 +13,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import androidx.lifecycle.ViewModelProvider
 import com.example.dots.R
+import com.example.dots.models.Alamat
+import com.example.dots.viewmodel.AlamatViewModel
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
@@ -24,6 +27,7 @@ import com.google.android.material.textfield.TextInputLayout
 
 class CreateAddressActivity : AppCompatActivity() {
 
+    private lateinit var alamatViewModel: AlamatViewModel
     private lateinit var addressResultTextView: TextView
     private lateinit var mapPreviewCard: MaterialCardView
     private lateinit var mapTitle: TextView
@@ -65,6 +69,8 @@ class CreateAddressActivity : AppCompatActivity() {
         WindowInsetsControllerCompat(window, window.decorView)
             .isAppearanceLightStatusBars = true
 
+        alamatViewModel = ViewModelProvider(this)[AlamatViewModel::class.java]
+
         addressResultTextView = findViewById(R.id.addressResult)
         mapPreviewCard = findViewById(R.id.map_preview_card)
         mapTitle = findViewById(R.id.titik_lokasi_kamu)
@@ -78,6 +84,8 @@ class CreateAddressActivity : AppCompatActivity() {
             val intent = Intent(this, PickLocationActivity::class.java)
             pickLocationLauncher.launch(intent)
         }
+
+
 
 
 
@@ -102,23 +110,40 @@ class CreateAddressActivity : AppCompatActivity() {
         //button simpan alamat
         val saveAddress = findViewById<Button>(R.id.save)
 
-        //navigasi dan kirim variabel
-        saveAddress.setOnClickListener {
+        val isEditMode = intent.getBooleanExtra("EDIT_MODE", false)
 
-            //variabel alamat
+        if (isEditMode) {
+            // Ambil data dari intent
+            addressLabelInput.setText(intent.getStringExtra("LABEL"))
+            addressNameInput.setText(intent.getStringExtra("NAMA"))
+            addressPhoneInput.setText(intent.getStringExtra("HP"))
+            addressDetailInput.setText(intent.getStringExtra("DETAIL"))
+
+            selectedAddress = intent.getStringExtra("DETAIL")
+            selectedLatLng = LatLng(
+                intent.getDoubleExtra("LAT", 0.0),
+                intent.getDoubleExtra("LNG", 0.0)
+            )
+            addressResultTextView.text = intent.getStringExtra("DETAIL")
+            showMapPreview()
+        }
+
+
+        saveAddress.setOnClickListener {
+            // Variabel input
             val address = addressResultTextView.text.toString()
             val addressDetail = addressDetailInput.text.toString()
             val addressLabel = addressLabelInput.text.toString()
             val addressName = addressNameInput.text.toString()
             val addressPhone = addressPhoneInput.text.toString()
 
-            //error handling
+            // Validasi input
             addressDetailLayout.error = null
             addressLabelLayout.error = null
             addressNameLayout.error = null
             addressPhoneLayout.error = null
 
-            if (address.isEmpty()) {
+            if (selectedLatLng == null || selectedAddress == null) {
                 Toast.makeText(this, "Pilih lokasi dulu!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
@@ -143,18 +168,57 @@ class CreateAddressActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // Kirim balik data ke FragmentDelivery
-            val resultIntent = Intent().apply {
-                putExtra("ADDRESS", address)
-                putExtra("ADDRESS_DETAIL", addressDetail)
-                putExtra("ADDRESS_LABEL", addressLabel)
-                putExtra("ADDRESS_NAME", addressName)
-                putExtra("ADDRESS_PHONE", addressPhone)
+            // Siapkan objek Alamat
+            if (isEditMode) {
+                val alamat = Alamat(
+                    idAlamat = intent.getStringExtra("ALAMAT_ID"),
+                    labelAlamat = addressLabel,
+                    namaPenerima = addressName,
+                    noHpPenerima = addressPhone,
+                    alamat = "$address, $addressDetail",
+                    latitude = selectedLatLng?.latitude,
+                    longitude = selectedLatLng?.longitude,
+                    status = "tambahan",
+                )
+
+                alamatViewModel.editAlamat(alamat)
+            } else {
+                val alamat = Alamat( // isi di ViewModel lewat token login
+                    labelAlamat = addressLabel,
+                    namaPenerima = addressName,
+                    noHpPenerima = addressPhone,
+                    alamat = "$address, $addressDetail",
+                    latitude = selectedLatLng?.latitude,
+                    longitude = selectedLatLng?.longitude,
+                    status = "tambahan"
+                )
+
+                // Simpan ke server
+                alamatViewModel.tambahAlamat(alamat)
             }
 
-            setResult(RESULT_OK, resultIntent)
-            finish()
+
+
+            alamatViewModel.tambahAlamatResult.observe(this) { response ->
+                if (response != null) {
+                    Toast.makeText(this, "Alamat berhasil disimpan", Toast.LENGTH_SHORT).show()
+                    setResult(RESULT_OK)
+                    finish()
+                }
+            }
+
+            val observer = if (isEditMode) alamatViewModel.editAlamatResult else alamatViewModel.tambahAlamatResult
+            observer.observe(this) { response ->
+                if (response != null) {
+                    Toast.makeText(this, "Alamat berhasil disimpan", Toast.LENGTH_SHORT).show()
+                    setResult(RESULT_OK)
+                    finish()
+                }
+            }
+
+
         }
+
 
 
 

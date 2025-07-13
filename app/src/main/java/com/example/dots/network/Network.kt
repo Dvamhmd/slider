@@ -13,49 +13,41 @@ import java.util.concurrent.TimeUnit
 object Network {
 
     fun getRetrofit(context: Context): Retrofit {
-        // Logging interceptor (untuk debug request/response)
+        // Pastikan TokenManager sudah diinisialisasi
+        TokenManager.initialize(context)
+
+        // Logging interceptor
         val logging = HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BODY
         }
 
-        // Interceptor untuk menambahkan header Authorization Bearer
+        // Interceptor untuk menambahkan Authorization header jika perlu
         val authInterceptor = Interceptor { chain ->
-            val requestBuilder = chain.request().newBuilder()
+            val originalRequest = chain.request()
+            val requestBuilder = originalRequest.newBuilder()
                 .addHeader("Accept", "application/json")
 
-            // Ambil token dari TokenManager
             val token = TokenManager.getToken()
-            val requestUrl = chain.request().url.toString()
+            val requestUrl = originalRequest.url.toString()
 
-            // Hanya sisipkan Authorization kalau bukan endpoint login/register
-            if (!requestUrl.contains("/auth/login") && !requestUrl.contains("/auth/register") && token != null) {
+            if (!requestUrl.contains("/auth/login") &&
+                !requestUrl.contains("/auth/register") &&
+                token != null
+            ) {
                 requestBuilder.addHeader("Authorization", "Bearer $token")
             }
 
             chain.proceed(requestBuilder.build())
         }
 
-        // OkHttpClient
         val client = OkHttpClient.Builder()
-            .connectTimeout(10, TimeUnit.SECONDS) // waktu koneksi maksimal
-            .readTimeout(10, TimeUnit.SECONDS)    // waktu tunggu respons
-            .writeTimeout(10, TimeUnit.SECONDS)   // waktu kirim data
+            .connectTimeout(10, TimeUnit.SECONDS)
+            .readTimeout(10, TimeUnit.SECONDS)
+            .writeTimeout(10, TimeUnit.SECONDS)
             .addInterceptor(logging)
-            .addInterceptor { chain ->
-                val requestBuilder = chain.request().newBuilder()
-                val token = TokenManager.getToken()
-                val url = chain.request().url.toString()
-
-                if (!url.contains("/auth/login") && !url.contains("/auth/register") && token != null) {
-                    requestBuilder.addHeader("Authorization", "Bearer $token")
-                }
-
-                chain.proceed(requestBuilder.build())
-            }
+            .addInterceptor(authInterceptor) // ← hanya satu interceptor
             .build()
 
-
-        // Retrofit
         return Retrofit.Builder()
             .baseUrl(BuildConfig.API_BASE_URL)
             .client(client)

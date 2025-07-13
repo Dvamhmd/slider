@@ -1,17 +1,22 @@
 package com.example.dots.fragmentsLoggedIn
 
 import android.os.Bundle
+import android.view.*
+import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.dots.R
-
-
-
+import com.example.dots.adapter.FavoritAdapter
+import com.example.dots.viewmodel.FavoritViewModel
 
 class LoggedInFavoriteFragment : Fragment() {
 
+    private lateinit var favoritViewModel: FavoritViewModel
+    private lateinit var favoritRecyclerView: RecyclerView
+    private lateinit var emptyLayout: LinearLayout
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -19,12 +24,40 @@ class LoggedInFavoriteFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_logged_in_favorite, container, false)
 
+        favoritRecyclerView = view.findViewById(R.id.favoritRecyclerView)
+        favoritRecyclerView.layoutManager = LinearLayoutManager(requireContext())
 
+        emptyLayout = view.findViewById(R.id.emptyLayout)
+
+        favoritViewModel = ViewModelProvider(this)[FavoritViewModel::class.java]
+
+        favoritViewModel.favoritList.observe(viewLifecycleOwner) { favoritList ->
+            favoritList?.let { it ->
+                if (favoritList.isNotEmpty()) {
+                    favoritRecyclerView.visibility = View.VISIBLE
+                    emptyLayout.visibility = View.GONE
+                } else {
+                    favoritRecyclerView.visibility = View.GONE
+                    emptyLayout.visibility = View.VISIBLE
+                }
+
+                val adapter = FavoritAdapter(it){
+                    Toast.makeText(requireContext(), "Klik: $it", Toast.LENGTH_SHORT).show()
+                }
+                favoritRecyclerView.adapter = adapter
+            }
+        }
+
+        favoritViewModel.error.observe(viewLifecycleOwner) { errorMessage ->
+            errorMessage?.let {
+                Toast.makeText(requireContext(), "Error: $it", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        favoritViewModel.fetchFavorit()
 
 
 
         return view
     }
-
-
 }

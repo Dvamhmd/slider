@@ -100,11 +100,9 @@ dependencies {
     implementation(libs.google.location)
     implementation(libs.places)
 
-
-
-
-
-
+    
+    //alert
+    implementation(libs.material.v1110)
 
 
     // Retrofit untuk Networking
@@ -129,6 +127,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
 
 
 }

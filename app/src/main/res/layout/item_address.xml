@@ -1,112 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginBottom="@dimen/_8sdp"
-    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginVertical="@dimen/_8sdp"
     android:backgroundTint="@color/white"
-    app:cardElevation="0dp"
-    app:cardCornerRadius="@dimen/_12sdp">
-
+    app:cardCornerRadius="@dimen/_12sdp"
+    app:cardElevation="0dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_10sdp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/_10sdp">
 
-
+        <!-- Label Alamat -->
         <TextView
             android:id="@+id/address_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/rumah"
-            android:textSize="@dimen/_12ssp"
             android:layout_marginStart="@dimen/_8sdp"
             android:layout_marginBottom="@dimen/_8sdp"
-            android:fontFamily="@font/poppins_semi_bold"
-            android:textColor="@color/text_main"/>
+            android:text="@string/rumah"
+            android:textColor="@color/text_main"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/poppins_semi_bold" />
 
+        <!-- Garis pemisah -->
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/_1sdp"
-            android:background="@color/softer_gray"
-            android:layout_marginBottom="@dimen/_4sdp"/>
+            android:background="@color/softer_gray" />
 
-
-        <LinearLayout
+        <!-- Detail Alamat dengan Checklist -->
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="1"
-            android:layout_marginBottom="@dimen/_8sdp">
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/textContainer"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/checkbox">
 
                 <TextView
                     android:id="@+id/address_name_phone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/nama_no_hp"
+                    android:text="Nama | No HP"
                     android:textColor="@color/text_main"
                     android:textSize="@dimen/_11ssp"
                     android:fontFamily="@font/poppins_semi_bold"
-                    android:layout_marginStart="@dimen/_8sdp"
-                    android:layout_marginBottom="@dimen/_4sdp"/>
+                    android:layout_marginBottom="@dimen/_4sdp" />
 
                 <TextView
                     android:id="@+id/address_detail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/kepuhsari_rt_7_rw_05_maguwoharjo"
+                    android:text="Alamat detail user"
                     android:textColor="@color/text_main"
                     android:textSize="@dimen/_10ssp"
                     android:fontFamily="@font/poppins_regular"
-                    android:layout_marginStart="@dimen/_8sdp"
-                    android:layout_marginBottom="@dimen/_4sdp"/>
-
+                    android:layout_marginBottom="@dimen/_4sdp" />
 
                 <TextView
                     android:id="@+id/address"
-                    android:layout_width="@dimen/_220sdp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_8sdp"
-                    android:layout_marginEnd="@dimen/_8sdp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:text="@string/alamat_user"
+                    android:text="Lat: 0.000000, Lng: 0.000000"
                     android:textColor="@color/soft_gray"
                     android:textSize="@dimen/_9ssp"
-                    tools:ignore="TextSizeCheck,TextContrastCheck" />
-
+                    android:fontFamily="@font/poppins_regular" />
             </LinearLayout>
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_weight="1" />
-
             <ImageView
+                android:id="@+id/checkbox"
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
                 android:contentDescription="@string/icon"
-                android:layout_gravity="center"
-                android:layout_marginEnd="@dimen/_16sdp"
-                android:src="@drawable/uncheck" />
+                android:src="@drawable/uncheck"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </LinearLayout>
-
+        <!-- Garis pemisah -->
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/_1sdp"
             android:background="@color/softer_gray"
-            android:layout_marginBottom="@dimen/_8sdp"/>
+            android:layout_marginBottom="@dimen/_8sdp" />
 
+        <!-- Tombol Edit & Hapus -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -114,32 +108,22 @@
             android:layout_marginStart="@dimen/_8sdp">
 
             <ImageView
+                android:id="@+id/edit_button"
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
-                android:contentDescription="@string/icon"
-                android:src="@drawable/edit_address" />
+                android:src="@drawable/edit_address"
+                android:contentDescription="@string/icon" />
 
             <View
-                android:layout_width="@dimen/_1sdp"
-                android:layout_height="match_parent"
-                android:background="@color/softer_gray"
-                android:layout_marginStart="@dimen/_8sdp"
-                android:layout_marginEnd="@dimen/_8sdp" />
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="match_parent" />
 
             <ImageView
+                android:id="@+id/delete_button"
                 android:layout_width="@dimen/_20sdp"
                 android:layout_height="@dimen/_20sdp"
-                android:contentDescription="@string/icon"
-                android:src="@drawable/delete_address" />
-
+                android:src="@drawable/delete_address"
+                android:contentDescription="@string/icon" />
         </LinearLayout>
-
-
-
-
-
-
-
-
     </LinearLayout>
 </androidx.cardview.widget.CardView>

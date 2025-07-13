@@ -13,7 +13,7 @@ data class Kategori(
 ) {
     val gambar: String?
         get() = if (gambarRaw?.contains("127.0.0.1") == true)
-            gambarRaw.replace("127.0.0.1", "sharp-sheep-gladly.ngrok-free.app") // ← ganti IP sesuai IP lokal kamu
+            gambarRaw.replace("127.0.0.1", "sharp-sheep-gladly.ngrok-free.app")
         else
             gambarRaw
 }
