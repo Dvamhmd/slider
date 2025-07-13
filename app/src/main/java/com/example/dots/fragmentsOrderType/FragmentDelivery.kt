@@ -17,7 +17,6 @@ import com.example.dots.activityLoginTrue.CreateAddressActivity
 import com.example.dots.adapter.AlamatAdapter
 import com.example.dots.models.Alamat
 import com.example.dots.viewmodel.AlamatViewModel
-import com.google.android.material.card.MaterialCardView
 
 class FragmentDelivery : Fragment() {
 
