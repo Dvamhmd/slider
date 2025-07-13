@@ -183,7 +183,7 @@ class CreateAddressActivity : AppCompatActivity() {
                     detailAlamat = addressDetail,
                     latitude = selectedLatLng?.latitude,
                     longitude = selectedLatLng?.longitude,
-                    status = "tambahan",
+                    status = "utama",
                 )
 
                 showLoading(true)
@@ -197,7 +197,7 @@ class CreateAddressActivity : AppCompatActivity() {
                     detailAlamat = addressDetail,
                     latitude = selectedLatLng?.latitude,
                     longitude = selectedLatLng?.longitude,
-                    status = "tambahan"
+                    status = "utama"
                 )
 
                 // Simpan ke server
