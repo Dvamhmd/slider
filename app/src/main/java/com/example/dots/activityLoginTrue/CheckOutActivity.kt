@@ -102,17 +102,5 @@ class CheckOutActivity : AppCompatActivity() {
                 voucherStatus3.setImageResource(R.drawable.uncheck)
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }

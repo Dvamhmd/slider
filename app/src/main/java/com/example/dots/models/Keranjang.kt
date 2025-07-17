@@ -9,6 +9,7 @@ data class Keranjang(
     @SerializedName("id_produk") val idProduk: String?,
     @SerializedName("jumlah") val jumlah: Int?,
     @SerializedName("harga_total") val hargaTotal: Double?,
+    @SerializedName("gambar_produk") val gambar: String?,
     @SerializedName("created_at") val createdAt: String?,
     @SerializedName("updated_at") val updatedAt: String?
 )

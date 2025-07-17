@@ -51,11 +51,16 @@ interface ApiService {
     suspend fun deleteFavorit(@Body favorit: Favorit): Response<ApiResponse<Any?>>
 
     // 🛒 Keranjang
-    @POST("tambah-keranjang")
-    suspend fun tambahKeranjang(@Body keranjang: Keranjang): Response<ApiResponse<Any?>>
-
     @GET("get-keranjang")
-    suspend fun getKeranjang(): Response<List<Keranjang>>
+    suspend fun getKeranjang(): BaseResponse<Map<String, Any>>
+
+    @FormUrlEncoded
+    @POST("tambah-keranjang")
+    suspend fun tambahKeranjang(
+        @Field("id_produk") idProduk: String,
+        @Field("id_toko") idToko: String,
+        @Field("jumlah") jumlah: Int = 1
+    ): BaseResponse<Unit>
 
     @POST("edit-keranjang")
     suspend fun editKeranjang(@Body keranjang: Keranjang): Response<ApiResponse<Any?>>
