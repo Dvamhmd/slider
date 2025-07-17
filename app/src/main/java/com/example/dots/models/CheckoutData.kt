@@ -14,7 +14,8 @@ data class CheckoutItem(
     val nama_produk: String,
     val jumlah: Int,
     val harga_satuan: Int,
-    val subtotal: Int
+    val subtotal: Int,
+    val gambar: String? = null
 )
 
 data class TokoTerpilih(val id_toko: String)
