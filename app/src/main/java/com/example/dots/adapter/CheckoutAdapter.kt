@@ -30,14 +30,14 @@ class CheckoutProductAdapter(
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_checkout_view, parent, false)
 
-        Log.d("Checkout", "data: jkasjdaaaaaaaakkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk")
+        Log.i("Checkout", "data: jkasjdaaaaaaaakkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk")
         return CheckoutViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: CheckoutViewHolder, position: Int) {
         val product = productList[position]
 
-        Log.d("Checkout", "data: $product")
+        Log.i("Checkout", "data: $product")
 
         holder.name.text = product.nama_produk
         holder.price.text = "Rp ${product.harga_satuan}"

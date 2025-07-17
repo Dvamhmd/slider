@@ -7,8 +7,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.dots.models.Keranjang
 import com.example.dots.R
+import com.example.dots.utilities.createShimmerDrawable
 import com.example.dots.utilities.toRupiah
 
 class KeranjangAdapter(
@@ -29,8 +31,10 @@ class KeranjangAdapter(
             price.text = item.harga.toString().toRupiah()
             quantity.text = "${item.jumlah}"
 
-            // TODO: Load image pakai Glide/Picasso jika kamu punya URL-nya
-            // Glide.with(itemView.context).load(item.gambar).into(image)
+            Glide.with(itemView.context)
+                .load(item.gambar)
+                .placeholder(createShimmerDrawable()) // fallback
+                .into(image)
 
             deleteButton.setOnClickListener {
                 onDeleteClick(item)
