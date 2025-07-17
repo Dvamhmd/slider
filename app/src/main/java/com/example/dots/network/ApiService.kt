@@ -69,8 +69,11 @@ interface ApiService {
     suspend fun hapusKeranjang(@Body keranjang: Keranjang): Response<ApiResponse<Any?>>
 
     // 🛍️ Checkout & Order
-    @GET("checkout")
-    suspend fun prepareCheckout(): Response<CheckoutSummary>
+    @POST("checkout")
+    suspend fun prepareCheckout(
+        @Body body: Map<String, @JvmSuppressWildcards Any?>
+    ): BaseResponse<CheckoutData>
+
 
     @GET("orders")
     suspend fun getOrders(): Response<List<Transaksi>>

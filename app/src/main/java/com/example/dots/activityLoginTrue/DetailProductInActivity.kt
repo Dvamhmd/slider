@@ -139,6 +139,9 @@ class DetailProductInActivity : AppCompatActivity() {
         // --- Tombol Order Now / Checkout ---
         checkOut.setOnClickListener {
             val intent = Intent(this, CheckOutActivity::class.java)
+            intent.putExtra("ID_PRODUK", idProduk)
+            intent.putExtra("JUMLAH", quantity)
+            intent.putExtra("SOURCE", "PRODUK")
             startActivity(intent)
         }
     }
