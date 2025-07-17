@@ -8,6 +8,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.fragment.app.Fragment
 import com.example.dots.R
+import com.example.dots.fragmentsBottomNav.HomeFragment
 import com.example.dots.fragmentsLoggedIn.LoggedInCartFragment
 import com.example.dots.fragmentsLoggedIn.LoggedInFavoriteFragment
 import com.example.dots.fragmentsLoggedIn.LoggedInHistoryFragment
@@ -29,6 +30,12 @@ class HomeLoggedInActivity : AppCompatActivity() {
 
         val windowInsetsController = WindowInsetsControllerCompat(window, window.decorView)
         windowInsetsController.isAppearanceLightStatusBars = true
+
+        val target = intent.getStringExtra("FRAGMENT_TARGET")
+
+
+
+
 
         //Setting Icon Bottom Navigation
         val bottomNavigation = findViewById<CurvedBottomNavigation>(R.id.bottomNavigation )
@@ -71,6 +78,13 @@ class HomeLoggedInActivity : AppCompatActivity() {
         //Button Default saat awal masuk
         replaceFragment(LoggedInHomeFragment())
         bottomNavigation.show(id = 3)
+
+        if (target == "home") {
+            // ganti fragment ke HomeFragment
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainer, LoggedInHomeFragment())
+                .commit()
+        }
 
 
     }

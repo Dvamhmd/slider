@@ -1,16 +1,15 @@
 package com.example.dots.activityLoginTrue
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.dots.R
@@ -34,7 +33,19 @@ class CheckOutActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_check_out)
 
-        val repository = CheckoutRepository(ApiClient.getApiService(this)) // atau masukkan API service kalau pakai Retrofit
+        val windowInsetsController = WindowInsetsControllerCompat(window, window.decorView)
+        windowInsetsController.isAppearanceLightStatusBars = true
+
+        val back = findViewById<ImageView>(R.id.back)
+
+        back.setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
+            finish()
+        }
+
+        val checkOut = findViewById<Button>(R.id.check_out)
+
+        val repository = CheckoutRepository(ApiClient.getApiService(this))
         val factory = CheckOutViewModelFactory(repository)
         viewModel = ViewModelProvider(this, factory)[CheckOutViewModel::class.java]
 
@@ -43,7 +54,6 @@ class CheckOutActivity : AppCompatActivity() {
         val source = intent.getStringExtra("SOURCE")
         tokoId = intent.getStringExtra("id_toko") ?: "T001"
         Log.println(Log.DEBUG, "source", source!!)
-        // 1. Siapkan items berdasarkan sumber
         items = if (source == "PRODUK") {
               val idProduk = intent.getStringExtra("ID_PRODUK")!!
               val jumlah = intent.getIntExtra("JUMLAH", 1)
@@ -54,6 +64,11 @@ class CheckOutActivity : AppCompatActivity() {
                     finish() // keluar dari activity jika item keranjang kosong
                   }
               tempItems
+        }
+
+        checkOut.setOnClickListener{
+            val intent = Intent(this, PaymentActivity::class.java)
+            startActivity(intent)
         }
 
 
@@ -90,6 +105,7 @@ class CheckOutActivity : AppCompatActivity() {
     }
 
 
+    @SuppressLint("SetTextI18n")
     private fun showCheckoutData(data: CheckoutData) {
         findViewById<TextView>(R.id.userName).text = data.alamat_pengguna.namaPenerima
         findViewById<TextView>(R.id.userAddress).text = data.alamat_pengguna.alamat
@@ -101,7 +117,6 @@ class CheckOutActivity : AppCompatActivity() {
             else -> "Toko"
         }
 
-        // Tampilkan produk di orderDetail1/2 dst sesuai kebutuhan layout
-        // ...
+
     }
 }

@@ -72,12 +72,13 @@
             android:layout_marginEnd="@dimen/_16sdp">
 
             <ImageView
-                android:contentDescription="@string/image"
                 android:layout_width="@dimen/_160sdp"
                 android:layout_height="@dimen/_160sdp"
-                android:src="@drawable/happy_tea"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/_8sdp"/>
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:contentDescription="@string/image"
+                android:src="@drawable/happy_tea"
+                tools:ignore="ImageContrastCheck" />
 
             <!-- Rekening 1 -->
 
@@ -88,12 +89,13 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:contentDescription="@string/image"
                     android:id="@+id/bca_check"
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="start|center"
+                    android:contentDescription="@string/image"
                     android:src="@drawable/bullet_unchecked"
-                    android:layout_gravity="start|center"/>
+                    tools:ignore="ImageContrastCheck" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -153,12 +155,13 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:contentDescription="@string/image"
                     android:id="@+id/bri_check"
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="start|center"
+                    android:contentDescription="@string/image"
                     android:src="@drawable/bullet_unchecked"
-                    android:layout_gravity="start|center"/>
+                    tools:ignore="ImageContrastCheck" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -219,12 +222,13 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
-                    android:contentDescription="@string/image"
                     android:id="@+id/dana_check"
                     android:layout_width="@dimen/_20sdp"
                     android:layout_height="@dimen/_20sdp"
+                    android:layout_gravity="start|center"
+                    android:contentDescription="@string/image"
                     android:src="@drawable/bullet_unchecked"
-                    android:layout_gravity="start|center"/>
+                    tools:ignore="ImageContrastCheck" />
 
                 <TextView
                     android:layout_width="wrap_content"

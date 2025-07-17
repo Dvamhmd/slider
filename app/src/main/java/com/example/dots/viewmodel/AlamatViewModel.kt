@@ -92,4 +92,25 @@ class AlamatViewModel(application: Application) : AndroidViewModel(application) 
               }
     }
 
+    fun setAlamatUtama(selectedAlamat: Alamat) {
+        val currentList = _alamatList.value ?: return
+
+        // Clear semua status "utama"
+        val updatedList = currentList.map {
+            if (it.idAlamat == selectedAlamat.idAlamat) {
+                it.copy(status = "utama")
+            } else {
+                it.copy(status = "")
+            }
+        }
+
+        // Update ke LiveData agar adapter refresh
+        _alamatList.postValue(updatedList)
+
+        // Kirim perubahan ke server: hanya alamat yang jadi utama
+        editAlamat(selectedAlamat.copy(status = "utama"))
+    }
+
+
+
 }

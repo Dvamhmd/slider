@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dots.R
 import com.example.dots.activityLoginTrue.CreateAddressActivity
+import com.example.dots.activityLoginTrue.HomeLoggedInActivity
 import com.example.dots.adapter.AlamatAdapter
 import com.example.dots.models.Alamat
 import com.example.dots.viewmodel.AlamatViewModel
@@ -42,6 +43,14 @@ class FragmentDelivery : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val view = inflater.inflate(R.layout.fragment_delivery, container, false)
+
+        val saveAddress = view.findViewById<Button>(R.id.save_address)
+
+
+
+
+
+
         loadingOverlay = view.findViewById(R.id.addressLoadingOverlay)
 
         // Inisialisasi ViewModel
@@ -150,6 +159,22 @@ class FragmentDelivery : Fragment() {
         storeName3.text = getString(R.string.teh_idaman_wonosari)
         storeAddress3.text = getString(R.string.wonosari_address)
         storeDistance3.text = getString(R.string._12_km)
+
+
+        //navigasi ke home
+        saveAddress.setOnClickListener {
+            val intent = Intent(requireContext(), HomeLoggedInActivity::class.java)
+            intent.putExtra("FRAGMENT_TARGET", "home")
+            startActivity(intent)
+        }
+
+
+
+
+
+
+
+
 
 
         return view
