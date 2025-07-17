@@ -66,7 +66,7 @@ interface ApiService {
     suspend fun editKeranjang(@Body keranjang: Keranjang): Response<ApiResponse<Any?>>
 
     @POST("delete-keranjang")
-    suspend fun deleteKeranjang(@Body keranjang: Map<String, String>): Response<ApiResponse<Any?>>
+    suspend fun hapusKeranjang(@Body keranjang: Keranjang): Response<ApiResponse<Any?>>
 
     // 🛍️ Checkout & Order
     @GET("checkout")

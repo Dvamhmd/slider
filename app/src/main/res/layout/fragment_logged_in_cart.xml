@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:backgroundTint="@color/background"
     android:background="@color/background"
 
-    tools:context=".fragmentsLoggedIn.LoggedInFavoriteFragment">
+    android:paddingBottom="@dimen/_56sdp"
 
+    tools:context=".fragmentsLoggedIn.LoggedInCartFragment">
 
+    <!-- Title -->
     <androidx.cardview.widget.CardView
         android:id="@+id/title"
         android:layout_width="match_parent"
@@ -30,20 +32,32 @@
             android:textColor="@color/text_main"
             android:textSize="@dimen/_18ssp"
             android:fontFamily="@font/dmsans_semi_bold" />
-
-
     </androidx.cardview.widget.CardView>
 
+    <!-- RecyclerView keranjang -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewKeranjang"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toTopOf="@id/checkoutSection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="@dimen/_12sdp"/>
 
+    <!-- Layout keranjang kosong -->
     <LinearLayout
+        android:id="@+id/emptyCartLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:layout_marginTop="@dimen/_48sdp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toTopOf="@id/checkoutSection"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
-
 
         <ImageView
             android:layout_width="@dimen/_90sdp"
@@ -53,7 +67,6 @@
             android:contentDescription="@string/image"
             android:src="@drawable/bag"
             tools:ignore="ImageContrastCheck" />
-
 
         <TextView
             android:layout_width="match_parent"
@@ -76,7 +89,6 @@
             android:textSize="@dimen/_14ssp"
             tools:ignore="TextContrastCheck" />
 
-
         <Button
             android:id="@+id/goShopping"
             android:layout_width="@dimen/_145sdp"
@@ -85,17 +97,41 @@
             android:text="@string/start_shopping"
             android:textColor="@color/white"
             android:textSize="@dimen/_14ssp"
-            android:layout_gravity="center"
-            tools:ignore="TextContrastCheck,VisualLintButtonSize,VisualLintBounds" />
-
-
-
-
+            android:layout_gravity="center"/>
     </LinearLayout>
 
+    <!-- Checkout section -->
+    <LinearLayout
+        android:id="@+id/checkoutSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/_12sdp"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
+        <TextView
+            android:id="@+id/totalHarga"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total: Rp 0"
+            android:textSize="@dimen/_16ssp"
+            android:fontFamily="@font/dmsans_bold"
+            android:textColor="@color/text_main" />
 
-
-
+        <Button
+            android:id="@+id/btnCheckout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkout"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

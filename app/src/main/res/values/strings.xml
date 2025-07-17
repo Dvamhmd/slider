@@ -267,6 +267,10 @@
     <string name="rumah">Rumah</string>
     <string name="alamat_user">Jl, Cindelaras Gg Randu No 3 Kepuhsari-Maguwoharjo, Kec. Depok, 55598, Jl. Kepuhsari, RT.07/RW.05, Krodan, Maguwoharjo, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55282</string>
     <string name="nama_no_hp">Nama - No HP</string>
+    <string name="ketik_pesan">Ketik pesan...</string>
+    <string name="kirim">Kirim</string>
+    <string name="rp_10_000">Rp. 10.000</string>
+    <string name="checkout">Checkout</string>
 
 
 </resources>
