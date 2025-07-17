@@ -1,6 +1,8 @@
 package com.example.dots.activityLoginTrue
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -32,6 +34,10 @@ class CheckOutActivity : AppCompatActivity() {
             onBackPressedDispatcher.onBackPressed()
             finish()
         }
+
+
+        val checkOut = findViewById<Button>(R.id.check_out)
+
 
 
         //mencari layout
@@ -102,5 +108,15 @@ class CheckOutActivity : AppCompatActivity() {
                 voucherStatus3.setImageResource(R.drawable.uncheck)
             }
         }
+
+        checkOut.setOnClickListener{
+            val intent = Intent(this, PaymentActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
+
+
     }
 }

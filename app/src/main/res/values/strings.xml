@@ -271,6 +271,15 @@
     <string name="kirim">Kirim</string>
     <string name="rp_10_000">Rp. 10.000</string>
     <string name="checkout">Checkout</string>
+    <string name="pembayaran">Pembayaran</string>
+    <string name="bca">BCA</string>
+    <string name="rek_bca">4561034901</string>
+    <string name="bri">BRI</string>
+    <string name="rek_bri">8403256545</string>
+    <string name="dana">DANA</string>
+    <string name="_0895402655123">0895402655123</string>
+    <string name="upload_bukti_transfer">Upload Bukti Transfer</string>
+    <string name="konfirmasi_pembayaran">Konfirmasi Pembayaran</string>
 
 
 </resources>

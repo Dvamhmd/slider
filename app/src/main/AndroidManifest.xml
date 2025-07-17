@@ -19,6 +19,9 @@
         android:theme="@style/Theme.Dots"
         tools:targetApi="31">
         <activity
+            android:name=".activityLoginTrue.PaymentActivity"
+            android:exported="false" />
+        <activity
             android:name=".activityLoginTrue.RoomChatActivity"
             android:exported="false" />
         <activity
