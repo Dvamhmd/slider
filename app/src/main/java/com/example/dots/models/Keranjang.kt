@@ -11,7 +11,7 @@ data class Keranjang(
     @SerializedName("jumlah") val jumlah: Int?,
     @SerializedName("harga_total") val hargaTotal: Double?,
     @SerializedName("harga") val harga: Double?,
-    @SerializedName("gambar_produk") val gambar: String?,
+    @SerializedName("gambar") val gambar: String?,
     @SerializedName("created_at") val createdAt: String?,
     @SerializedName("updated_at") val updatedAt: String?
 )

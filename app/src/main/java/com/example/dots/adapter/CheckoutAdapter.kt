@@ -1,5 +1,6 @@
 package com.example.dots.adapter
 
+import android.annotation.SuppressLint
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -12,18 +13,19 @@ import com.example.dots.R
 import com.example.dots.models.CheckoutItem
 import com.example.dots.utilities.createShimmerDrawable
 import com.example.dots.utilities.formatRupiah
+import com.example.dots.utilities.toRupiah
 
-class CheckoutProductAdapter(
+class CheckoutAdapter(
     private var productList: List<CheckoutItem>
-) : RecyclerView.Adapter<CheckoutProductAdapter.CheckoutViewHolder>() {
+) : RecyclerView.Adapter<CheckoutAdapter.CheckoutViewHolder>() {
 
 
     inner class CheckoutViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val imgProduct: ImageView = itemView.findViewById(R.id.product_image)
+//        val imgProduct: ImageView = itemView.findViewById(R.id.product_image)
         val name: TextView = itemView.findViewById(R.id.product_name)
         val price: TextView = itemView.findViewById(R.id.product_price)
         val quantity: TextView = itemView.findViewById(R.id.product_quantity)
-        val size: TextView = itemView.findViewById(R.id.product_quantity) // Ganti jika ukuran ada ID tersendiri
+        val subtotal: TextView = itemView.findViewById(R.id.product_subtotal)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CheckoutViewHolder {
@@ -34,15 +36,16 @@ class CheckoutProductAdapter(
         return CheckoutViewHolder(view)
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: CheckoutViewHolder, position: Int) {
         val product = productList[position]
 
         Log.i("Checkout", "data: $product")
 
         holder.name.text = product.nama_produk
-        holder.price.text = "Rp ${product.harga_satuan}"
+        holder.price.text = product.harga_satuan.toString().toRupiah()
         holder.quantity.text = product.jumlah.toString()
-        holder.size.text = (product.jumlah ?: "") as CharSequence?
+        holder.subtotal.text = product.subtotal.toString().toRupiah()
 
 //        Glide.with(holder.itemView.context)
 //            .load(product.gambar ?: createShimmerDrawable())

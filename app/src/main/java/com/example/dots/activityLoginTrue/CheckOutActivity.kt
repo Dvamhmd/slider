@@ -12,19 +12,24 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dots.R
+import com.example.dots.adapter.CheckoutAdapter
 import com.example.dots.models.CheckoutData
 import com.example.dots.models.RequestCheckoutItem
 import com.example.dots.network.ApiClient
 import com.example.dots.repository.CheckoutRepository
-import com.example.dots.viewmodel.CheckOutViewModel
+import com.example.dots.viewmodel.CheckoutViewModel
 import com.example.dots.viewmodel.factory.CheckOutViewModelFactory
 import com.google.gson.Gson
+import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.reflect.TypeToken
 
 class CheckOutActivity : AppCompatActivity() {
 
-    private lateinit var viewModel: CheckOutViewModel
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: CheckoutAdapter
+    private lateinit var viewModel: CheckoutViewModel
     private lateinit var loadingView: View
     private var tokoId = ""
     private var items: List<RequestCheckoutItem> = emptyList()
@@ -32,6 +37,12 @@ class CheckOutActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_check_out)
+
+        recyclerView = findViewById(R.id.orderItemsRecycler)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        adapter = CheckoutAdapter(emptyList())
+        recyclerView.adapter = adapter
+
 
         val windowInsetsController = WindowInsetsControllerCompat(window, window.decorView)
         windowInsetsController.isAppearanceLightStatusBars = true
@@ -47,7 +58,7 @@ class CheckOutActivity : AppCompatActivity() {
 
         val repository = CheckoutRepository(ApiClient.getApiService(this))
         val factory = CheckOutViewModelFactory(repository)
-        viewModel = ViewModelProvider(this, factory)[CheckOutViewModel::class.java]
+        viewModel = ViewModelProvider(this, factory)[CheckoutViewModel::class.java]
 
         loadingView = findViewById(R.id.loadingOverlay)
 
@@ -117,8 +128,8 @@ class CheckOutActivity : AppCompatActivity() {
             else -> "Toko"
         }
 
-
-
-
+        adapter.updateList(data.items)  // ini akan menampilkan produk
+        Log.d("CheckOutActivity", "produk_dibeli: ${Gson().toJson(data.items)}")
     }
+
 }

@@ -1,11 +1,14 @@
 package com.example.dots.fragmentsLoggedIn
 
 import android.app.AlertDialog
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -15,12 +18,15 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dots.R
+import com.example.dots.activityLoginTrue.CheckOutActivity
 import com.example.dots.adapter.KeranjangAdapter
 import com.example.dots.models.Keranjang
+import com.example.dots.models.RequestCheckoutItem
 import com.example.dots.network.ApiClient
 import com.example.dots.repository.KeranjangRepository
 import com.example.dots.utilities.toRupiah
 import com.example.dots.viewmodel.KeranjangViewModel
+import com.google.gson.Gson
 
 class LoggedInCartFragment : Fragment() {
 
@@ -46,6 +52,12 @@ class LoggedInCartFragment : Fragment() {
         emptyLayout = view.findViewById(R.id.emptyCartLayout)
         checkoutSection = view.findViewById(R.id.checkoutSection)
         totalHargaText = view.findViewById(R.id.totalHarga)
+
+        val checkoutButton = view.findViewById<Button>(R.id.btnCheckout)
+        checkoutButton.setOnClickListener {
+            goToCheckout()
+        }
+
 
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
@@ -125,4 +137,30 @@ class LoggedInCartFragment : Fragment() {
             }
         }
     }
+
+    private fun goToCheckout() {
+        val keranjangList = viewModel.keranjangList.value ?: emptyList()
+
+        if (keranjangList.isEmpty()) {
+            Toast.makeText(requireContext(), "Keranjang kosong", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val requestList = keranjangList.map {
+            RequestCheckoutItem(
+                id_produk = it.idProduk ?: "",
+                jumlah = it.jumlah ?: 1
+            )
+        }
+
+        val json = Gson().toJson(requestList)
+        val prefs = requireContext().getSharedPreferences("cart", Context.MODE_PRIVATE)
+        prefs.edit().putString("keranjang_items", json).apply()
+
+        val intent = Intent(requireContext(), CheckOutActivity::class.java)
+        intent.putExtra("SOURCE", "KERANJANG")
+        intent.putExtra("id_toko", keranjangList.firstOrNull()?.idToko ?: "T001")
+        startActivity(intent)
+    }
+
 }
