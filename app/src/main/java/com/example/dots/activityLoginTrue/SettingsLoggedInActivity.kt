@@ -11,7 +11,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import com.example.dots.HomeActivityLogOut
+import com.example.dots.MainActivity
 import com.example.dots.R
+import com.example.dots.TokenManager
+import kotlin.jvm.java
 
 class SettingsLoggedInActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,8 +47,8 @@ class SettingsLoggedInActivity : AppCompatActivity() {
 
         logOut.setOnClickListener{
             Toast.makeText(this, "Log Out Berhasil", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, HomeActivityLogOut::class.java)
-            startActivity(intent)
+            TokenManager.clearToken() // ini akan menghapus token
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
 

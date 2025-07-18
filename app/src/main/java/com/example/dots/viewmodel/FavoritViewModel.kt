@@ -33,4 +33,15 @@ class FavoritViewModel(application: Application) : AndroidViewModel(application)
             }
         }
     }
+
+    fun tambahFavorit(idProduk: String, idToko: String) {
+        viewModelScope.launch {
+            try {
+                repository.tambahFavorit(idProduk, idToko)
+                fetchFavorit()
+            } catch (e: Exception) {
+                _error.value = e.message
+            }
+        }
+    }
 }

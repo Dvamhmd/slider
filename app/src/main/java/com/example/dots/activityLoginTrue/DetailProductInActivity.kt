@@ -16,6 +16,7 @@ import com.example.dots.R
 import com.example.dots.network.ApiClient
 import com.example.dots.repository.KeranjangRepository
 import com.example.dots.utilities.formatRupiah
+import com.example.dots.viewmodel.FavoritViewModel
 import com.example.dots.viewmodel.KeranjangViewModel
 import java.text.NumberFormat
 import java.util.*
@@ -26,6 +27,7 @@ class DetailProductInActivity : AppCompatActivity() {
     private lateinit var btnMinus: ImageView
     private lateinit var tvQuantity: TextView
     private lateinit var keranjangViewModel: KeranjangViewModel
+    private lateinit var favoritViewModel: FavoritViewModel
 
     private var quantity = 1
 
@@ -68,6 +70,10 @@ class DetailProductInActivity : AppCompatActivity() {
             }
         }
 
+        //val favoritRepository = FavoritRepository()
+
+        favoritViewModel = ViewModelProvider(this)[FavoritViewModel::class.java]
+
         // --- Inisialisasi Komponen ---
         val back = findViewById<ImageView>(R.id.back)
         val favorite = findViewById<ImageView>(R.id.favorite)
@@ -97,12 +103,14 @@ class DetailProductInActivity : AppCompatActivity() {
         // --- Favorite Toggle ---
         var isFavorite = false
         favorite.setOnClickListener {
-            isFavorite = !isFavorite
-            favorite.setImageResource(if (isFavorite) R.drawable.fav else R.drawable.no_fav)
-            Toast.makeText(this,
-                if (isFavorite) "Ditambahkan ke favorit" else "Dihapus dari favorit",
-                Toast.LENGTH_SHORT
-            ).show()
+            if (idProduk.isNotBlank() && idToko.isNotBlank()) {
+                favoritViewModel.tambahFavorit(idProduk, idToko)
+                cart.setImageResource(R.drawable.ic_favorite)
+                Toast.makeText(this, "item ditambahkan ke favorit", Toast.LENGTH_SHORT).show()
+
+            } else {
+                Toast.makeText(this, "Produk tidak valid", Toast.LENGTH_SHORT).show()
+            }
         }
 
         // --- Quantity Control ---

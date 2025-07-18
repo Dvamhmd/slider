@@ -23,5 +23,8 @@ class FavoritRepository(private val context: Context) {
             Result.failure(e)
         }
     }
-}
 
+    suspend fun tambahFavorit(idProduk: String, idToko: String) =
+            apiService.tambahFavorit(idProduk, idToko)
+    }
+    
