@@ -165,11 +165,11 @@
                     layout="@layout/detail_order" />
 
                 <include
-                    android:id="@+id/product_detail1"
+                    android:id="@+id/product_detail2"
                     layout="@layout/detail_order" />
 
                 <include
-                    android:id="@+id/product_detail1"
+                    android:id="@+id/product_detail3"
                     layout="@layout/detail_order" />
 
 

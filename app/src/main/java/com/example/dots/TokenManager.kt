@@ -9,6 +9,7 @@ object TokenManager {
     private const val KEY_AUTH_TOKEN = "auth_token"
     private const val KEY_SELECTED_STORE_ID = "selected_store_id"
     private const val KEY_DELIVERY_OPTION = "delivery_option"
+    private const val KEY_ADDRESS_DETAIL = "detail_address"
 
     private var prefs: SharedPreferences? = null
 
@@ -51,6 +52,15 @@ object TokenManager {
 
     fun getDeliveryOption(): String? {
         return prefs?.getString(KEY_DELIVERY_OPTION, null)
+    }
+
+
+    fun saveAddressDetail(detail : String) {
+        prefs?.edit {putString(KEY_ADDRESS_DETAIL, detail)}
+    }
+
+    fun getAddressDetail() : String? {
+        return prefs?.getString(KEY_ADDRESS_DETAIL, null)
     }
 
 }

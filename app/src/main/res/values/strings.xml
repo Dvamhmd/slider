@@ -289,6 +289,8 @@
     <string name="rp_190_000" tools:ignore="MissingTranslation">Rp. 190.000</string>
     <string name="order_delivered" tools:ignore="MissingTranslation">Order Delivered</string>
     <string name="buat_pesanan" tools:ignore="MissingTranslation">Buat Pesanan</string>
+    <string name="nama">Nama</string>
+    <string name="name">Nama</string>
 
 
 </resources>

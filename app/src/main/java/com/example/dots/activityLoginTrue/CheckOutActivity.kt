@@ -165,6 +165,8 @@ class CheckOutActivity : AppCompatActivity() {
 
 
         adapter.updateList(data.items)  // ini akan menampilkan produk
+        Log.d("CheckOutActivity line 168", "adapter count: ${adapter.itemCount}")
+
         Log.d("CheckOutActivity", "produk_dibeli: ${Gson().toJson(data.items)}")
     }
 

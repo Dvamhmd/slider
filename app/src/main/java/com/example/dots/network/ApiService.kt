@@ -2,6 +2,7 @@ package com.example.dots.network
 
 import com.example.dots.models.*
 import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -19,10 +20,20 @@ interface ApiService {
 
     // 👤 User
     @GET("user")
-    suspend fun getUser(): Response<User>
+    suspend fun getUser(): Response<BaseResponse<User>>
 
+
+    @Multipart
     @POST("update-user")
-    suspend fun updateUser(@Body request: User): Response<User>
+    suspend fun updateProfile(
+        @Part("nama") nama: RequestBody,
+        @Part("username") username: RequestBody,
+        @Part("email") email: RequestBody,
+        @Part("no_hp") noHp: RequestBody,
+        @Part photo: MultipartBody.Part?
+    ): Response<BaseResponse<User>>
+
+
 
     @POST("update-password")
     suspend fun updatePassword(@Body request: UpdatePasswordRequest): Response<ApiResponse<Any?>>

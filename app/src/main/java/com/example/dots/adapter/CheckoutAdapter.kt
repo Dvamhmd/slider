@@ -31,31 +31,31 @@ class CheckoutAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CheckoutViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.item_checkout_view, parent, false)
-
-        Log.i("Checkout", "data: jkasjdaaaaaaaakkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk")
         return CheckoutViewHolder(view)
     }
 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: CheckoutViewHolder, position: Int) {
-        val product = productList[position]
+        try {
+            val product = productList[position]
 
-        Log.i("Checkout", "data: $product")
+            Log.i("CheckoutAdapter line 43", "data: $product")
 
-        holder.name.text = product.nama_produk
-        holder.price.text = product.harga_satuan.toString().toRupiah()
-        holder.quantity.text = product.jumlah.toString()
-        holder.subtotal.text = product.subtotal.toString().toRupiah()
-
-//        Glide.with(holder.itemView.context)
-//            .load(product.gambar ?: createShimmerDrawable())
-//            .into(holder.imgProduct)
+            holder.name.text = product.nama_produk
+            holder.price.text = product.harga_satuan.toString().toRupiah()
+            holder.quantity.text = product.jumlah.toString()
+            holder.subtotal.text = product.subtotal.toString().toRupiah()
+        } catch (e: Exception) {
+            Log.e("AdapterError", "Error at position $position: ${e.message}")
+        }
     }
 
     override fun getItemCount(): Int = productList.size
 
+    @SuppressLint("NotifyDataSetChanged")
     fun updateList(newList: List<CheckoutItem>) {
         productList = newList
+        Log.i("CheckoutAdapter line 57", "data: $productList")
         notifyDataSetChanged()
     }
 }

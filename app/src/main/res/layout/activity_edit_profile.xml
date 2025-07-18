@@ -98,6 +98,31 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/text_main"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"/>
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:hint="Nama Kamu"
+                android:textColor="@color/dark_gray"
+                android:fontFamily="@font/montserrat_semi_bold"
+                android:textSize="@dimen/_14ssp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                tools:ignore="HardcodedText,LabelFor,VisualLintTextFieldSize" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="@string/username"
                 android:fontFamily="@font/montserrat_medium"
                 android:textSize="@dimen/_12ssp"
@@ -210,6 +235,26 @@
 
 
     </ScrollView>
+
+    <!-- Overlay loading animasi -->
+    <FrameLayout
+        android:id="@+id/loadingOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieLoading"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            app:lottie_rawRes="@raw/coffee_animation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
