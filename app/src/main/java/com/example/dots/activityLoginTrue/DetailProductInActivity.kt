@@ -34,6 +34,7 @@ class DetailProductInActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
         enableEdgeToEdge()
         setContentView(R.layout.activity_detail_product_in)
 
@@ -72,7 +73,19 @@ class DetailProductInActivity : AppCompatActivity() {
 
         //val favoritRepository = FavoritRepository()
 
-        favoritViewModel = ViewModelProvider(this)[FavoritViewModel::class.java]
+        favoritViewModel = ViewModelProvider(
+            this,
+            ViewModelProvider.AndroidViewModelFactory.getInstance(application)
+        )[FavoritViewModel::class.java]
+        favoritViewModel.fetchFavorit()
+
+        favoritViewModel.error.observe(this) {
+              it?.let {
+                Toast.makeText(this, "Gagal ubah favorit: $it", Toast.LENGTH_SHORT).show()
+                  Log.i("detailProduk = ","eror : $it")
+              }
+        }
+
 
         // --- Inisialisasi Komponen ---
         val back = findViewById<ImageView>(R.id.back)
@@ -101,17 +114,31 @@ class DetailProductInActivity : AppCompatActivity() {
         }
 
         // --- Favorite Toggle ---
-        var isFavorite = false
+        favoritViewModel.favoritList.observe(this) { listFavorit ->
+            val isFavorited = listFavorit?.any { it.idProduk == idProduk } == true
+            favorite.setImageResource(if (isFavorited) R.drawable.fav else R.drawable.no_fav)
+        }
+
         favorite.setOnClickListener {
             if (idProduk.isNotBlank() && idToko.isNotBlank()) {
-                favoritViewModel.tambahFavorit(idProduk, idToko)
-                cart.setImageResource(R.drawable.ic_favorite)
-                Toast.makeText(this, "item ditambahkan ke favorit", Toast.LENGTH_SHORT).show()
-
+                val currentList = favoritViewModel.favoritList.value ?: emptyList()
+                val isFavorited = currentList.any { it.idProduk == idProduk }
+                favorite.isEnabled = false
+                if (isFavorited) {
+                    favoritViewModel.hapusFavorit(idProduk)
+                    favorite.setImageResource(R.drawable.no_fav)
+                    Toast.makeText(this, "Item dihapus dari favorit", Toast.LENGTH_SHORT).show()
+                } else {
+                    favoritViewModel.tambahFavorit(idProduk, idToko)
+                    favorite.setImageResource(R.drawable.fav)
+                    Toast.makeText(this, "Item ditambahkan ke favorit", Toast.LENGTH_SHORT).show()
+                }
+                favorite.postDelayed({favorite.isEnabled = true}, 1000)
             } else {
                 Toast.makeText(this, "Produk tidak valid", Toast.LENGTH_SHORT).show()
             }
         }
+
 
         // --- Quantity Control ---
         btnPlus = findViewById(R.id.btnPlus)

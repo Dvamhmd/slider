@@ -19,6 +19,7 @@ import com.example.dots.activityLoginTrue.HomeLoggedInActivity
 import com.example.dots.adapter.AlamatAdapter
 import com.example.dots.models.Alamat
 import com.example.dots.viewmodel.AlamatViewModel
+import androidx.appcompat.app.AppCompatActivity
 
 class FragmentDelivery : Fragment() {
 
@@ -162,13 +163,13 @@ class FragmentDelivery : Fragment() {
         storeDistance3.text = getString(R.string._12_km)
 
 
-        //navigasi ke home
+        //navigasi kembali ke halaman sebelumnya
         saveAddress.setOnClickListener {
-            val intent = Intent(requireContext(), HomeLoggedInActivity::class.java)
-            intent.putExtra("FRAGMENT_TARGET", "home")
-            TokenManager.saveDeliveryOption("Delivery")
-            startActivity(intent)
+            TokenManager.saveDeliveryOption("delivery")
+            requireActivity().setResult(AppCompatActivity.RESULT_OK)
+            requireActivity().finish()
         }
+
 
 
 

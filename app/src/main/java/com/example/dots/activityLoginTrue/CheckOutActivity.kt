@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -35,6 +36,32 @@ class CheckOutActivity : AppCompatActivity() {
     private lateinit var loadingView: View
     private var tokoId = ""
     private var items: List<RequestCheckoutItem> = emptyList()
+
+    private val orderTypeLauncher = registerForActivityResult(
+        androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == RESULT_OK) {
+            // Update tampilan pengiriman dan toko
+            findViewById<TextView>(R.id.deliveryOption).text = when (TokenManager.getDeliveryOption()) {
+                "delivery" -> "Delivery"
+                "pickup" -> "Pick Up"
+                else -> "Pilih Opsi Pengiriman"
+            }
+
+            findViewById<TextView>(R.id.StoreName).text = when (TokenManager.getSelectedStore()) {
+                "T001" -> "Teh Idaman Concat"
+                "T002" -> "Teh Idaman Gejayan"
+                "T003" -> "Teh Idaman Wonosari"
+                else -> "Toko"
+            }
+
+            // Refresh checkout data dari server
+            tokoId = TokenManager.getSelectedStore() ?: "T001"
+            viewModel.prepareCheckout(tokoId, items)
+        }
+    }
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -130,7 +157,11 @@ class CheckOutActivity : AppCompatActivity() {
             "T003" -> "Teh Idaman Wonosari"
             else -> "Toko"
         }
-        findViewById<TextView>(R.id.deliveryOption).text = TokenManager.getDeliveryOption() ?: "Delivery"
+        findViewById<CardView>(R.id.deliveryOptionLayout).setOnClickListener {
+            val intent = Intent(this, OrderTypeActivity::class.java)
+            orderTypeLauncher.launch(intent)
+        }
+
 
 
         adapter.updateList(data.items)  // ini akan menampilkan produk

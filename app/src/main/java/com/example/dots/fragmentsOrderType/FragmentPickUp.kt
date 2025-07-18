@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.example.dots.R
 import com.example.dots.TokenManager
@@ -87,10 +88,9 @@ class FragmentPickUp : Fragment() {
 
         //navigasi ke home
         saveAddress.setOnClickListener {
-            val intent = Intent(requireContext(), HomeLoggedInActivity::class.java)
-            intent.putExtra("FRAGMENT_TARGET", "home")
-            TokenManager.saveDeliveryOption("Pick Up")
-            startActivity(intent)
+            TokenManager.saveDeliveryOption("pickup")
+            requireActivity().setResult(AppCompatActivity.RESULT_OK)
+            requireActivity().finish()
         }
 
 

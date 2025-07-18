@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         TokenManager.initialize(this)
 
           // ✅ Cek apakah token login masih tersimpan
-          if (!TokenManager.getToken().isNullOrEmpty()) {
+          if (TokenManager.isLoggedIn()) {
                 // Jika token tersedia, langsung ke halaman utama
                 startActivity(Intent(this, HomeLoggedInActivity::class.java))
                 finish() // agar MainActivity tidak bisa dikembaliin dengan tombol back

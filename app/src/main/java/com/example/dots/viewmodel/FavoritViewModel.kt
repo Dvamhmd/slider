@@ -44,4 +44,23 @@ class FavoritViewModel(application: Application) : AndroidViewModel(application)
             }
         }
     }
+
+    fun hapusFavorit(idProduk: String) {
+          viewModelScope.launch {
+                try {
+                  repository.hapusFavorit(idProduk)
+
+                  // Optimasi: hapus langsung dari list lokal
+                  val currentList = _favoritList.value?.toMutableList()
+                  currentList?.removeAll { it.idProduk == idProduk }
+                  _favoritList.value = currentList
+
+                  _error.value = null
+                } catch (e: Exception) {
+                  _error.value = e.message
+                }
+              }
+    }
+
+
 }

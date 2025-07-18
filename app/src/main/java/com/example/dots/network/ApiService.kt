@@ -51,8 +51,11 @@ interface ApiService {
     @GET("get-favorit")
     suspend fun getFavorit(): Response<BaseResponse<List<Favorit>>>
 
+    @FormUrlEncoded
     @POST("delete-favorit")
-    suspend fun deleteFavorit(@Body favorit: Favorit): Response<ApiResponse<Any?>>
+    suspend fun hapusFavorit(
+        @Field("id_produk") idProduk: String
+    ): Response<ApiResponse<Any?>>
 
     // 🛒 Keranjang
     @GET("get-keranjang")
