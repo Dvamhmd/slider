@@ -360,7 +360,7 @@
             android:text="@string/buat_pesanan"
             android:textColor="@color/white"
             android:textSize="@dimen/_12ssp"
-            tools:ignore="VisualLintButtonSize,TextContrastCheck,DuplicateSpeakableTextCheck" />
+            tools:ignore="DuplicateSpeakableTextCheck,HardcodedText,TextContrastCheck,VisualLintButtonSize" />
 
 
     </androidx.cardview.widget.CardView>

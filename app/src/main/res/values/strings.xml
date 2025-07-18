@@ -261,33 +261,34 @@
     <string name="alamat" tools:ignore="MissingTranslation">Alamat</string>
     <string name="lokasi_anda" tools:ignore="MissingTranslation">Lokasi anda</string>
     <string name="google_maps_key">AIzaSyD1onlNz8rQjXIvoy_2UgiumsdQNBK3EyQ</string>
-    <string name="gagal_geocoder">Gagal geocoder</string>
-    <string name="cari_alamat">Cari alamat</string>
-    <string name="tes">tes</string>
-    <string name="rumah">Rumah</string>
-    <string name="alamat_user">Jl, Cindelaras Gg Randu No 3 Kepuhsari-Maguwoharjo, Kec. Depok, 55598, Jl. Kepuhsari, RT.07/RW.05, Krodan, Maguwoharjo, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55282</string>
-    <string name="nama_no_hp">Nama - No HP</string>
-    <string name="ketik_pesan">Ketik pesan...</string>
-    <string name="kirim">Kirim</string>
-    <string name="rp_10_000">Rp. 10.000</string>
-    <string name="checkout">Checkout</string>
-    <string name="pembayaran">Pembayaran</string>
-    <string name="bca">BCA</string>
-    <string name="rek_bca">4561034901</string>
-    <string name="bri">BRI</string>
-    <string name="rek_bri">8403256545</string>
-    <string name="dana">DANA</string>
-    <string name="_0895402655123">0895402655123</string>
-    <string name="upload_bukti_transfer">Upload Bukti Transfer</string>
-    <string name="konfirmasi_pembayaran">Konfirmasi Pembayaran</string>
-    <string name="pesanan">Pesanan #</string>
-    <string name="_90897">90897</string>
-    <string name="cek_detail_pesanan">Cek Detail Pesanan</string>
-    <string name="items">items :</string>
-    <string name="_10">10</string>
-    <string name="cost">cost</string>
-    <string name="rp_190_000">Rp. 190.000</string>
-    <string name="order_delivered">Order Delivered</string>
+    <string name="gagal_geocoder" tools:ignore="MissingTranslation">Gagal geocoder</string>
+    <string name="cari_alamat" tools:ignore="MissingTranslation">Cari alamat</string>
+    <string name="tes" tools:ignore="MissingTranslation">tes</string>
+    <string name="rumah" tools:ignore="MissingTranslation">Rumah</string>
+    <string name="alamat_user" tools:ignore="MissingTranslation">Jl, Cindelaras Gg Randu No 3 Kepuhsari-Maguwoharjo, Kec. Depok, 55598, Jl. Kepuhsari, RT.07/RW.05, Krodan, Maguwoharjo, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55282</string>
+    <string name="nama_no_hp" tools:ignore="MissingTranslation">Nama - No HP</string>
+    <string name="ketik_pesan" tools:ignore="MissingTranslation,TypographyEllipsis">Ketik pesan...</string>
+    <string name="kirim" tools:ignore="MissingTranslation">Kirim</string>
+    <string name="rp_10_000" tools:ignore="MissingTranslation">Rp. 10.000</string>
+    <string name="checkout" tools:ignore="MissingTranslation">Checkout</string>
+    <string name="pembayaran" tools:ignore="MissingTranslation">Pembayaran</string>
+    <string name="bca" tools:ignore="MissingTranslation">BCA</string>
+    <string name="rek_bca" tools:ignore="MissingTranslation">4561034901</string>
+    <string name="bri" tools:ignore="MissingTranslation">BRI</string>
+    <string name="rek_bri" tools:ignore="MissingTranslation">8403256545</string>
+    <string name="dana" tools:ignore="MissingTranslation">DANA</string>
+    <string name="_0895402655123" tools:ignore="MissingTranslation">0895402655123</string>
+    <string name="upload_bukti_transfer" tools:ignore="MissingTranslation">Upload Bukti Transfer</string>
+    <string name="konfirmasi_pembayaran" tools:ignore="MissingTranslation">Konfirmasi Pembayaran</string>
+    <string name="pesanan" tools:ignore="MissingTranslation">Pesanan #</string>
+    <string name="_90897" tools:ignore="MissingTranslation">90897</string>
+    <string name="cek_detail_pesanan" tools:ignore="MissingTranslation">Cek Detail Pesanan</string>
+    <string name="items" tools:ignore="MissingTranslation">items :</string>
+    <string name="_10" tools:ignore="MissingTranslation">10</string>
+    <string name="cost" tools:ignore="MissingTranslation">cost</string>
+    <string name="rp_190_000" tools:ignore="MissingTranslation">Rp. 190.000</string>
+    <string name="order_delivered" tools:ignore="MissingTranslation">Order Delivered</string>
+    <string name="buat_pesanan" tools:ignore="MissingTranslation">Buat Pesanan</string>
 
 
 </resources>

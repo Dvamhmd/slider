@@ -20,7 +20,7 @@ import com.example.dots.models.CheckoutData
 import com.example.dots.models.RequestCheckoutItem
 import com.example.dots.network.ApiClient
 import com.example.dots.repository.CheckoutRepository
-import com.example.dots.viewmodel.CheckoutViewModel
+import com.example.dots.viewmodel.CheckOutViewModel
 import com.example.dots.viewmodel.factory.CheckOutViewModelFactory
 import com.google.gson.Gson
 import androidx.recyclerview.widget.RecyclerView
@@ -32,7 +32,7 @@ class CheckOutActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: CheckoutAdapter
-    private lateinit var viewModel: CheckoutViewModel
+    private lateinit var viewModel: CheckOutViewModel
     private lateinit var loadingView: View
     private var tokoId = ""
     private var items: List<RequestCheckoutItem> = emptyList()
@@ -87,7 +87,7 @@ class CheckOutActivity : AppCompatActivity() {
 
         val repository = CheckoutRepository(ApiClient.getApiService(this))
         val factory = CheckOutViewModelFactory(repository)
-        viewModel = ViewModelProvider(this, factory)[CheckoutViewModel::class.java]
+        viewModel = ViewModelProvider(this, factory)[CheckOutViewModel::class.java]
 
         loadingView = findViewById(R.id.loadingOverlay)
 

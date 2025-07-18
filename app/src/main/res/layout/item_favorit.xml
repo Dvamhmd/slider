@@ -5,8 +5,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardBackgroundColor="@color/white"
-    android:layout_marginStart="@dimen/_16sdp"
-    android:layout_marginEnd="@dimen/_16sdp"
+    app:strokeWidth="0dp"
     android:layout_marginTop="@dimen/_16sdp">
 
 
@@ -46,6 +45,7 @@
                 android:layout_marginBottom="@dimen/_4sdp"
                 android:text="@string/bubble_gum_creamy"
                 android:textSize="@dimen/_16ssp"
+                android:textColor="@color/text_main"
                 android:fontFamily="@font/dmsans_bold"/>
 
             <TextView
@@ -67,7 +67,7 @@
             android:layout_height="@dimen/_38sdp"
             android:layout_gravity="center"
             app:cardCornerRadius="@dimen/_6sdp"
-            app:cardElevation="1dp"
+            app:cardElevation="0dp"
             app:cardBackgroundColor="@color/soft_red"
             android:clickable="true"
             android:focusable="true">

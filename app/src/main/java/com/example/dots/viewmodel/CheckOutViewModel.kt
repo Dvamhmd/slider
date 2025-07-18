@@ -8,7 +8,7 @@ import com.example.dots.repository.CheckoutRepository
 import kotlinx.coroutines.launch
 import androidx.lifecycle.*
 
-class CheckoutViewModel(private val repository: CheckoutRepository) : ViewModel() {
+class CheckOutViewModel(private val repository: CheckoutRepository) : ViewModel() {
 
     val checkoutResponse = MutableLiveData<CheckoutData?>()
     val loading = MutableLiveData<Boolean>()
