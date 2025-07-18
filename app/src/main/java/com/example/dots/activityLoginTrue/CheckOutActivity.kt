@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,6 +24,8 @@ import com.example.dots.viewmodel.CheckoutViewModel
 import com.example.dots.viewmodel.factory.CheckOutViewModelFactory
 import com.google.gson.Gson
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dots.TokenManager
+import com.example.dots.utilities.toRupiah
 import com.google.gson.reflect.TypeToken
 
 class CheckOutActivity : AppCompatActivity() {
@@ -33,6 +36,32 @@ class CheckOutActivity : AppCompatActivity() {
     private lateinit var loadingView: View
     private var tokoId = ""
     private var items: List<RequestCheckoutItem> = emptyList()
+
+    private val orderTypeLauncher = registerForActivityResult(
+        androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == RESULT_OK) {
+            // Update tampilan pengiriman dan toko
+            findViewById<TextView>(R.id.deliveryOption).text = when (TokenManager.getDeliveryOption()) {
+                "delivery" -> "Delivery"
+                "pickup" -> "Pick Up"
+                else -> "Pilih Opsi Pengiriman"
+            }
+
+            findViewById<TextView>(R.id.StoreName).text = when (TokenManager.getSelectedStore()) {
+                "T001" -> "Teh Idaman Concat"
+                "T002" -> "Teh Idaman Gejayan"
+                "T003" -> "Teh Idaman Wonosari"
+                else -> "Toko"
+            }
+
+            // Refresh checkout data dari server
+            tokoId = TokenManager.getSelectedStore() ?: "T001"
+            viewModel.prepareCheckout(tokoId, items)
+        }
+    }
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,8 +91,9 @@ class CheckOutActivity : AppCompatActivity() {
 
         loadingView = findViewById(R.id.loadingOverlay)
 
+
         val source = intent.getStringExtra("SOURCE")
-        tokoId = intent.getStringExtra("id_toko") ?: "T001"
+        tokoId = TokenManager.getSelectedStore() ?: "T001"
         Log.println(Log.DEBUG, "source", source!!)
         items = if (source == "PRODUK") {
               val idProduk = intent.getStringExtra("ID_PRODUK")!!
@@ -72,7 +102,7 @@ class CheckOutActivity : AppCompatActivity() {
         } else {
               val tempItems = getItemsFromKeranjang()
               if (tempItems.isEmpty()) {
-                    finish() // keluar dari activity jika item keranjang kosong
+                    finish()
                   }
               tempItems
         }
@@ -120,13 +150,19 @@ class CheckOutActivity : AppCompatActivity() {
     private fun showCheckoutData(data: CheckoutData) {
         findViewById<TextView>(R.id.userName).text = data.alamat_pengguna.namaPenerima
         findViewById<TextView>(R.id.userAddress).text = data.alamat_pengguna.alamat
-        findViewById<TextView>(R.id.paymentTotal).text = "Rp${data.ringkasan_harga.total_akhir}"
+        findViewById<TextView>(R.id.paymentTotal).text = data.ringkasan_harga.total_akhir.toString().toRupiah()
         findViewById<TextView>(R.id.StoreName).text = when (data.toko_terpilih.id_toko) {
             "T001" -> "Teh Idaman Concat"
             "T002" -> "Teh Idaman Gejayan"
             "T003" -> "Teh Idaman Wonosari"
             else -> "Toko"
         }
+        findViewById<CardView>(R.id.deliveryOptionLayout).setOnClickListener {
+            val intent = Intent(this, OrderTypeActivity::class.java)
+            orderTypeLauncher.launch(intent)
+        }
+
+
 
         adapter.updateList(data.items)  // ini akan menampilkan produk
         Log.d("CheckOutActivity", "produk_dibeli: ${Gson().toJson(data.items)}")

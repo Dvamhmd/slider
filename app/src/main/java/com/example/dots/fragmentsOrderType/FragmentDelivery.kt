@@ -13,11 +13,13 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dots.R
+import com.example.dots.TokenManager
 import com.example.dots.activityLoginTrue.CreateAddressActivity
 import com.example.dots.activityLoginTrue.HomeLoggedInActivity
 import com.example.dots.adapter.AlamatAdapter
 import com.example.dots.models.Alamat
 import com.example.dots.viewmodel.AlamatViewModel
+import androidx.appcompat.app.AppCompatActivity
 
 class FragmentDelivery : Fragment() {
 
@@ -161,11 +163,11 @@ class FragmentDelivery : Fragment() {
         storeDistance3.text = getString(R.string._12_km)
 
 
-        //navigasi ke home
+        //navigasi kembali ke halaman sebelumnya
         saveAddress.setOnClickListener {
-            val intent = Intent(requireContext(), HomeLoggedInActivity::class.java)
-            intent.putExtra("FRAGMENT_TARGET", "home")
-            startActivity(intent)
+            TokenManager.saveDeliveryOption("delivery")
+            requireActivity().setResult(AppCompatActivity.RESULT_OK)
+            requireActivity().finish()
         }
 
 
@@ -175,16 +177,20 @@ class FragmentDelivery : Fragment() {
 
 
 
+
+        restoreSelectedStore()
 
 
         return view
     }
 
     private fun selectStore(selectedIndex: Int) {
+        // Update centang semua gambar
         checkImages.forEachIndexed { index, image ->
             image.setImageResource(if (index == selectedIndex) R.drawable.checked else R.drawable.uncheck)
         }
 
+        // Simpan data toko
         val storeName = when (selectedIndex) {
             0 -> "Concat"
             1 -> "Gejayan"
@@ -192,8 +198,31 @@ class FragmentDelivery : Fragment() {
             else -> "Unknown Store"
         }
 
+        val idToko = when (selectedIndex) {
+            0 -> "T001"
+            1 -> "T002"
+            2 -> "T003"
+            else -> ""
+        }
+
+        TokenManager.saveSelectedStore(idToko)
+
         Toast.makeText(requireContext(), "Teh Idaman $storeName", Toast.LENGTH_SHORT).show()
     }
+
+    private fun restoreSelectedStore() {
+        val selectedStore = when (TokenManager.getSelectedStore()) {
+            "T001" -> 0
+            "T002" -> 1
+            "T003" -> 2
+            else -> -1
+        }
+
+        if (selectedStore != -1) {
+            selectStore(selectedStore)
+        }
+    }
+
 
     private fun showDeleteConfirmationDialog(context: Context, alamat: Alamat, onConfirm: () -> Unit) {
         val dialog = com.google.android.material.dialog.MaterialAlertDialogBuilder(context)

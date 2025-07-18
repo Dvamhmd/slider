@@ -1,5 +1,6 @@
 package com.example.dots.fragmentsLoggedIn
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.*
 import android.widget.LinearLayout
@@ -41,9 +42,24 @@ class LoggedInFavoriteFragment : Fragment() {
                     emptyLayout.visibility = View.VISIBLE
                 }
 
-                val adapter = FavoritAdapter(it){
-                    Toast.makeText(requireContext(), "Klik: $it", Toast.LENGTH_SHORT).show()
-                }
+                val adapter = FavoritAdapter(it,
+                      onItemClick = { favorit ->
+                    Toast.makeText(requireContext(), "Klik: ${favorit.namaProduk}", Toast.LENGTH_SHORT).show()
+                  },
+                  onDeleteClick = { favorit ->
+                    AlertDialog.Builder(requireContext())
+                      .setTitle("Hapus Favorit")
+                      .setMessage("Yakin ingin menghapus ${favorit.namaProduk} dari daftar favorit?")
+                      .setPositiveButton("Ya") { _, _ ->
+                        favoritViewModel.hapusFavorit(favorit.idProduk ?: "")
+                        Toast.makeText(requireContext(), "Produk dihapus dari favorit", Toast.LENGTH_SHORT).show()
+                      }
+                      .setNegativeButton("Batal", null)
+                      .show()
+                  }
+                )
+
+
                 favoritRecyclerView.adapter = adapter
             }
         }

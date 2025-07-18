@@ -1,15 +1,20 @@
 package com.example.dots.fragmentsOrderType
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import com.example.dots.R
+import com.example.dots.TokenManager
+import com.example.dots.activityLoginTrue.HomeLoggedInActivity
 
 
 class FragmentPickUp : Fragment() {
@@ -23,6 +28,7 @@ class FragmentPickUp : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_pick_up, container, false)
+        val saveAddress = view.findViewById<Button>(R.id.save_address)
 
         //mencari nearest store
         val nearestStore1 = view.findViewById<CardView>(R.id.nearest_store1)
@@ -80,6 +86,18 @@ class FragmentPickUp : Fragment() {
 
 
 
+        //navigasi ke home
+        saveAddress.setOnClickListener {
+            TokenManager.saveDeliveryOption("pickup")
+            requireActivity().setResult(AppCompatActivity.RESULT_OK)
+            requireActivity().finish()
+        }
+
+
+
+
+
+        restoreSelectedStore()
 
 
 
@@ -87,15 +105,14 @@ class FragmentPickUp : Fragment() {
         return view
     }
 
+
     private fun selectStore(selectedIndex: Int) {
-        for (i in checkImages.indices) {
-            if (i == selectedIndex) {
-                checkImages[i].setImageResource(R.drawable.checked)
-            } else {
-                checkImages[i].setImageResource(R.drawable.uncheck)
-            }
+        // Update centang semua gambar
+        checkImages.forEachIndexed { index, image ->
+            image.setImageResource(if (index == selectedIndex) R.drawable.checked else R.drawable.uncheck)
         }
 
+        // Simpan data toko
         val storeName = when (selectedIndex) {
             0 -> "Concat"
             1 -> "Gejayan"
@@ -103,10 +120,31 @@ class FragmentPickUp : Fragment() {
             else -> "Unknown Store"
         }
 
+        val idToko = when (selectedIndex) {
+            0 -> "T001"
+            1 -> "T002"
+            2 -> "T003"
+            else -> ""
+        }
+
+        TokenManager.saveSelectedStore(idToko)
+
         Toast.makeText(requireContext(), "Teh Idaman $storeName", Toast.LENGTH_SHORT).show()
-
-
     }
+
+    private fun restoreSelectedStore() {
+        val selectedStore = when (TokenManager.getSelectedStore()) {
+            "T001" -> 0
+            "T002" -> 1
+            "T003" -> 2
+            else -> -1
+        }
+
+        if (selectedStore != -1) {
+            selectStore(selectedStore)
+        }
+    }
+
 
 
 }

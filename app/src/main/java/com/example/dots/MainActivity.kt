@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import com.example.dots.activityLoginTrue.HomeLoggedInActivity
 import com.example.dots.adapter.SliderAdapter
 import com.example.dots.databinding.ActivityMainBinding
 import com.example.dots.fragmentsSlider.Fragment_slider1
@@ -26,6 +27,17 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        TokenManager.initialize(this)
+
+          // ✅ Cek apakah token login masih tersimpan
+          if (TokenManager.isLoggedIn()) {
+                // Jika token tersedia, langsung ke halaman utama
+                startActivity(Intent(this, HomeLoggedInActivity::class.java))
+                finish() // agar MainActivity tidak bisa dikembaliin dengan tombol back
+                return
+              }
+        
         enableEdgeToEdge()
         TokenManager.initialize(this)
 

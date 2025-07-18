@@ -280,15 +280,6 @@
     <string name="_0895402655123">0895402655123</string>
     <string name="upload_bukti_transfer">Upload Bukti Transfer</string>
     <string name="konfirmasi_pembayaran">Konfirmasi Pembayaran</string>
-    <string name="pesanan_90897">Pesanan #90897</string>
-    <string name="cek_detail_pesanan">Cek Detail Pesanan</string>
-    <string name="order_delivered">Order Delivered</string>
-    <string name="items">items :</string>
-    <string name="_10">10</string>
-    <string name="pesanan">Pesanan #</string>
-    <string name="_90897">90897</string>
-    <string name="cost">cost :</string>
-    <string name="rp_190_000">Rp. 190.000</string>
 
 
 </resources>

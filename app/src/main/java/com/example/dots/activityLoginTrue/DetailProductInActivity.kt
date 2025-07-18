@@ -16,6 +16,7 @@ import com.example.dots.R
 import com.example.dots.network.ApiClient
 import com.example.dots.repository.KeranjangRepository
 import com.example.dots.utilities.formatRupiah
+import com.example.dots.viewmodel.FavoritViewModel
 import com.example.dots.viewmodel.KeranjangViewModel
 import java.text.NumberFormat
 import java.util.*
@@ -26,12 +27,14 @@ class DetailProductInActivity : AppCompatActivity() {
     private lateinit var btnMinus: ImageView
     private lateinit var tvQuantity: TextView
     private lateinit var keranjangViewModel: KeranjangViewModel
+    private lateinit var favoritViewModel: FavoritViewModel
 
     private var quantity = 1
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
         enableEdgeToEdge()
         setContentView(R.layout.activity_detail_product_in)
 
@@ -68,6 +71,22 @@ class DetailProductInActivity : AppCompatActivity() {
             }
         }
 
+        //val favoritRepository = FavoritRepository()
+
+        favoritViewModel = ViewModelProvider(
+            this,
+            ViewModelProvider.AndroidViewModelFactory.getInstance(application)
+        )[FavoritViewModel::class.java]
+        favoritViewModel.fetchFavorit()
+
+        favoritViewModel.error.observe(this) {
+              it?.let {
+                Toast.makeText(this, "Gagal ubah favorit: $it", Toast.LENGTH_SHORT).show()
+                  Log.i("detailProduk = ","eror : $it")
+              }
+        }
+
+
         // --- Inisialisasi Komponen ---
         val back = findViewById<ImageView>(R.id.back)
         val favorite = findViewById<ImageView>(R.id.favorite)
@@ -95,15 +114,31 @@ class DetailProductInActivity : AppCompatActivity() {
         }
 
         // --- Favorite Toggle ---
-        var isFavorite = false
-        favorite.setOnClickListener {
-            isFavorite = !isFavorite
-            favorite.setImageResource(if (isFavorite) R.drawable.fav else R.drawable.no_fav)
-            Toast.makeText(this,
-                if (isFavorite) "Ditambahkan ke favorit" else "Dihapus dari favorit",
-                Toast.LENGTH_SHORT
-            ).show()
+        favoritViewModel.favoritList.observe(this) { listFavorit ->
+            val isFavorited = listFavorit?.any { it.idProduk == idProduk } == true
+            favorite.setImageResource(if (isFavorited) R.drawable.fav else R.drawable.no_fav)
         }
+
+        favorite.setOnClickListener {
+            if (idProduk.isNotBlank() && idToko.isNotBlank()) {
+                val currentList = favoritViewModel.favoritList.value ?: emptyList()
+                val isFavorited = currentList.any { it.idProduk == idProduk }
+                favorite.isEnabled = false
+                if (isFavorited) {
+                    favoritViewModel.hapusFavorit(idProduk)
+                    favorite.setImageResource(R.drawable.no_fav)
+                    Toast.makeText(this, "Item dihapus dari favorit", Toast.LENGTH_SHORT).show()
+                } else {
+                    favoritViewModel.tambahFavorit(idProduk, idToko)
+                    favorite.setImageResource(R.drawable.fav)
+                    Toast.makeText(this, "Item ditambahkan ke favorit", Toast.LENGTH_SHORT).show()
+                }
+                favorite.postDelayed({favorite.isEnabled = true}, 1000)
+            } else {
+                Toast.makeText(this, "Produk tidak valid", Toast.LENGTH_SHORT).show()
+            }
+        }
+
 
         // --- Quantity Control ---
         btnPlus = findViewById(R.id.btnPlus)

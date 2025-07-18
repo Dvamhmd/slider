@@ -41,14 +41,21 @@ interface ApiService {
     suspend fun deleteAlamat(@Body id: Map<String, String>): Response<BaseResponse<List<Alamat>>>
 
     // ❤️ Favorit
+    @FormUrlEncoded
     @POST("tambah-favorit")
-    suspend fun tambahFavorit(@Body favorit: Favorit): Response<ApiResponse<Any?>>
+    suspend fun tambahFavorit(
+        @Field("id_produk") idProduk: String,
+        @Field("id_toko") idToko: String
+    ): BaseResponse<Unit>
 
     @GET("get-favorit")
     suspend fun getFavorit(): Response<BaseResponse<List<Favorit>>>
 
+    @FormUrlEncoded
     @POST("delete-favorit")
-    suspend fun deleteFavorit(@Body favorit: Favorit): Response<ApiResponse<Any?>>
+    suspend fun hapusFavorit(
+        @Field("id_produk") idProduk: String
+    ): Response<ApiResponse<Any?>>
 
     // 🛒 Keranjang
     @GET("get-keranjang")
