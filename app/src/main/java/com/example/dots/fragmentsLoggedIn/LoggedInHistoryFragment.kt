@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.example.dots.R
 
 class LoggedInHistoryFragment : Fragment() {
@@ -14,7 +15,6 @@ class LoggedInHistoryFragment : Fragment() {
         savedInstanceState: Bundle?): View? {
 
         val view = inflater.inflate(R.layout.fragment_logged_in_history, container, false)
-
 
 
         return view

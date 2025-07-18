@@ -31,6 +31,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_marginBottom="@dimen/_8sdp"
                 tools:ignore="UselessParent">
 
                 <ImageView
@@ -42,8 +44,9 @@
                     android:layout_marginEnd="@dimen/_6sdp"/>
 
                 <FrameLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:orientation="vertical" >
 
                     <LinearLayout
@@ -132,10 +135,42 @@
 
                 </FrameLayout>
 
+                <ImageView
+                    android:id="@+id/expand_indicator"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:contentDescription="@string/image"
+                    android:src="@drawable/no_expand"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_12sdp" />
+
 
             </LinearLayout>
 
 
+            <LinearLayout
+                android:id="@+id/order_detail_expand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp">
+
+                <include
+                    android:id="@+id/product_detail1"
+                    layout="@layout/detail_order" />
+
+                <include
+                    android:id="@+id/product_detail1"
+                    layout="@layout/detail_order" />
+
+                <include
+                    android:id="@+id/product_detail1"
+                    layout="@layout/detail_order" />
+
+
+            </LinearLayout>
 
 
 

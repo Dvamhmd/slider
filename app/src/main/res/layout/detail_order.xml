@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="@dimen/_4sdp">
+
+    <ImageView
+        android:layout_width="@dimen/_6sdp"
+        android:layout_height="@dimen/_6sdp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/rounded"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/product_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/jasmine_tea"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/dmsans_semi_bold"
+        android:textColor="@color/text_gray"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/x"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/dmsans_semi_bold"
+        android:textColor="@color/text_gray"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/product_qty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/_4"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/dmsans_semi_bold"
+        android:textColor="@color/text_gray"
+        android:layout_gravity="center"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/product_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rp_10_000"
+        android:textSize="@dimen/_12ssp"
+        android:fontFamily="@font/dmsans_semi_bold"
+        android:textColor="@color/text_gray"
+        android:layout_gravity="center"/>
+
+
+
+</LinearLayout>
