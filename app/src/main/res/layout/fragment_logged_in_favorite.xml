@@ -40,6 +40,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:padding="@dimen/_16sdp"
+          android:layout_marginBottom="@dimen/_60sdp"
         android:clipToPadding="false" />
 
       <!-- Layout kosong saat tidak ada data favorit -->

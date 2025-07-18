@@ -15,7 +15,6 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.dots.R
 import com.example.dots.network.ApiClient
 import com.example.dots.repository.KeranjangRepository
-import com.example.dots.utilities.formatRupiah
 import com.example.dots.viewmodel.FavoritViewModel
 import com.example.dots.viewmodel.KeranjangViewModel
 import java.text.NumberFormat

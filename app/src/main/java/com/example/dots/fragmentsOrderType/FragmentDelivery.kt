@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.dots.R
 import com.example.dots.TokenManager
 import com.example.dots.activityLoginTrue.CreateAddressActivity
-import com.example.dots.activityLoginTrue.HomeLoggedInActivity
 import com.example.dots.adapter.AlamatAdapter
 import com.example.dots.models.Alamat
 import com.example.dots.viewmodel.AlamatViewModel
