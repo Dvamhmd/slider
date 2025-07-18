@@ -23,6 +23,7 @@ import com.example.dots.viewmodel.CheckoutViewModel
 import com.example.dots.viewmodel.factory.CheckOutViewModelFactory
 import com.google.gson.Gson
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dots.utilities.toRupiah
 import com.google.gson.reflect.TypeToken
 
 class CheckOutActivity : AppCompatActivity() {
@@ -120,7 +121,7 @@ class CheckOutActivity : AppCompatActivity() {
     private fun showCheckoutData(data: CheckoutData) {
         findViewById<TextView>(R.id.userName).text = data.alamat_pengguna.namaPenerima
         findViewById<TextView>(R.id.userAddress).text = data.alamat_pengguna.alamat
-        findViewById<TextView>(R.id.paymentTotal).text = "Rp${data.ringkasan_harga.total_akhir}"
+        findViewById<TextView>(R.id.paymentTotal).text = data.ringkasan_harga.total_akhir.toString().toRupiah()
         findViewById<TextView>(R.id.StoreName).text = when (data.toko_terpilih.id_toko) {
             "T001" -> "Teh Idaman Concat"
             "T002" -> "Teh Idaman Gejayan"

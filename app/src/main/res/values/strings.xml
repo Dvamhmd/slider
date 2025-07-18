@@ -242,7 +242,7 @@
     <string name="nomor_handphone" tools:ignore="MissingTranslation">Nomor Handphone</string>
     <string name="simpan" tools:ignore="MissingTranslation">Simpan</string>
     <string name="pilih_toko" tools:ignore="MissingTranslation">Pilih Toko</string>
-    <string name="check_out" tools:ignore="MissingTranslation">Check Out</string>
+    <string name="check_out" tools:ignore="MissingTranslation">Checkout</string>
     <string name="rp_30_000" tools:ignore="MissingTranslation">Rp 30.000,-</string>
     <string name="x" tools:ignore="MissingTranslation">x</string>
     <string name="_4" tools:ignore="MissingTranslation">4</string>
@@ -280,6 +280,7 @@
     <string name="_0895402655123">0895402655123</string>
     <string name="upload_bukti_transfer">Upload Bukti Transfer</string>
     <string name="konfirmasi_pembayaran">Konfirmasi Pembayaran</string>
+    <string name="buat_pesanan">Buat Pesanan</string>
 
 
 </resources>

@@ -356,7 +356,7 @@
             android:layout_marginEnd="@dimen/_16sdp"
             android:backgroundTint="@color/green"
             android:fontFamily="@font/montserrat_semi_bold"
-            android:text="@string/check_out"
+            android:text="@string/buat_pesanan"
             android:textColor="@color/white"
             android:textSize="@dimen/_12ssp"
             tools:ignore="VisualLintButtonSize,TextContrastCheck,DuplicateSpeakableTextCheck" />
