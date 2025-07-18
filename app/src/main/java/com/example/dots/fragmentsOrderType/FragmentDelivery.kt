@@ -166,7 +166,7 @@ class FragmentDelivery : Fragment() {
         saveAddress.setOnClickListener {
             val intent = Intent(requireContext(), HomeLoggedInActivity::class.java)
             intent.putExtra("FRAGMENT_TARGET", "home")
-            TokenManager.saveDeliveryOption("delivery")
+            TokenManager.saveDeliveryOption("Delivery")
             startActivity(intent)
         }
 

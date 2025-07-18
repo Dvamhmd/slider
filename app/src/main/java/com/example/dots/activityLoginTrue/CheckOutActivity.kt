@@ -23,6 +23,7 @@ import com.example.dots.viewmodel.CheckoutViewModel
 import com.example.dots.viewmodel.factory.CheckOutViewModelFactory
 import com.google.gson.Gson
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dots.TokenManager
 import com.example.dots.utilities.toRupiah
 import com.google.gson.reflect.TypeToken
 
@@ -63,8 +64,9 @@ class CheckOutActivity : AppCompatActivity() {
 
         loadingView = findViewById(R.id.loadingOverlay)
 
+
         val source = intent.getStringExtra("SOURCE")
-        tokoId = intent.getStringExtra("id_toko") ?: "T001"
+        tokoId = TokenManager.getSelectedStore() ?: "T001"
         Log.println(Log.DEBUG, "source", source!!)
         items = if (source == "PRODUK") {
               val idProduk = intent.getStringExtra("ID_PRODUK")!!
@@ -73,7 +75,7 @@ class CheckOutActivity : AppCompatActivity() {
         } else {
               val tempItems = getItemsFromKeranjang()
               if (tempItems.isEmpty()) {
-                    finish() // keluar dari activity jika item keranjang kosong
+                    finish()
                   }
               tempItems
         }
@@ -128,6 +130,8 @@ class CheckOutActivity : AppCompatActivity() {
             "T003" -> "Teh Idaman Wonosari"
             else -> "Toko"
         }
+        findViewById<TextView>(R.id.deliveryOption).text = TokenManager.getDeliveryOption() ?: "Delivery"
+
 
         adapter.updateList(data.items)  // ini akan menampilkan produk
         Log.d("CheckOutActivity", "produk_dibeli: ${Gson().toJson(data.items)}")

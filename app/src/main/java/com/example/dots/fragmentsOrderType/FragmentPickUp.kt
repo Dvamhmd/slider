@@ -89,7 +89,7 @@ class FragmentPickUp : Fragment() {
         saveAddress.setOnClickListener {
             val intent = Intent(requireContext(), HomeLoggedInActivity::class.java)
             intent.putExtra("FRAGMENT_TARGET", "home")
-            TokenManager.saveDeliveryOption("delivery")
+            TokenManager.saveDeliveryOption("Pick Up")
             startActivity(intent)
         }
 
