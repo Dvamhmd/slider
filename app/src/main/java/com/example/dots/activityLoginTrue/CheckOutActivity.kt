@@ -170,4 +170,22 @@ class CheckOutActivity : AppCompatActivity() {
         Log.d("CheckOutActivity", "produk_dibeli: ${Gson().toJson(data.items)}")
     }
 
+
+    override fun onResume() {
+        super.onResume()
+
+        findViewById<TextView>(R.id.deliveryOption).text = when (TokenManager.getDeliveryOption()) {
+            "delivery" -> "Delivery"
+            "pickup" -> "Pick Up"
+            else -> "Pilih Opsi Pengiriman"
+        }
+
+        findViewById<TextView>(R.id.StoreName).text = when (TokenManager.getSelectedStore()) {
+            "T001" -> "Teh Idaman Concat"
+            "T002" -> "Teh Idaman Gejayan"
+            "T003" -> "Teh Idaman Wonosari"
+            else -> "Toko"
+        }
+        observeLiveData()
+    }
 }

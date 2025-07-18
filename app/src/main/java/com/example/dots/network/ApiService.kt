@@ -100,7 +100,8 @@ interface ApiService {
     suspend fun checkoutOrder(@Body transaksi: Transaksi): Response<ApiResponse<Any?>>
 
     @POST("orders")
-    suspend fun placeOrder(@Body transaksi: Transaksi): Response<ApiResponse<Any?>>
+    suspend fun placeOrder(@Body request: Map<String, @JvmSuppressWildcards Any?>): BaseResponse<PlaceOrderResponse>
+
 
     // 🔖 Promo
     @GET("promo")

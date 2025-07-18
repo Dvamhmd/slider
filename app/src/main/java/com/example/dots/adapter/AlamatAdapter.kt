@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dots.R
+import com.example.dots.TokenManager
 import com.example.dots.models.Alamat
 
 class AlamatAdapter(
@@ -42,6 +43,10 @@ class AlamatAdapter(
 
           // Checklist
         val newImage = if (alamat.status == "utama") R.drawable.checked else R.drawable.uncheck
+        if (alamat.status == "utama") {
+            TokenManager.saveAddressDetail(alamat.detailAlamat.toString())
+        }
+
 
         holder.checkBox.animate()
             .scaleX(0.7f)

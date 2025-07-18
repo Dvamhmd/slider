@@ -1,5 +1,6 @@
 package com.example.dots.fragmentsLoggedIn
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.*
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.dots.R
+import com.example.dots.TokenManager
 import com.example.dots.activityLoginTrue.ChatLoggedInActivity
 import com.example.dots.activityLoginTrue.OrderTypeActivity
 import com.example.dots.activityLoginTrue.SettingsLoggedInActivity
@@ -27,6 +29,8 @@ class LoggedInHomeFragment : Fragment() {
     private lateinit var kategoriViewModel: KategoriViewModel
     private lateinit var kategoriRecycler: RecyclerView
 
+
+    @SuppressLint("ResourceType")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,9 +42,12 @@ class LoggedInHomeFragment : Fragment() {
         val deliveryLayout = view.findViewById<LinearLayout>(R.id.delivery_layout)
         val seeAllProducts = view.findViewById<TextView>(R.id.see_products)
 
+
+
         viewPager = view.findViewById(R.id.viewPager)
         tabLayout = view.findViewById(R.id.tabLayout)
         kategoriRecycler = view.findViewById(R.id.kategoriRecyclerView)
+
 
         // Navigasi Settings dan Chat
         settings.setOnClickListener {
@@ -114,4 +121,31 @@ class LoggedInHomeFragment : Fragment() {
 
         return view
     }
+
+    override fun onResume() {
+        super.onResume()
+
+        val deliveryOption = view?.findViewById<TextView>(R.id.deliveryOptionHome)
+        val address = view?.findViewById<TextView>(R.id.addressHome)
+
+        val selectedStore = when (TokenManager.getSelectedStore()) {
+            "T001" -> "Teh Idaman Concat"
+            "T002" -> "Teh Idaman Gejayan"
+            "T003" -> "Teh Idaman Wonosari"
+            else -> "Ambil di mana"
+        }
+
+        deliveryOption?.text = when (TokenManager.getDeliveryOption()) {
+            "delivery" -> "Delivery To"
+            "pickup" -> "Pick Up at"
+            else -> "Delivery To"
+        }
+
+        address?.text = when (TokenManager.getDeliveryOption()) {
+            "delivery" -> TokenManager.getAddressDetail()
+            "pickup" -> selectedStore
+            else -> "Mau di mana nihh"
+        }
+    }
+
 }
