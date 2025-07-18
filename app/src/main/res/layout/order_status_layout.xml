@@ -176,25 +176,9 @@
                 android:fontFamily="@font/poppins_semi_bold"
                 android:layout_marginStart="@dimen/_10sdp" />
 
-
-
-
-
-
-
         </LinearLayout>
 
 
     </LinearLayout>
-
-
-
-
-
-
-
-
-
-
 
 </com.google.android.material.card.MaterialCardView>
