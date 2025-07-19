@@ -97,12 +97,32 @@ class LoggedInHistoryFragment : Fragment() {
         if (result.resultCode == Activity.RESULT_OK) {
             val transactionResult = result.data?.getParcelableExtra<TransactionResult>(UiKitConstants.KEY_TRANSACTION_RESULT)
             when (transactionResult?.status) {
-                UiKitConstants.STATUS_SUCCESS -> Toast.makeText(requireContext(), "Pembayaran Berhasil!", Toast.LENGTH_SHORT).show()
-                UiKitConstants.STATUS_PENDING -> Toast.makeText(requireContext(), "Pembayaran Tertunda!", Toast.LENGTH_SHORT).show()
-                UiKitConstants.STATUS_FAILED -> Toast.makeText(requireContext(), "Pembayaran Gagal!", Toast.LENGTH_SHORT).show()
-                else -> Toast.makeText(requireContext(), "Transaksi dibatalkan.", Toast.LENGTH_SHORT).show()
+                UiKitConstants.STATUS_SUCCESS -> {
+                    Toast.makeText(requireContext(), "Pembayaran Berhasil!", Toast.LENGTH_SHORT).show()
+                    viewModel.getOrderHistory() // <-- refresh setelah sukses
+                }
+                UiKitConstants.STATUS_PENDING -> {
+                    Toast.makeText(requireContext(), "Pembayaran Tertunda!", Toast.LENGTH_SHORT).show()
+                    viewModel.getOrderHistory() // <-- refresh juga saat pending
+                }
+                UiKitConstants.STATUS_FAILED -> {
+                    Toast.makeText(requireContext(), "Pembayaran Gagal!", Toast.LENGTH_SHORT).show()
+                    viewModel.getOrderHistory() // <-- refresh juga jika gagal, status bisa berubah
+                }
+                else -> {
+                    Toast.makeText(requireContext(), "Transaksi dibatalkan.", Toast.LENGTH_SHORT).show()
+                    viewModel.getOrderHistory() // <-- tetap refresh
+                }
             }
+        } else {
+            viewModel.getOrderHistory() // <-- user tekan back tanpa selesaiin pembayaran
         }
     }
+
+    fun refreshOrder() {
+        viewModel.getOrderHistory()
+    }
+
+
 
 }

@@ -3,6 +3,7 @@ package com.example.dots
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,6 +12,7 @@ import androidx.core.view.WindowInsetsControllerCompat
 import com.example.dots.activityLoginTrue.HomeLoggedInActivity
 import com.example.dots.adapter.SliderAdapter
 import com.example.dots.databinding.ActivityMainBinding
+import com.example.dots.fragmentsLoggedIn.LoggedInHistoryFragment
 import com.example.dots.fragmentsSlider.Fragment_slider1
 import com.example.dots.fragmentsSlider.Fragment_slider2
 import com.example.dots.fragmentsSlider.Fragment_slider3
@@ -118,6 +120,25 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+
+        intent.data?.let { uri ->
+            if (uri.scheme == "tehidaman" && uri.host == "payment") {
+                val result = uri.lastPathSegment
+                if (result == "success") {
+                    // Beri tahu fragment bahwa pembayaran selesai
+                    val fragment = supportFragmentManager.findFragmentById(R.id.fragmentContainer)
+                    if (fragment is LoggedInHistoryFragment) {
+                        fragment.refreshOrder()
+                    }
+                    Toast.makeText(this, "Pembayaran selesai!", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
+
 
     //fungsi untuk bottom indicator
     private fun updateButtons(position: Int) {
