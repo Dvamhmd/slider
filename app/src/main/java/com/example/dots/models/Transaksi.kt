@@ -13,7 +13,9 @@ data class Transaksi(
     @SerializedName("id_promo_terpakai") val idPromoTerpakai: String?,
     @SerializedName("diskon") val diskon: Double?,
     @SerializedName("harga_akhir") val hargaAkhir: Double?,
+    @SerializedName("total_item") val jumlah: Int?,
     @SerializedName("status") val status: String?,
+    @SerializedName("snap_token") val snapToken: String?,
     @SerializedName("created_at") val createdAt: String?,
     @SerializedName("updated_at") val updatedAt: String?
 )

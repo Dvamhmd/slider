@@ -76,15 +76,41 @@ class HomeLoggedInActivity : AppCompatActivity() {
 
 
         //Button Default saat awal masuk
-        replaceFragment(LoggedInHomeFragment())
-        bottomNavigation.show(id = 3)
+        // Button Default saat awal masuk
+        val defaultFragment = LoggedInHomeFragment()
+        var defaultMenuId = 3 // default ke Home
 
-        if (target == "home") {
-            // ganti fragment ke HomeFragment
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, LoggedInHomeFragment())
-                .commit()
+// Cek apakah ada target fragment dari intent
+        when (target) {
+                  "home" -> {
+                replaceFragment(LoggedInHomeFragment())
+                defaultMenuId = 3
+              }
+                  "history" -> {
+                replaceFragment(LoggedInHistoryFragment())
+                defaultMenuId = 4
+              }
+                  "cart" -> {
+                replaceFragment(LoggedInCartFragment())
+                defaultMenuId = 1
+              }
+                  "favorite" -> {
+                replaceFragment(LoggedInFavoriteFragment())
+                defaultMenuId = 2
+              }
+                  "profile" -> {
+                replaceFragment(LoggedInProfilFragment())
+                defaultMenuId = 5
+              }
+                  else -> {
+                replaceFragment(defaultFragment)
+                defaultMenuId = 3
+              }
         }
+
+// Tampilkan menu yang sesuai
+        bottomNavigation.show(id = defaultMenuId)
+
 
 
     }

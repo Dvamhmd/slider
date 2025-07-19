@@ -1,5 +1,7 @@
 package com.example.dots.models
 
+import com.google.gson.annotations.SerializedName
+
 data class SnapTokenResponse(
-    val token: String?
+    @SerializedName("snap_token") val token: String?
 )

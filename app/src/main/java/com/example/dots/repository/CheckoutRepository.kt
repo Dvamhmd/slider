@@ -4,7 +4,11 @@ import com.example.dots.models.BaseResponse
 import com.example.dots.models.CheckoutData
 import com.example.dots.models.PlaceOrderResponse
 import com.example.dots.models.RequestCheckoutItem
+import com.example.dots.models.SnapTokenResponse
+import com.example.dots.models.Transaksi
 import com.example.dots.network.ApiService
+import com.google.gson.Gson
+import retrofit2.HttpException
 import retrofit2.Response
 
 
@@ -20,7 +24,21 @@ class CheckoutRepository(private val api: ApiService) {
             "items" to items,
             "selected_promo_id" to promoId
         )
-        return api.prepareCheckout(body)
+
+        return try {
+            val response = api.prepareCheckout(body) // pakai Response<...>
+            if (response.isSuccessful) {
+                response.body()!!
+            } else {
+                val errorBody = response.errorBody()?.string()
+                val gson = Gson()
+                gson.fromJson(errorBody, BaseResponse::class.java) as BaseResponse<CheckoutData>
+            }
+        } catch (e: HttpException) {
+            val errorBody = e.response()?.errorBody()?.string()
+            val gson = Gson()
+            gson.fromJson(errorBody, BaseResponse::class.java) as BaseResponse<CheckoutData>
+        }
     }
 
     suspend fun placeOrder(
@@ -41,5 +59,14 @@ class CheckoutRepository(private val api: ApiService) {
         )
         return api.placeOrder(body)
     }
+
+    suspend fun getOrderHistory(): Response<BaseResponse<List<Transaksi>>> {
+        return api.getOrders()
+    }
+
+    suspend fun getSnapToken(transaksiId: String): Response<SnapTokenResponse> {
+        return api.createSnapToken(transaksiId)
+    }
+
 
 }

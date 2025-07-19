@@ -60,16 +60,16 @@
                             android:fontFamily="@font/poppins_semi_bold"
                             android:text="@string/pesanan"
                             android:textColor="@color/text_main"
-                            android:textSize="@dimen/_14ssp" />
+                            android:textSize="@dimen/_12ssp" />
 
                         <TextView
                             android:id="@+id/order_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/poppins_semi_bold"
-                            android:text="@string/_90897"
+                            android:text="@string/_908978787878787"
                             android:textColor="@color/text_main"
-                            android:textSize="@dimen/_14ssp" />
+                            android:textSize="@dimen/_12ssp" />
 
 
                     </LinearLayout>

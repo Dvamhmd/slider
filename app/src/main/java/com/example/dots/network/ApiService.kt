@@ -90,11 +90,11 @@ interface ApiService {
     @POST("checkout")
     suspend fun prepareCheckout(
         @Body body: Map<String, @JvmSuppressWildcards Any?>
-    ): BaseResponse<CheckoutData>
+    ): Response<BaseResponse<CheckoutData>>
 
 
     @GET("orders")
-    suspend fun getOrders(): Response<List<Transaksi>>
+    suspend fun getOrders(): Response<BaseResponse<List<Transaksi>>>
 
     @POST("orders/checkout")
     suspend fun checkoutOrder(@Body transaksi: Transaksi): Response<ApiResponse<Any?>>
